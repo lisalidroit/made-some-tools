@@ -14,7 +14,7 @@ then
         files=$(grep -rl "$a" $2)
         for item in $files
         do
-            echo "$item" >> /Scripts/affectedFiles.txt
+            echo "$item" >> affectedFiles.txt
             sed -i '' "s#${a}#${b}#g" $item
         done
 fi
