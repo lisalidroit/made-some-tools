@@ -3,11 +3,13 @@ made some tools
 
 ## replaceLinks.sh
 
-takes in an "old link to new link mapping csv or txt file" and a location to all mandate json files and replaces the old links in the mandates with the new links. 
+takes in an "old link to new link mapping csv or txt file" and "path/to/snapshot.droit.1.0" and replaces the old links in the mandates json files with the new links. 
 
 Example command:
 
-`./replaceLinks bofa-mifir-links.csv path/to/snapshot.droit.1.0`
+`./replaceLinks.sh bofa-mifir-links.csv path/to/snapshot.droit.1.0`
 
-* will create an output file /Scripts/affectedFiles.txt, which shows all the files that have been modified by the script
+* will create an output affectedFiles.txt, which shows all the files that contain the old links
 * replace all the old links in the mandates with the new links listed in the *bofa-mifir-links.csv*
+
+Note: perform `chmod +x replaceLinks.sh` first to use it
