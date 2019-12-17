@@ -3,7 +3,7 @@ made some tools
 
 ## replaceLinks.sh
 
-takes in an "old link to new link mapping csv or txt file" and a location to all mandate json files and replaces the old links in the mandates with the new links. 
+takes in an "old link to new link mapping csv or txt file" and "path/to/snapshot.droit.1.0" and replaces the old links in the mandates json files with the new links. 
 
 Example command:
 
