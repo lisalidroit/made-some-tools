@@ -14,6 +14,7 @@ then
         files=$(grep -rl "$a" $2)
         for item in $files
         do
+            echo "Affected files with old link: $a , new link: $b" >> affectedFiles.txt
             echo "$item" >> affectedFiles.txt
             sed -i '' "s#${a}#${b}#g" $item
         done
