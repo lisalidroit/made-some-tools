@@ -16,7 +16,7 @@
   },
   "name" : "eu_short_position_unilateral_scope_counterparty",
   "label" : "EU Short Position - Unilateral Party Scope - Counterparty",
-  "description" : null,
+  "description" : "EU Short Position - Unilateral Party Scope - Counterparty",
   "tags" : [ ],
   "inputs" : [ ],
   "outputs" : [ ],
