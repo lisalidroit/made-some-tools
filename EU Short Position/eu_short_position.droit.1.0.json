@@ -1,0 +1,74 @@
+{
+  "type" : "flowchart",
+  "metadata" : {
+    "id" : "eu_short_position.droit.1.0",
+    "branch" : "droit",
+    "createdDate" : 1567792265321,
+    "author" : "droit",
+    "comment" : null,
+    "status" : "run",
+    "parentVersionId" : "",
+    "mergeVersionId" : "",
+    "entityName" : "eu_short_position",
+    "effectiveDate" : 1567792265321,
+    "majorVersion" : 1,
+    "minorVersion" : 0
+  },
+  "name" : "eu_short_position",
+  "label" : "EU Short Position",
+  "description" : null,
+  "tags" : [ ],
+  "inputs" : [ ],
+  "outputs" : [ ],
+  "defaults" : "[\n    'scope-decisions': [\n        'product': ['in-scope': d.eu_short_position_product_scope.'in-scope'],\n        'bilateral-party': ['in-scope': d.eu_short_position_bilateral_party_scope.'in-scope'],\n        'unilateral-party-contraparty': ['in-scope': d.eu_short_position_unilateral_scope_contraparty.'in-scope'],\n        'unilateral-party-counterparty': ['in-scope': d.eu_short_position_unilateral_scope_counterparty.'in-scope'],\n        'transaction-context': ['in-scope': d.eu_short_position_transaction_context.'in-scope']\n    ],\n    'transaction-eligibility': ['in-scope': d.eu_short_position_transaction_eligibility.'in-scope']\n]",
+  "initRef" : "node1",
+  "boundingBox" : [ ],
+  "nodes" : [ {
+    "type" : "condition",
+    "name" : "node1",
+    "description" : "Is transaction under EU short position regulations?",
+    "expr" : "d.eu_short_position_transaction_eligibility.'in-scope'",
+    "trueRef" : "node2",
+    "falseRef" : "node3",
+    "annotationURI" : "",
+    "annotationRefs" : null,
+    "formatting" : {
+      "x" : 4,
+      "y" : 4,
+      "tarrow" : [ ],
+      "farrow" : [ ]
+    }
+  }, {
+    "type" : "termination",
+    "name" : "node2",
+    "description" : "Determine obligations",
+    "expr" : "[\n    'obligations': [\n        'core': d.eu_short_position_obligations.core,\n        'extra': d.eu_short_position_obligations.extra\n    ]\n]",
+    "trueRef" : "",
+    "falseRef" : "",
+    "annotationURI" : "",
+    "annotationRefs" : null,
+    "formatting" : {
+      "x" : 15,
+      "y" : 4,
+      "style" : "mandate",
+      "tarrow" : [ ],
+      "farrow" : [ ]
+    }
+  }, {
+    "type" : "termination",
+    "name" : "node3",
+    "description" : "No obligations apply",
+    "expr" : "[\n    'obligations': [\n        'core': [:],\n        'extra': [:]\n    ]\n]",
+    "trueRef" : "",
+    "falseRef" : "",
+    "annotationURI" : "",
+    "annotationRefs" : null,
+    "formatting" : {
+      "x" : 4,
+      "y" : 11,
+      "style" : "exemption",
+      "tarrow" : [ ],
+      "farrow" : [ ]
+    }
+  } ]
+}

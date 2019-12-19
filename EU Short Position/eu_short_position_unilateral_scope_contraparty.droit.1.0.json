@@ -1,0 +1,107 @@
+{
+  "type" : "flowchart",
+  "metadata" : {
+    "id" : "eu_short_position_unilateral_scope_contraparty.droit.1.0",
+    "branch" : "droit",
+    "createdDate" : 1567792265321,
+    "author" : "template",
+    "comment" : null,
+    "status" : "run",
+    "parentVersionId" : "",
+    "mergeVersionId" : "",
+    "entityName" : "eu_short_position_unilateral_scope_contraparty",
+    "effectiveDate" : 1567792265321,
+    "majorVersion" : 1,
+    "minorVersion" : 0
+  },
+  "name" : "eu_short_position_unilateral_scope_contraparty",
+  "label" : "EU Short Position - Unilateral Party Scope - Contraparty",
+  "description" : null,
+  "tags" : [ ],
+  "inputs" : [ ],
+  "outputs" : [ ],
+  "defaults" : "[:]",
+  "initRef" : "node2",
+  "boundingBox" : [ ],
+  "nodes" : [ {
+    "type" : "condition",
+    "name" : "node2",
+    "description" : "Is party an EU natural or legal person?",
+    "expr" : "d.contraparty.isEUNaturalPerson",
+    "trueRef" : "node10",
+    "falseRef" : "node9",
+    "annotationURI" : "",
+    "annotationRefs" : null,
+    "formatting" : {
+      "x" : 12,
+      "y" : 8,
+      "style" : "",
+      "tarrow" : [ ],
+      "farrow" : [ ]
+    }
+  }, {
+    "type" : "termination",
+    "name" : "node6",
+    "description" : "In Scope",
+    "expr" : "[\n\t'message':'reason for termination',\n\t'tsomeFact':'some fact'\n]\n// These outputs can be referenced from another\n// module as d.<this_module_name>.someFact\n",
+    "trueRef" : "",
+    "falseRef" : "",
+    "annotationURI" : "",
+    "annotationRefs" : null,
+    "formatting" : {
+      "x" : 31,
+      "y" : 16,
+      "style" : "continue",
+      "tarrow" : [ ],
+      "farrow" : [ ]
+    }
+  }, {
+    "type" : "termination",
+    "name" : "node9",
+    "description" : "Not in scope",
+    "expr" : "[\n\t'inScope': false,\n\t'message': 'Foo is not in scope because...',\n\t'source' : 'regulation citation goes here'\n]",
+    "trueRef" : "",
+    "falseRef" : "",
+    "annotationURI" : "",
+    "annotationRefs" : null,
+    "formatting" : {
+      "x" : 12,
+      "y" : 16,
+      "style" : "exemption",
+      "tarrow" : [ ],
+      "farrow" : [ ]
+    }
+  }, {
+    "type" : "condition",
+    "name" : "node10",
+    "description" : "Did party have net short position?",
+    "expr" : "d.contraparty.shortPosition // replace this with d.<expr>",
+    "trueRef" : "node6",
+    "falseRef" : "node11",
+    "annotationURI" : "",
+    "annotationRefs" : null,
+    "formatting" : {
+      "x" : 31,
+      "y" : 8,
+      "style" : "",
+      "tarrow" : [ ],
+      "farrow" : [ ]
+    }
+  }, {
+    "type" : "termination",
+    "name" : "node11",
+    "description" : "Not in scope",
+    "expr" : "[\n\t'inScope': false,\n\t'message': 'Foo is not in scope because...',\n\t'source' : 'regulation citation goes here'\n]",
+    "trueRef" : "",
+    "falseRef" : "",
+    "annotationURI" : "",
+    "annotationRefs" : null,
+    "formatting" : {
+      "x" : 46,
+      "y" : 8,
+      "style" : "exemption",
+      "tarrow" : [ ],
+      "farrow" : [ ]
+    }
+  } ]
+}

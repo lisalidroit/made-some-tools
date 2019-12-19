@@ -15,3 +15,12 @@ Example command:
 Note: 
 * perform `chmod +x replaceLinks.sh` in the terminal first to use it
 * input file should follow the *bofa-mifir-links.csv* format with the first line as headers
+
+## EU Short Position
+
+Contains
+
+* Basic eu short position logic mock up in json files
+* REGULATION (EU) No 236/2012 pdf
+* DIRECTIVE 2004/39/EC pdf
+* basic outline of each scope in a word file

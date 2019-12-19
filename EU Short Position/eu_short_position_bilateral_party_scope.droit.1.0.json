@@ -1,0 +1,75 @@
+{
+  "type" : "flowchart",
+  "metadata" : {
+    "id" : "eu_short_position_bilateral_party_scope.droit.1.0",
+    "branch" : "droit",
+    "createdDate" : 1567792265321, 
+    "author" : "template",
+    "comment" : null,
+    "status" : "run",
+    "parentVersionId" : "",
+    "mergeVersionId" : "",
+    "entityName" : "eu_short_position_bilateral_party_scope",
+    "effectiveDate" : 1567792265321,
+    "majorVersion" : 1,
+    "minorVersion" : 0
+  },
+  "name" : "eu_short_position_bilateral_party_scope",
+  "label" : "EU Short Position - Bilateral Party Scope",
+  "description" : null,
+  "tags" : [ ],
+  "inputs" : [ ],
+  "outputs" : [ ],
+  "defaults" : "[:]",
+  "initRef" : "node1",
+  "boundingBox" : [ ],
+  "nodes" : [ {
+    "type" : "condition",
+    "name" : "node1",
+    "description" : "Is at least one party in scope?",
+    "expr" : "d.eu_short_position_unilateral_scope_counterparty.'inScope' ||\nd.eu_short_position_unilateral_scope_contraparty.'inScope'",
+    "trueRef" : "node14",
+    "falseRef" : "node2",
+    "annotationURI" : "",
+    "annotationRefs" : null,
+    "formatting" : {
+      "x" : 0,
+      "y" : 6,
+      "style" : "",
+      "tarrow" : [ ],
+      "farrow" : [ ]
+    }
+  }, {
+    "type" : "termination",
+    "name" : "node2",
+    "description" : "Out of scope",
+    "expr" : "[\n    'in-scope': false]",
+    "trueRef" : "",
+    "falseRef" : "",
+    "annotationURI" : "",
+    "annotationRefs" : null,
+    "formatting" : {
+      "x" : 11,
+      "y" : 6,
+      "style" : "exemption",
+      "tarrow" : [ ],
+      "farrow" : [ ]
+    }
+  }, {
+    "type" : "termination",
+    "name" : "node14",
+    "description" : "Parties are in scope",
+    "expr" : "[\n\t'message':'reason for termination',\n\t'tsomeFact':'some fact'\n]\n// These outputs can be referenced from another\n// module as d.<this_module_name>.someFact\n",
+    "trueRef" : "",
+    "falseRef" : "",
+    "annotationURI" : "",
+    "annotationRefs" : null,
+    "formatting" : {
+      "x" : 0,
+      "y" : 13,
+      "style" : "continue",
+      "tarrow" : [ ],
+      "farrow" : [ ]
+    }
+  } ]
+}
