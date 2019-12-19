@@ -1,0 +1,106 @@
+{
+  "type" : "flowchart",
+  "metadata" : {
+    "id" : "eu_short_position_product_scope.droit.1.0",
+    "branch" : "droit",
+    "createdDate" : 1546881296003,
+    "author" : "template",
+    "comment" : null,
+    "status" : "run",
+    "parentVersionId" : "",
+    "mergeVersionId" : "",
+    "entityName" : "eu_short_position_product_scope",
+    "effectiveDate" : 1546881296003,
+    "majorVersion" : 1,
+    "minorVersion" : 0
+  },
+  "name" : "eu_short_position_product_scope",
+  "label" : "EU Product Scope for Short Position Mandates",
+  "description" : "EU Product Scope for Short Position Mandates",
+  "tags" : [ ],
+  "inputs" : [ ],
+  "outputs" : [ ],
+  "defaults" : "[:]",
+  "initRef" : "1",
+  "boundingBox" : [ ],
+  "nodes" : [ {
+    "type" : "condition",
+    "name" : "1",
+    "description" : "Is the product an appropriate EU Financial Instrument?",
+    "expr" : " (d.esma_taxonomy_translation.esmaContractTypes in ['FUTR', 'OPTN', 'SWAP','FORW']) || (d.esma_taxonomy_translation.esmaAssetClass in ['MoneyMarket', 'ContractForDifference'])",
+    "trueRef" : "node2",
+    "falseRef" : "node3",
+    "annotationURI" : "Annex I Section C of Directive 2004/39/EC",
+    "annotationRefs" : [ "Annex I Section C of Directive 2004/39/EC" ],
+    "formatting" : {
+      "x" : 3,
+      "y" : 5,
+      "tarrow" : [ ],
+      "farrow" : [ ]
+    }
+  }, {
+    "type" : "termination",
+    "name" : "node2",
+    "description" : "Product is in scope",
+    "expr" : "[\n    'in-scope': true,\n    ]",
+    "trueRef" : "",
+    "falseRef" : "",
+    "annotationURI" : "/document/17-CFR-240/annotation/1982",
+    "annotationRefs" : [ "/document/17-CFR-240/annotation/1982" ],
+    "formatting" : {
+      "x" : 16,
+      "y" : 5,
+      "style" : "continue",
+      "tarrow" : [ ],
+      "farrow" : [ ]
+    }
+  }, {
+    "type" : "condition",
+    "name" : "node3",
+    "description" : "Is Product a Credit Default Swap?",
+    "expr" : "true",
+    "trueRef" : "node4",
+    "falseRef" : "node5",
+    "annotationURI" : "",
+    "annotationRefs" : null,
+    "formatting" : {
+      "x" : 3,
+      "y" : 13,
+      "style" : "",
+      "tarrow" : [ ],
+      "farrow" : [ ]
+    }
+  }, {
+    "type" : "termination",
+    "name" : "node4",
+    "description" : "Product in scope",
+    "expr" : "[\n\t'message':'reason for termination',\n\t'tsomeFact':'some fact'\n]\n// These outputs can be referenced from another\n// module as d.<this_module_name>.someFact\n",
+    "trueRef" : "",
+    "falseRef" : "",
+    "annotationURI" : "",
+    "annotationRefs" : null,
+    "formatting" : {
+      "x" : 16,
+      "y" : 13,
+      "style" : "continue",
+      "tarrow" : [ ],
+      "farrow" : [ ]
+    }
+  }, {
+    "type" : "termination",
+    "name" : "node5",
+    "description" : "Out of Scope",
+    "expr" : "[\n\t'inScope': false,\n\t'message': 'Foo is not in scope because...',\n\t'source' : 'regulation citation goes here'\n]",
+    "trueRef" : "",
+    "falseRef" : "",
+    "annotationURI" : "",
+    "annotationRefs" : null,
+    "formatting" : {
+      "x" : 3,
+      "y" : 21,
+      "style" : "exemption",
+      "tarrow" : [ ],
+      "farrow" : [ ]
+    }
+  } ]
+}

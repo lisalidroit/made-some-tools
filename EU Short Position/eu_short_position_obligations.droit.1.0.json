@@ -1,0 +1,155 @@
+{
+  "type" : "flowchart",
+  "metadata" : {
+    "id" : "eu_short_position_obligations.droit.1.0",
+    "branch" : "droit",
+    "createdDate" : 1567792265321,
+    "author" : "droit",
+    "comment" : null,
+    "status" : "run",
+    "parentVersionId" : "",
+    "mergeVersionId" : "",
+    "entityName" : "eu_short_position_obligations",
+    "effectiveDate" : 1567792265321,
+    "majorVersion" : 1,
+    "minorVersion" : 0
+  },
+  "name" : "eu_short_position_obligations",
+  "label" : "EU Short Position - Obligations",
+  "description" : null,
+  "tags" : [ ],
+  "inputs" : [ ],
+  "outputs" : [ ],
+  "defaults" : "[\n    'core': [:],\n    'extra': [:]\n]",
+  "initRef" : "node7",
+  "boundingBox" : [ ],
+  "nodes" : [ {
+    "type" : "condition",
+    "name" : "node7",
+    "description" : "In contraparty in scope?",
+    "expr" : "d.eu_short_position_unilateral_scope_contraparty.'in-scope'",
+    "trueRef" : "node6",
+    "falseRef" : "node10",
+    "annotationURI" : "",
+    "annotationRefs" : null,
+    "formatting" : {
+      "x" : 2,
+      "y" : 12,
+      "style" : "",
+      "tarrow" : [ ],
+      "farrow" : [ ]
+    }
+  }, {
+    "type" : "termination",
+    "name" : "node8",
+    "description" : "Report to relevant authority",
+    "expr" : "[\n    'core':[\n        'obligation-bearer': 'Contraparty', //?\n        'obligation-time-frame': 'T+1', //?\n        'obligation-venue': [] //?\n        ],\n    'extra': [\n        'segregation-required': true,\n        'obligation-rule': 'Rule 15c3-3',\n        ]\n]\n// These outputs can be referenced from another\n// module as d.<this_module_name>.someFact\n",
+    "trueRef" : "",
+    "falseRef" : "",
+    "annotationURI" : "",
+    "annotationRefs" : null,
+    "formatting" : {
+      "x" : 25,
+      "y" : 19,
+      "style" : "continue",
+      "tarrow" : [ ],
+      "farrow" : [ ]
+    }
+  }, {
+    "type" : "termination",
+    "name" : "node9",
+    "description" : "Out of scope",
+    "expr" : "[\n\t'inScope': false,\n\t'message': 'Foo is not in scope because...',\n\t'source' : 'regulation citation goes here'\n]",
+    "trueRef" : "",
+    "falseRef" : "",
+    "annotationURI" : "",
+    "annotationRefs" : null,
+    "formatting" : {
+      "x" : 31,
+      "y" : 12,
+      "style" : "exemption",
+      "tarrow" : [ ],
+      "farrow" : [ ]
+    }
+  }, {
+    "type" : "condition",
+    "name" : "node10",
+    "description" : "Is counterparty in scope?",
+    "expr" : "d.eu_short_position_unilateral_scope_counterparty.'in-scope'  // replace this with d.<expr>",
+    "trueRef" : "node6",
+    "falseRef" : "node9",
+    "annotationURI" : "",
+    "annotationRefs" : null,
+    "formatting" : {
+      "x" : 15,
+      "y" : 12,
+      "style" : "",
+      "tarrow" : [ ],
+      "farrow" : [ ]
+    }
+  }, {
+    "type" : "condition",
+    "name" : "node6",
+    "description" : "Did position fall below 0.2% or just reach 0.2%, 0.3% or 0.4% of the issued share capital?",
+    "expr" : "(d.trade.oldPosition < 0.002 && d.trade.newPosition >= 0.002)||\n(d.trade.oldPosition >= 0.002 && d.trade.newPosition < 0.002)||\n(d.trade.oldPosition >= 0.003 && d.trade.newPosition < 0.005)",
+    "trueRef" : "node8",
+    "falseRef" : "node11",
+    "annotationURI" : "",
+    "annotationRefs" : null,
+    "formatting" : {
+      "x" : 8,
+      "y" : 19,
+      "style" : "",
+      "tarrow" : [ ],
+      "farrow" : [ ]
+    }
+  }, {
+    "type" : "condition",
+    "name" : "node11",
+    "description" : "Did position reach 0.5% or every 0,1% above that of the issued share capital?",
+    "expr" : "(d.trade.oldPosition >= 0.005) && ((d.trade.newPosition - d.trade.oldPosition>= 0.001))",
+    "trueRef" : "node12",
+    "falseRef" : "node13",
+    "annotationURI" : "",
+    "annotationRefs" : null,
+    "formatting" : {
+      "x" : 8,
+      "y" : 28,
+      "style" : "",
+      "tarrow" : [ ],
+      "farrow" : [ ]
+    }
+  }, {
+    "type" : "termination",
+    "name" : "node12",
+    "description" : "Public disclosure requirement",
+    "expr" : "[\n\t'message':'reason for termination',\n\t'tsomeFact':'some fact'\n]\n// These outputs can be referenced from another\n// module as d.<this_module_name>.someFact\n",
+    "trueRef" : "",
+    "falseRef" : "",
+    "annotationURI" : "",
+    "annotationRefs" : null,
+    "formatting" : {
+      "x" : 8,
+      "y" : 38,
+      "style" : "continue",
+      "tarrow" : [ ],
+      "farrow" : [ ]
+    }
+  }, {
+    "type" : "termination",
+    "name" : "node13",
+    "description" : "Out of Scope",
+    "expr" : "[\n\t'inScope': false,\n\t'message': 'Foo is not in scope because...',\n\t'source' : 'regulation citation goes here'\n]",
+    "trueRef" : "",
+    "falseRef" : "",
+    "annotationURI" : "",
+    "annotationRefs" : null,
+    "formatting" : {
+      "x" : 25,
+      "y" : 28,
+      "style" : "exemption",
+      "tarrow" : [ ],
+      "farrow" : [ ]
+    }
+  } ]
+}
