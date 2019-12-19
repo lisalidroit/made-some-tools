@@ -24,3 +24,7 @@ Contains
 * REGULATION (EU) No 236/2012 pdf
 * DIRECTIVE 2004/39/EC pdf
 * basic outline of each scope in a word file
+
+## Work Term Report
+
+* A Comparison Between Clojure And Python

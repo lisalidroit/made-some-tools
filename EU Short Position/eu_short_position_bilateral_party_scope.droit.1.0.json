@@ -16,7 +16,7 @@
   },
   "name" : "eu_short_position_bilateral_party_scope",
   "label" : "EU Short Position - Bilateral Party Scope",
-  "description" : null,
+  "description" : "EU Short Position - Bilateral Party Scope",
   "tags" : [ ],
   "inputs" : [ ],
   "outputs" : [ ],
