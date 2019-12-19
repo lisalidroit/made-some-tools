@@ -1,0 +1,43 @@
+{
+  "type" : "flowchart",
+  "metadata" : {
+    "id" : "eu_short_position_transaction_eligibility.droit.1.0",
+    "branch" : "droit",
+    "createdDate" : 1567792265321,
+    "author" : "droit",
+    "comment" : null,
+    "status" : "run",
+    "parentVersionId" : "",
+    "mergeVersionId" : "",
+    "entityName" : "eu_short_position_transaction_eligibility",
+    "effectiveDate" : 1567792265321,
+    "majorVersion" : 1,
+    "minorVersion" : 0
+  },
+  "name" : "eu_short_position_transaction_eligibility",
+  "label" : "EU Short Position - Transaction Eligibility",
+  "description" : null,
+  "tags" : [ ],
+  "inputs" : [ ],
+  "outputs" : [ ],
+  "defaults" : "[:]",
+  "initRef" : "node1",
+  "boundingBox" : [ ],
+  "nodes" : [ {
+    "type" : "termination",
+    "name" : "node1",
+    "description" : "EU Short Position Transaction Eligibility",
+    "expr" : "[\n    'in-scope': d.eu_short_position_product_scope.'in-scope' &&\n                d.eu_short_position_bilateral_party_scope.'in-scope' &&\n                d.eu_short_position_transaction_context.'in-scope'\n]",
+    "trueRef" : null,
+    "falseRef" : null,
+    "annotationURI" : "",
+    "annotationRefs" : null,
+    "formatting" : {
+      "x" : 3,
+      "y" : 8,
+      "tarrow" : [ ],
+      "farrow" : [ ],
+      "style" : "mandate"
+    }
+  } ]
+}

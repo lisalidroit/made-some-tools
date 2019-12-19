@@ -1,0 +1,139 @@
+{
+  "type" : "flowchart",
+  "metadata" : {
+    "id" : "eu_short_position_transaction_context.droit.1.0",
+    "branch" : "droit",
+    "createdDate" : 1567792265321,
+    "author" : "droit",
+    "comment" : null,
+    "status" : "run",
+    "parentVersionId" : "",
+    "mergeVersionId" : "",
+    "entityName" : "eu_short_position_transaction_context",
+    "effectiveDate" : 1567792265321,
+    "majorVersion" : 1,
+    "minorVersion" : 0
+  },
+  "name" : "eu_short_position_transaction_context",
+  "label" : "EU Short Position - Transaction Context",
+  "description" : null,
+  "tags" : [ ],
+  "inputs" : [ ],
+  "outputs" : [ ],
+  "defaults" : "[:]",
+  "initRef" : "node4",
+  "boundingBox" : [ ],
+  "nodes" : [ {
+    "type" : "condition",
+    "name" : "node1",
+    "description" : "Is transaction in a short position",
+    "expr" : "d.trade.isShortPosition",
+    "trueRef" : "node6",
+    "falseRef" : "node2",
+    "annotationURI" : "",
+    "annotationRefs" : null,
+    "formatting" : {
+      "x" : 0,
+      "y" : 17,
+      "style" : "",
+      "tarrow" : [ ],
+      "farrow" : [ ]
+    }
+  }, {
+    "type" : "termination",
+    "name" : "node2",
+    "description" : "Out of scope",
+    "expr" : "[\n\t'inScope': false,\n\t'message': 'Foo is not in scope because...',\n\t'source' : 'regulation citation goes here'\n]",
+    "trueRef" : "",
+    "falseRef" : "",
+    "annotationURI" : "",
+    "annotationRefs" : null,
+    "formatting" : {
+      "x" : 16,
+      "y" : 17,
+      "style" : "exemption",
+      "tarrow" : [ ],
+      "farrow" : [ ]
+    }
+  }, {
+    "type" : "condition",
+    "name" : "node4",
+    "description" : "Is transaction trading on a trading venue?",
+    "expr" : "d.trade.tradevenue in ['regulated market', 'multilateral trading facility']",
+    "trueRef" : "node1",
+    "falseRef" : "node5",
+    "annotationURI" : "",
+    "annotationRefs" : null,
+    "formatting" : {
+      "x" : 0,
+      "y" : 8,
+      "style" : "",
+      "tarrow" : [ ],
+      "farrow" : [ ]
+    }
+  }, {
+    "type" : "termination",
+    "name" : "node5",
+    "description" : "Out of scope",
+    "expr" : "[\n\t'inScope': false,\n\t'message': 'Foo is not in scope because...',\n\t'source' : 'regulation citation goes here'\n]",
+    "trueRef" : "",
+    "falseRef" : "",
+    "annotationURI" : "",
+    "annotationRefs" : null,
+    "formatting" : {
+      "x" : 16,
+      "y" : 8,
+      "style" : "exemption",
+      "tarrow" : [ ],
+      "farrow" : [ ]
+    }
+  }, {
+    "type" : "condition",
+    "name" : "node6",
+    "description" : "Did position fall below or reach 0.2% of the company issued share capital?",
+    "expr" : "(d.trade.newPosition >= 0.002)||(d.trade.oldPosition >= 0.002 && d.trade.newPosition < 0.002) \n",
+    "trueRef" : "node7",
+    "falseRef" : "node8",
+    "annotationURI" : "",
+    "annotationRefs" : null,
+    "formatting" : {
+      "x" : 0,
+      "y" : 25,
+      "style" : "",
+      "tarrow" : [ ],
+      "farrow" : [ ]
+    }
+  }, {
+    "type" : "termination",
+    "name" : "node7",
+    "description" : "In Scope",
+    "expr" : "[\n\t'mandated': true,\n\t'message': 'Mandated as per regulation...'\n]",
+    "trueRef" : "",
+    "falseRef" : "",
+    "annotationURI" : "",
+    "annotationRefs" : null,
+    "formatting" : {
+      "x" : 0,
+      "y" : 32,
+      "style" : "mandate",
+      "tarrow" : [ ],
+      "farrow" : [ ]
+    }
+  }, {
+    "type" : "termination",
+    "name" : "node8",
+    "description" : "Out of Scope",
+    "expr" : "[\n\t'inScope': false,\n\t'message': 'Foo is not in scope because...',\n\t'source' : 'regulation citation goes here'\n]",
+    "trueRef" : "",
+    "falseRef" : "",
+    "annotationURI" : "",
+    "annotationRefs" : null,
+    "formatting" : {
+      "x" : 16,
+      "y" : 25,
+      "style" : "exemption",
+      "tarrow" : [ ],
+      "farrow" : [ ]
+    }
+  } ]
+}
