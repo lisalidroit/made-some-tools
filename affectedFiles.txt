@@ -1,0 +1,66 @@
+Affected files with old link: /document/MiFID-II-Del-Reg/1/1/element/article_10_1__point_a , new link: /document/MiFID-II-Del-Reg/annotation/645
+/Users/lisali/Desktop/Droit/workflows/snapshot.droit.1.0/mifid2_section_c4_financial_instrument.droit.1.0.json
+Affected files with old link: /document/MiFID-II-Del-Reg/1/1/element/article_10_1__point_a , new link: /document/MiFID-II-Del-Reg/annotation/645
+/Users/lisali/Desktop/Droit/workflows/snapshot.droit.1.0/fca_section_c4_financial_instrument.droit.1.0.json
+Affected files with old link: /document/MiFID-II-Del-Reg/1/1/element/article_10_1__point_a , new link: /document/MiFID-II-Del-Reg/annotation/645
+/Users/lisali/Desktop/Droit/workflows/snapshot.droit.1.0/mifid2_section_c4_financial_instrument_variant.droit.1.0.json
+Affected files with old link: /document/MiFID-II-Del-Reg/1/1/element/article_10_1__point_b , new link: /document/MiFID-II-Del-Reg/annotation/1017
+/Users/lisali/Desktop/Droit/workflows/snapshot.droit.1.0/fca_suitability_appropriateness_transaction_context.droit.1.0.json
+Affected files with old link: /document/MiFID-II-Del-Reg/1/1/element/article_10_1__point_b , new link: /document/MiFID-II-Del-Reg/annotation/1017
+/Users/lisali/Desktop/Droit/workflows/snapshot.droit.1.0/fca_ork_transaction_context.droit.1.0.json
+Affected files with old link: /document/MiFID-II-Del-Reg/1/1/element/article_10_1__point_b , new link: /document/MiFID-II-Del-Reg/annotation/1017
+/Users/lisali/Desktop/Droit/workflows/snapshot.droit.1.0/mifir_post_trade_transparency_transaction_context.droit.1.0.json
+Affected files with old link: /document/MiFID-II-Del-Reg/1/1/element/article_10_1__point_b , new link: /document/MiFID-II-Del-Reg/annotation/1017
+/Users/lisali/Desktop/Droit/workflows/snapshot.droit.1.0/mifid2_suitability_appropriateness_transaction_context.droit.1.0.json
+Affected files with old link: /document/MiFID-II-Del-Reg/1/1/element/article_10_1__point_b , new link: /document/MiFID-II-Del-Reg/annotation/1017
+/Users/lisali/Desktop/Droit/workflows/snapshot.droit.1.0/mifir_fird_reporting_transaction_context.droit.1.0.json
+Affected files with old link: /document/MiFID-II-Del-Reg/1/1/element/article_10_1__point_b , new link: /document/MiFID-II-Del-Reg/annotation/1017
+/Users/lisali/Desktop/Droit/workflows/snapshot.droit.1.0/fca_fird_reporting_transaction_context.droit.1.0.json
+Affected files with old link: /document/MiFID-II-Del-Reg/1/1/element/article_10_1__point_b , new link: /document/MiFID-II-Del-Reg/annotation/1017
+/Users/lisali/Desktop/Droit/workflows/snapshot.droit.1.0/fca_best_ex_client_execution_transaction_context.droit.1.0.json
+Affected files with old link: /document/MiFID-II-Del-Reg/1/1/element/article_10_1__point_b , new link: /document/MiFID-II-Del-Reg/annotation/1017
+/Users/lisali/Desktop/Droit/workflows/snapshot.droit.1.0/mifir_pre_trade_transparency_transaction_context.droit.1.0.json
+Affected files with old link: /document/MiFID-II-Del-Reg/1/1/element/article_10_1__point_b , new link: /document/MiFID-II-Del-Reg/annotation/1017
+/Users/lisali/Desktop/Droit/workflows/snapshot.droit.1.0/cacib_info_on_instrument_transaction_context.droit.1.0.json
+Affected files with old link: /document/MiFID-II-Del-Reg/1/1/element/article_10_1__point_b , new link: /document/MiFID-II-Del-Reg/annotation/1017
+/Users/lisali/Desktop/Droit/workflows/snapshot.droit.1.0/fca_costs_charges_transaction_context.droit.1.0.json
+Affected files with old link: /document/MiFID-II-Del-Reg/1/1/element/article_10_1__point_b , new link: /document/MiFID-II-Del-Reg/annotation/1017
+/Users/lisali/Desktop/Droit/workflows/snapshot.droit.1.0/fca_post_trade_transparency_transaction_context.droit.1.0.json
+Affected files with old link: /document/MiFID-II-Del-Reg/1/1/element/article_10_1__point_b , new link: /document/MiFID-II-Del-Reg/annotation/1017
+/Users/lisali/Desktop/Droit/workflows/snapshot.droit.1.0/fca_best_ex_top5_transaction_context.droit.1.0.json
+Affected files with old link: /document/MiFID-II-Del-Reg/1/1/element/article_10_1__point_b , new link: /document/MiFID-II-Del-Reg/annotation/1017
+/Users/lisali/Desktop/Droit/workflows/snapshot.droit.1.0/fca_best_ex_qoe_transaction_context.droit.1.0.json
+Affected files with old link: /document/MiFID-II-Del-Reg/1/1/element/article_10_1__point_b , new link: /document/MiFID-II-Del-Reg/annotation/1017
+/Users/lisali/Desktop/Droit/workflows/snapshot.droit.1.0/mifir_transaction_reporting_transaction_context.droit.1.0.json
+Affected files with old link: /document/MiFID-II-Del-Reg/1/1/element/article_10_1__point_b , new link: /document/MiFID-II-Del-Reg/annotation/1017
+/Users/lisali/Desktop/Droit/workflows/snapshot.droit.1.0/mifid2_best_ex_qoe_transaction_context.droit.1.0.json
+Affected files with old link: /document/MiFID-II-Del-Reg/1/1/element/article_10_1__point_b , new link: /document/MiFID-II-Del-Reg/annotation/1017
+/Users/lisali/Desktop/Droit/workflows/snapshot.droit.1.0/fca_other_currency_derivative_exclusion.droit.1.0.json
+Affected files with old link: /document/MiFID-II-Del-Reg/1/1/element/article_10_1__point_b , new link: /document/MiFID-II-Del-Reg/annotation/1017
+/Users/lisali/Desktop/Droit/workflows/snapshot.droit.1.0/mifid2_best_ex_client_execution_transaction_context.droit.1.0.json
+Affected files with old link: /document/MiFID-II-Del-Reg/1/1/element/article_10_1__point_b , new link: /document/MiFID-II-Del-Reg/annotation/1017
+/Users/lisali/Desktop/Droit/workflows/snapshot.droit.1.0/fca_pre_trade_transparency_transaction_context.droit.1.0.json
+Affected files with old link: /document/MiFID-II-Del-Reg/1/1/element/article_10_1__point_b , new link: /document/MiFID-II-Del-Reg/annotation/1017
+/Users/lisali/Desktop/Droit/workflows/snapshot.droit.1.0/fca_derivative_trading_transaction_context.droit.1.0.json
+Affected files with old link: /document/MiFID-II-Del-Reg/1/1/element/article_10_1__point_b , new link: /document/MiFID-II-Del-Reg/annotation/1017
+/Users/lisali/Desktop/Droit/workflows/snapshot.droit.1.0/mifid2_client_reporting_transaction_context.droit.1.0.json
+Affected files with old link: /document/MiFID-II-Del-Reg/1/1/element/article_10_1__point_b , new link: /document/MiFID-II-Del-Reg/annotation/1017
+/Users/lisali/Desktop/Droit/workflows/snapshot.droit.1.0/fca_product_governance_transaction_context.droit.1.0.json
+Affected files with old link: /document/MiFID-II-Del-Reg/1/1/element/article_10_1__point_b , new link: /document/MiFID-II-Del-Reg/annotation/1017
+/Users/lisali/Desktop/Droit/workflows/snapshot.droit.1.0/fca_transaction_reporting_transaction_context.droit.1.0.json
+Affected files with old link: /document/MiFID-II-Del-Reg/1/1/element/article_10_1__point_b , new link: /document/MiFID-II-Del-Reg/annotation/1017
+/Users/lisali/Desktop/Droit/workflows/snapshot.droit.1.0/mifid2_other_currency_derivative_exclusion.droit.1.0.json
+Affected files with old link: /document/MiFID-II-Del-Reg/1/1/element/article_10_1__point_b , new link: /document/MiFID-II-Del-Reg/annotation/1017
+/Users/lisali/Desktop/Droit/workflows/snapshot.droit.1.0/mifir_firm_quote_transaction_context.droit.1.0.json
+Affected files with old link: /document/MiFID-II-Del-Reg/1/1/element/article_10_1__point_b , new link: /document/MiFID-II-Del-Reg/annotation/1017
+/Users/lisali/Desktop/Droit/workflows/snapshot.droit.1.0/fca_firm_quote_transaction_context.droit.1.0.json
+Affected files with old link: /document/MiFID-II-Del-Reg/1/1/element/article_10_1__point_b , new link: /document/MiFID-II-Del-Reg/annotation/1017
+/Users/lisali/Desktop/Droit/workflows/snapshot.droit.1.0/mifid2_best_ex_top5_transaction_context.droit.1.0.json
+Affected files with old link: /document/MiFID-II-Del-Reg/1/1/element/article_10_1__point_b , new link: /document/MiFID-II-Del-Reg/annotation/1017
+/Users/lisali/Desktop/Droit/workflows/snapshot.droit.1.0/fca_client_reporting_transaction_context.droit.1.0.json
+Affected files with old link: /document/MiFID-II-Del-Reg/1/1/element/article_10_1__point_b , new link: /document/MiFID-II-Del-Reg/annotation/1017
+/Users/lisali/Desktop/Droit/workflows/snapshot.droit.1.0/mifid2_ork_transaction_context.droit.1.0.json
+Affected files with old link: /document/MiFID-II-Del-Reg/1/1/element/article_10_1__point_b , new link: /document/MiFID-II-Del-Reg/annotation/1017
+/Users/lisali/Desktop/Droit/workflows/snapshot.droit.1.0/mifid2_product_governance_transaction_context.droit.1.0.json
+Affected files with old link: /document/MiFID-II-Del-Reg/1/1/element/article_10_1__point_b , new link: /document/MiFID-II-Del-Reg/annotation/1017
+/Users/lisali/Desktop/Droit/workflows/snapshot.droit.1.0/mifid2_costs_charges_transaction_context.droit.1.0.json
