@@ -1,0 +1,6 @@
+Affected files with old link: /document/MiFID-II-Del-Reg/1/1/element/article_10_1__point_a , new link: /document/MiFID-II-Del-Reg/annotation/645
+/Users/lisali/Desktop/Droit/workflows/snapshot.droit.1.0/mifid2_section_c4_financial_instrument.droit.1.0.json
+Affected files with old link: /document/MiFID-II-Del-Reg/1/1/element/article_10_1__point_a , new link: /document/MiFID-II-Del-Reg/annotation/645
+/Users/lisali/Desktop/Droit/workflows/snapshot.droit.1.0/fca_section_c4_financial_instrument.droit.1.0.json
+Affected files with old link: /document/MiFID-II-Del-Reg/1/1/element/article_10_1__point_a , new link: /document/MiFID-II-Del-Reg/annotation/645
+/Users/lisali/Desktop/Droit/workflows/snapshot.droit.1.0/mifid2_section_c4_financial_instrument_variant.droit.1.0.json
