@@ -1,0 +1,1385 @@
+namespace,name,type,cardinality,description,validation,source
+party,CTAInPlace,Boolean,One,CTA In Place,,
+party,EUDomServices,Boolean,One,Party is an authorised investment firm providing investment services and/or performing investment activities in the EU,,
+party,MasApprovedTrustee,Boolean,One,N/A,,
+party,MasBank,Boolean,One,N/A,,
+party,MasBankSubsidiary,Boolean,One,N/A,,
+party,MasCapitalMarketLicensee,Boolean,One,N/A,,
+party,MasFinanceCompany,Boolean,One,N/A,,
+party,MasHeadOfficeSG,Boolean,One,N/A,,
+party,MasIncorporatedSG,Boolean,One,N/A,,
+party,MasInsurer,Boolean,One,N/A,,
+party,MasMerchantBank,Boolean,One,N/A,,
+party,MasSignificantDerivativeHolder,Boolean,One,N/A,,
+party,SingaporeExemptPerson,Boolean,One,"1. The Government 2. Any statutory board established under any written law 3. Any central bank in a jurisdiction other than Singapore 4. Any central government in a jurisdiction other than Singapore 5. Any agency (of a central government in a jurisdiction other than Singapore) that is incorporated or established, in a jurisdiction other than Singapore, for non?commercial purposes 6. Any of the following multilateral agencies, organisations or entities: -the African Development Bank -the Asian Development Bank -the Bank for International Settlements -the European Bank for Reconstruction and Development -the European Economic Community -the European Investment Bank -the Inter?American Development Bank -the International Bank for Reconstruction and Development (World?Bank) -the International Finance Corporation -the International Monetary Fund",,
+party,accountDomicileCountryCode,String,One,"The two letter ISO-CC code for the country of domicile. Drives the ""established in EU"" criterion for EMIR workflows.",,
+party,accountID,String,One,Unique Party identifier used for search and display,,
+party,accountName,String,One,Party Name used for search and  display,,
+party,aifManager,Boolean,One,AIF Manager,,AIF Directive art. 4(1)(b)
+party,alwaysCoveredBondExecution,Boolean,One,The client represents they are always entering derivative transactions to hedge European covered bond issuance.,,
+party,alwaysFileEUEForClient,Boolean,One,Skip Standing Opt Out Annual Filing,,
+party,amfDeemedDealer,Boolean,One,"For purpose of the Quebec reporting requirements only, party represents itself as a ""deemed dealer"" to report as if it were a registered dealer under AMF",,
+party,amfDerivativesDealer,Boolean,One,Whether an entity is a registered as a dealer under the Derivatives Act (chapter I.14.01),,"Regulation 91-507 respecting trade repositories and derivatives data reporting (2013), par.1"
+party,amfSpecialEntity,Boolean,One,"Whether an entity is one of the excluded entities from the application of this Regulation: (a) the Gouvernement du Quebec; (b) a body referred to in paragraph 2 of section 77 of the Financial Administration Act (chapter A-6.001); (c) a municipality, a metropolitan community, a school board or the Comite de gestion de la taxe scolaire de l'ile de Montreal; (d) a transit authority established under an Act of Quebec; (e) a public institution or regional council within the meaning of the Act respecting health services and social services for Cree Native persons (chapter S-5), a public institution or a health and social services agency referred to in the Act respecting health services and social services (chapter S-4.2), or the Corporation d'hebergement du Quebec; (f) a Quebec university; (g) a general and vocational college; (h) an inter-municipal management board.",,"Regulation 91-507 respecting trade repositories and derivatives data reporting (2013), par. 41"
+party,appropriatenessInfo,Boolean,One,Information to assess appropriateness obtained,,"MiFID-II art. 25(3), MiFID-II Del. Reg. art. 56(1)"
+party,asicForeignCompany,Boolean,One,A foreign company that is required to be registered under Division 2 of Part 5B.2 of the Corporations Act 2001,,"Corporations Act 2001, s761D (Austl.)"
+party,asicReportingDelegate,String,One,LEI for the delegate appointed by the Reporting Entity to report on behalf of the Reporting Entity in accordance with Rules 2.2.1 to 2.2.5 and 2.2.8,,"ASIC Derivative Transaction Rules (Reporting) 2013, Rule 2.2.7 (Austl.)"
+party,ateDocumenation,Boolean,One,ateDocumentation,,
+party,ateDocumentation,Boolean,One,ATE Documentation,,
+party,auForeignIntlActiveDealer,Boolean,One,"The party is a ��_��_��_foreign internationally active dealer��_� as defined in the ASIC Rules (Clearing), Art. 1.2.1 and Corporations Regulations 2001, section 7.5A.65.",,"ASIC Rules (Clearing), Art. 1.2.1 and Corporations Regulations 2001, section 7.5A.65"
+party,auGrossNotionalOutstandingPositionPersonal,Integer,One,"The party��_�s ��_��_��_gross notional outstanding position,��_� expressed in AUD, when acting in their personal capacity, as defined in the ASIC Rules (Clearing), Art. 1.2.6.",,"ASIC Rules (Clearing), Art. 1.2.6"
+party,auGrossNotionalOutstandingPositionRepresentative,Integer,One,"The party��_�s ��_��_��_gross notional outstanding position,��_� expressed in AUD, when acting in a representative capacity, as defined in the ASIC Rules (Clearing), Art. 1.2.6.",,"ASIC Rules (Clearing), Art. 1.2.6"
+party,auNexusOptIn,Boolean,One,Whether an entity has provided Opt-in Notice and has not withdrawn that notice to use the alternative test for establishing AU nexus (Nexus Derivative Transaction or Nexus Derivative Position),,Australian Securities and Investments Commission Corporations Act?Paragraph 907D(2)(a)? Class Exemption
+party,auReportingCounterpartyRepresentation,EnumeratedString,One,"If two parties have made representations to each other, such that one party is the Reporting Entity and the other party is the Exempt Entity electing single-sided exemption, then this attribute must be used to specify which side is the Reporting Entity",lookup:PartyRoleType,"Corporations Amendment (Central Clearing and Single-Sided Reporting) Regulation 2015, 7.5A.72"
+party,austrailianFinServicesLicense,Boolean,One,Whether a person holds an Australian financial services licence within the meaning of section 761A of the Corporations Act 2001.,,"ASIC Derivative Transaction Rules (Reporting) 2013, Rule 1.2.3 (Austl.)"
+party,australianPhase2ReportingThreshold,Boolean,One,Whether a party as at 31 December 2013 holds total gross notional outstanding positions of AUD $50 billion or more,,ASIC Derivative Transaction Rules (Reporting) 2013 S1.2.1
+party,australianPhase3ReportingThreshold,Boolean,One,A party as at 30 June 2014 holds total gross notional outstanding positions of AUD $5 billion or more,,ASIC Derivative Transaction Rules (Reporting) 2013 S1.2.1
+party,authorizedDepositInstitution,Boolean,One,Whether an Australian Entity is an Australian ADI within the meaning of section 9 of the Corporations Act 2001.,,"ASIC Derivative Transaction Rules (Reporting) 2013, Rule 1.2.3 (Austl.)"
+party,bisBankruptcyRemoteness,Boolean,One,"The (contra)party has ��_��__��_��__��_��__bankruptcy remoteness.��_��__��_  Under Basel III, bankruptcy remoteness is satisfied if (i) the Initial Margin and any Additional Collateral Amount are held with the CCP and (ii) there is a Security Deed of Assignment in place between the client, the clearing member and the CCP.",,BIS Reg Cap
+party,bisLookThroughOptionAvailable,Boolean,One,The ��_��__��_��__��_��__look through��_��__��_ option is available to the (contra)party.,,BIS Reg Cap
+party,bisReasonedOpinionExists,Boolean,One,"Under Basel III, the (contra)party has received a reasoned opinion from counsel determining that ��_��__��_��__��_��__look through��_��__��_ is justified.  Industry opinions need to be on file which verify the following: (1) Upon aclearing member��_��__��_s insolvency (e.g. a trigger event), initial margin is not available to clearing member��_��__��_s other creditors; (2) CCP has the ability to segregate positions and initial margin on an omnibus or individually segregated basis; (3) CCP supports portability (i.e. positions and initial margin are capable of being transferred to a back-up clearing member); (4) CCP��_��__��_s portability is enforceable; and (5) client clearing agreement is enforceable.",,BIS Reg Cap
+party,branch,Boolean,One,Party is a branch,,
+party,bunchedOrder,Boolean,One,Is this a bunched order identifier? If instead it is a subaccount the answer is False.,,
+party,caAboveAffiliateThreshold,Boolean,One,Whether an affiliate of a participant of a Regulated Clearing Agency is above the gross notional threshold as defined in Rule 94-101 Part 2 Section 3(1)(b)(ii) and meets the clearing specifications in Section 3(2),,Rule 94-101 Part 2 Section 3.(1)(b)(ii) & (2)
+party,caAboveLCThreshold,Boolean,One,Whether a Local Counterparty's combined gross notional is above the threshold as defined in Rule 94-101 Part 2 Section 3(1)(c)(ii) and meets the clearing specifications in Section 3(2),,Rule 94-101 Part 2 Section 3(1)(c)(ii) & (2)
+party,caAffiliatedPersonLocalities,EnumeratedString,Many,"List of Canadian provincial abbreviation codes that corresponds to the provinces checked under ISDA Canadian representation letter question II(B), i.e. provinces where an entity is an affiliate of a local counterparty.",lookup:CanadianPostalAbbreviations,ISDA Canadian Representation Letter #1 for Trade Reporting and Other Obligations.
+party,caClearingCategory1,Boolean,One,Whether an entity is a participant of a regulated clearing agency under Rule 94-101,,CSA Rule 94-101 Part 6 Section 13
+party,caClearingExemptSpecialEntity,Boolean,One,Whether party meets the criteria expressed in Part 3 Section 6 of Rule 94-101,,CSA Rule 94-101 Part 3 Section 6
+party,caClearingIntragroupAgreement,Boolean,One,Whether affiliated entities to a mandatory clearable derivative agree to rely on Intragroup exemption,,94-101 Part 3 Section 7.(1)(b)
+party,caCoveredEntity,Boolean,One,Party is a financial entity in a consolidated group with AANA for March-May 2016 and any year after exceeding CAD 12 billion,,
+party,caDeemedDealerLocalities,EnumeratedString,Many,"List of provincial codes checked for ISDA Canadian representation letter question IV, i.e. the list of provinces where an entity is a deemed  dealer.",lookup:CanadianPostalAbbreviations,ISDA Canadian Representation Letter #1 for Trade Reporting and Other Obligations.
+party,caFinancialInstitution,Boolean,One,Whether an entity is a Canadian Financial Institution,,"Capital Tax Act (1997), s.58."
+party,caIMPhaseInCategory,EnumeratedString,One,"Indicates when the party is phased in (per CA AANA calculation for reference period March-May): NotPhasedIn, 2016, 2017, 2018, 2019, 2020, After2020",lookup:IMPhaseInCategoryType,
+party,caMarginExemptAffiliate,Boolean,One,Canadian Margin-Exempt Affiliate,,
+party,caPersonLocalities,EnumeratedString,Many,"List of location codes checked for question I(A) in the ISDA Canadian Representation Letter, i.e. jurisdiction of organization, or head office, or principal place of business.",lookup:CanadianPostalAbbreviations,ISDA Canadian Representation Letter #1 for Trade Reporting and Other Obligations.
+party,caRegisteredDealerLocalities,EnumeratedString,Many,"List of provincial codes checked for ISDA Canadian representation letter question I.2(B), i.e. the list of provinces where an entity is registered as a dealer.",lookup:CanadianPostalAbbreviations,ISDA Canadian Representation Letter #1 for Trade Reporting and Other Obligations.
+party,caReportingDelegate,String,One,LEI or other Identification for the party to whom a party has delegated its trade reporting obligation under Canadian reporting rules,,"Regulation 91-507 respecting trade repositories and derivatives data reporting (2013), par.26(3)."
+party,caSpecialEntity,Boolean,One,"Whether an entity is one of the excluded entities from the application of this Regulation in Part 5 Section 41 of OSC, AMF and MSC",,
+party,cacibISRClassification,EnumeratedString,One,Party Internal Suitability Rating (ISR) classification,,
+party,cdeaDocumentation,Boolean,One,Did the client sign FIA/ISDA CDEA documentation to cover cleared OTC transactions?,,
+party,cftcClearingAffiliateExemptionElection,Boolean,One,Whether a party elects the Affiliate Exemption per 17 CFR Part 50.52(b)(1),,17 CFR Part 50.52(b)(1)
+party,cftcEndUserMeetsFinancialObligations,Boolean,One,CFTC end user meets its financial obligations through the election of one or more of the following five criteria: a. Written credit support agreement  b. Pledged or segregated assets  c. Written third-party guarantee  d. Available financial resources  e. Mean other than those described in the foregoing subsection A - D,,
+party,cftcFinalUSPerson,Boolean,One,U.S. Person definition according to CFTC Interpretive Guidance on Cross-Border Application of Swap Provisions,,"Final Guidance, 78 Fed. Reg. 45369 (Jul. 26, 2013)."
+party,cftcMajorJurisdiction,Boolean,One,"Is the party domiciled in any of the following jurisdictions: Australia, Canada, the European Union, Hong Kong, Japan, Switzerland. Note that there is some logic involved in deriving this field that may draw on the domicile / principal place of business fields.",,"Final Guidance, 78 Fed. Reg. 45369 (Jul. 26, 2013)."
+party,cftcSdrDelegate,String,One,CFTC Swap Data Reporting delegate party LEI,,17 C.F.R. s 45.9
+party,cftcSegregatedMargin,String,One,"This field tracks registration of clients for Segregated Margin. This applies as follows: - Blank: CFTC Collateral Segregation rules do not apply - SPN: CFTC Collateral Segregation rules do not apply; ""Trading suspended: CFTC Segregation Election not received? - RCY: CFTC Collateral Segregation is required, trading is allowed, independent amount should be taken with trade; "" ?Can ask for Independent amount (IA /IM) Collateral Segregation is required? - RCN: CFTC Collateral Segregation is NOT required, trading is allowed, independent amount should be taken with trade, ?Can ask for Independent amount (IA /IM) Collateral Segregation is NOT required?",,
+party,cftcSwapEntity,Boolean,One,"CFTC swap entity includes Swap Dealer and Major Swap Participant. Whether party has represented itself as a CFTC Swap entity by answering ""yes"" to the ISDA March DF Protocol questionnaire 2 ""CFTC Swap Entity""",,
+party,clearingImplementationCategory,String,One,"Reasonably complicated logic that drives this, but ultimately it comes down to the following:     if (CFTC Swap Entity) or (Active Fund) then CATEGORY1 else if Category 2 Entity then CATEGORY2 else CATEGORY3 Field takes the following enumerated values: - CATEGORY1 - CATEGORY2 - CATEGORY3 - UNKNOWN - NOT_APPLICABLE",,
+party,clearingMemberVsClient,EnumeratedString,Many,Indicates whether the (contra)party is acting as clearing member or client.,lookup:clearingMemberVsClientEnum,BIS Reg Cap
+party,clientClearedAddendumInPlace,Boolean,One,There is an ISDA/FIA Client Cleared Derivatives Addendum in place between the (contra)party and its client.  The Addendum should specify that the client agrees that the clearing member��_��__��_s performance and payment obligations to the client under the client transactions (including under the collateral arrangements) are limited by and contingent on the actual performance or payment by the relevant CCP to the clearing member under the related CM/CCP Transactions.  This provision is specified in Section 15 of the ISDA-standard Addendum. Particular care should be taken this provision has not been changed.,,BIS Reg Cap
+party,clientClearingRelationshipWithCM,Boolean,One,The (contra)party has a client clearing relationship with a clearing member.,,BIS Reg Cap
+party,clientType,EnumeratedString,One,Client Type,lookup:MiFID-II-ClientType,"MiFID-II arts. 4(10)-(11), 30, Annex II"
+party,cnbvCreditInstitution,Boolean,One,"The party is a ��_��__��_��__��_��__Credit Institution��_��__��_ as defined in Bank of Mexico Circular 4/2012, sec. 1.1.",,"Bank of Mexico Circular 4/2012, sec. 1.1"
+party,cnbvGeneralDepositWarehouse,Boolean,One,"The party is a ��_��__��_��__��_��__General Deposit Warehouse��_��__��_ as defined in Bank of Mexico Circular 4/2012, sec. 1.1.",,"Bank of Mexico Circular 4/2012, sec. 1.1"
+party,cnbvInvestmentFund,Boolean,One,"The party is an ��_��__��_��__��_��__Investment Fund��_��__��_ as defined in Bank of Mexico Circular 4/2012, sec. 1.1.",,"Bank of Mexico Circular 4/2012, sec. 1.1"
+party,cnbvRuralFinancialInstitution,Boolean,One,"The party is a ��_��__��_��__��_��__Rural Financial Institution��_��__��_ as defined in Bank of Mexico Circular 4/2012, sec. 1.1.",,"Bank of Mexico Circular 4/2012, sec. 1.1"
+party,cnbvSecuritiesFirm,Boolean,One,"The party is a ��_��__��_��__��_��__Securities Firm��_��__��_ as defined in Bank of Mexico Circular 4/2012, sec. 1.1.",,"Bank of Mexico Circular 4/2012, sec. 1.1"
+party,cnbvSofome,Boolean,One,"The party is a ��_��__��_��__��_��__Sofome��_��__��_ as defined in Bank of Mexico Circular 4/2012, sec. 1.1.",,"Bank of Mexico Circular 4/2012, sec. 1.1"
+party,commoditiesCommercialIntent,Boolean,One,"For a Non-Financial Counterparty End User  transacting commodities, whether party has established blanket commercial intent via a representation.",,
+party,conduitAffiliateUSPerson,Boolean,One,Is the party a Conduit Affiliate of a US Person per CFTC rules?,,"Final Guidance, 78 Fed. Reg. 45369 (Jul. 26, 2013)."
+party,countryOfNationality,EnumeratedString,One,ISO 3166-1 Alpha-2 code of country of organization of a legal entity,lookup:CountryCode,
+party,countryOfResidence,EnumeratedString,One,ISO 3166-1 Alpha-2 code of country of residence/operation of a legal entity,lookup:CountryCode,
+party,creditline,Boolean,One,Does the client have a valid credit line?,,
+party,csaList,Object droit.party:csa,Many,CSA List,,
+party,dealingRestrictionStatus,EnumeratedString,One,"Whether the party is subject to a ""Do Not Deal"" or a ""Restricted Dealing""",lookup:DealingRestrictionStatus,
+party,defaultNettingSet,String,One,Default Netting Set,,
+party,designatedFiduciary,Boolean,One,Yes if there is at least one Designated Fiduciary specified (required for ERISA SE's).,,
+party,designatedQIR,Boolean,One,"Yes if there is at least one Designated QIR specified, this is required in the case of non-ERISA Special Entities.",,
+party,disclosureAcknoledgementClearing,Boolean,One,Tracking to ensure appropriate Clearing disclosures have been distributed and acknowledged by the counterparty.,,
+party,disclosureAcknoledgementDailyMarks,Boolean,One,Tracking to ensure appropriate Daily Marks disclosures have been distributed and acknowledged by the counterparty.,,
+party,disclosureAcknoledgementScenarioAnalysis,Boolean,One,Tracking to ensure appropriate Scenario Analysis disclosures have been distributed and acknowledged by the counterparty.,,
+party,disclosureAcknoledgementSpecialEntity,Boolean,One,Tracking to ensure appropriate Special Entity disclosures have been distributed and acknowledged by the counterparty.,,
+party,disclosureDistribution,Boolean,One,"Were disclosures sent to client, either electronically or by voice?",,
+party,eligibleAffiliateInternalParty,Boolean,One,Indicates whether the counterparty is internal to the client AND an eligible affiliate for the purpose of utilizing the CFTC affiliate clearing exemption.,,17 C.F.R. Part 50.52
+party,eligibleContractParticipant,Boolean,One,Is the counterparty an Eligible Contract Participant under CFTC rules? Required for all customers.,,
+party,eligibleTreasuryAffiliate,Boolean,One,CFTC Letter 13-22 provides a clearing exemption for eligible treasury affiliates that meet certain criteria.,,
+party,emirArticle1_4_entity,Boolean,One,Whether party is a wholly exempt EMIR entity as described in EMIR Article 1(4),,Regulation (EU) No 648/2012 (EMIR) art. 1(4)
+party,emirArticle1_4b_entity,Boolean,One,"The Bank for International Settlements, i.e. ""EMIR Article 1(4)(b) Entity"" in the ISDA EMIR Classification Letter",,"Regulation (EU) No 648/2012, Art. 1(4)(b)"
+party,emirArticle1_5_entity,Boolean,One,"Whether a party is an entity as described by EMIR Article 1(5), i.e. multilateral development banks, public sectors owned or guaranteed by central governments, the European Financial Stability Facility and the European Stability Mechanism.",,Regulation (EU) No 648/2012 (EMIR) art. 1(5)
+party,emirCCP,Boolean,One,A central clearing party as defined in Article 2(1) of EMIR,,"Regulation (EU) No 648/2012 of the European Parliament and of the Council of 4 July 2012 on OTC Derivatives, Central Counterparties and Trade Repositories Text with EEA relevance, Jul. 27, 2012 O.J."
+party,emirClearingCategoryUndefined,Boolean,One,boolean value for when an emir category is undefined,,
+party,emirFrontLoadingAgreement,Boolean,One,"This attribute indicates if counterparty has signed a Frontloading agreement. Currently, only used by RBC.",,
+party,emirNonUndertaking,Boolean,One,"For the purpose of EMIR, whether an entity is a non-undertaking as indicated on Question 2(b) of the ISDA EMIR Classification Letter",,
+party,emirTCEclassification,EnumeratedString,One,"For the purposes of EMIR, Third Country Entities (TCE) must indicate its categorisation that it would be if the Named Entity were established in the EU by specifying whether the entity is a TCE FC, TCE NFC+ or TCE NFC-.",lookup:emirTCEclassification,
+party,endUser,String,One,"Takes one of the following values: {NO, Non-Financial (Commercial) End User, Financial End User}. Non-Financial end users are not CFTC Swap Entities and are also not Financial Entities.",,
+party,energyOperator,Boolean,One,"Whether a party is an operator or administrator of an energy transmission grid, energy balancing mechanism or pipeline network",,"Commission Regulation (EC) No 1287/2006 of 10 August 2006 implementing Directive 2004/39/EC of the European Parliament and of the Council as regards record-keeping obligations for investment firms, transaction reporting, market transparency, admission of financial instruments to trading, and defined terms for the purposes of that Directive, Sep.2, 2006 O.J."
+party,erisaSpecialEntity,Boolean,One,Employee benefit plan subject to Title I of ERISA,,
+party,erisaSpecialEntitySafeHarborOption1,Boolean,One,Does the ERISA SE agree to incorporate safe harbor provisions according to schedule 5 (Option 1)?,,
+party,erisaSpecialEntitySafeHarborOption2,Boolean,One,Does the ERISA SE agree to incorporate safe harbor provisions according to schedule 6 (Option 2)?,,
+party,esmaClearingCategory,EnumeratedString,One,"Allowed values are {CATEGORY1, CATEGORY2, CATEGORY3, CATEGORY4, NotApplicable}. This is the appropriate EMIR clearing category for the first wave of mandated Rates products used to drive clearing mandate dates. For TCE's, it is the EMIR clearing category they would have if they were equivalent entities established in the EEA.",lookup:emirClearingCategory,
+party,esmaClearingCategoryCredit1,EnumeratedString,One,"Allowed values are {CATEGORY1, CATEGORY2, CATEGORY3, CATEGORY4, NotApplicable}. This is the appropriate EMIR clearing category for the first wave of mandated Credit products used to drive clearing mandate dates. For TCE's, it is the EMIR clearing category they would have if they were equivalent entities established in the EEA.",lookup:emirClearingCategory,
+party,esmaClearingCategoryRates2,EnumeratedString,One,"Allowed values are {CATEGORY1, CATEGORY2, CATEGORY3, CATEGORY4, NotApplicable}. This is the appropriate EMIR clearing category for the second wave of mandated Rates products used to drive clearing mandate dates. For TCE's, it is the EMIR clearing category they would have if they were equivalent entities established in the EEA.",lookup:emirClearingCategory,
+party,establishedIn,EnumeratedString,Many,"Two-letter codes for countries, provinces, regions, etc, under the laws of which an entity is established, using the ISO-3166 standards. This attribute can take on a single string value, such as ""AU"" for a party established under the laws of Australia. Or when multiple levels of regulations are relevant, this attribute can be populated with an array of string codes to signify different levels of granularity. For example, when a party is established in Canada, the specific provincial codes are also necessary, e.g. [""CA"",""ON""] for Ontario. An example for a party established in one of the European Union member states can be [""BE"",""EU""]",lookup:LocationCode,
+party,euAffiliateStatus,EnumeratedString,One,EU Affiliate Status,lookup:EUAffiliateStatusType,
+party,euCentralBank,Boolean,One,"EMIR 1(4)(a) explicitly carves out for all regulatory purposes: ""the members of the ESCB and other Member States? bodies performing similar functions"". Part (b) also carves out the Bank of International Settlements, which is assumed to have this flag set to true.  A reasonable list of these can be found at: http://www.ecb.europa.eu/stats/money/mfi/general/html/mfis_list_2013-05.en.html",,Regulation (EU) No 648/2012 (EMIR) art. 1(4)
+party,euCentralBankOrPublicDebtManager,Boolean,One,"Any members of the European System of Central Banks or other Member States�۪ bodies performing similar functions or other European Union public bodies charged with or intervening in the management of the public debt, i.e. ""EMIR Article 1(4)(a) Entity"" in the ISDA EMIR classification letter.",,"Regulation (EU) No 648/2012, Art.1(4)(a)"
+party,euExemptedForeignCentralBank,Boolean,One,"Central banks and public debt management bodies in Japan, the U.S.A, Australia, Canada, Hong Kong, Mexico, Singapore, Switzerland",,Commision Delegated Regulation (EU) 2017/979 of 2 March 2017 amending Regulation (EU) No 648/2012 amending Regulation (EU) No 648/2012
+party,euExemptedPensionScheme,Boolean,One,"Explicitly exempted from EMIR Clearing until such time as schemes for non-cash variation margin are effected. In practice, they have a time-limited exemption which is likely to be extended.",,
+party,euExemptedPublicSectorEntity,Boolean,One,"EMIR 1(5)(b) and {c} exempt these entities for all regulatory purposes EXCEPT reporting: ""(b) public sector entities within the meaning of point (18) of Article 4 of Directive 2006/48/EC where they are owned by central governments and have explicit guarantee arrangements provided by central governments; (c) the European Financial Stability Facility and the European Stability Mechanism""",,
+party,euIMPhaseInCategory,EnumeratedString,One,"Indicates if and when the party is phased in (per ESAs AANA calculation for reference period March-May): NotPhasedIn, 2016, 2017, 2018, 2019, 2020, After2020",lookup:IMPhaseInCategoryType,
+party,euMultilateralDevelopmentBank,Boolean,One,"EMIR 1(5)(a) exempts these entities for all regulatory purposes EXCEPT reporting: ""as listed under Section 4.2  of Part 1 of Annex VI to Directive 2006/48/EC""",,
+party,euPublicDebtManager,Boolean,One,Member States? bodies performing similar functions and other Union public bodies charged with or intervening in the management of the public debt.,,Regulation (EU) No 648/2012 (EMIR) art. 1(4)
+party,exemptCooperative,Boolean,One,CFTC Letter 13-47 provides a permanent clearing exemption for certain forms of cooperative.,,17 C.F.R. Part 50.51
+party,exemptCooperativeElection,Boolean,One,Whether a party elects the Exempt Cooperative exemption per 17 CFR 50.51,,17 CFR 50.51(c)
+party,exemptForeignLicense,Boolean,One,"A person: (a) whose activities, relating to Derivatives, are regulated by an overseas regulatory authority; (b) who provides a financial service, relating to Derivatives, only to wholesale clients as defined in section 761G of the Act; and (c) who is exempt from the requirement to hold an AFS Licence for the financial service referred to in paragraph (b).",,"ASIC Derivative Transaction Rules (Reporting) 2013, Rule 1.2.3 (Austl.)"
+party,exemptIntragroupAffiliate,Boolean,One,"A valid intragroup affiliate that has been approved for exemption from the clearing mandate, which must meet three tests according to article (3) of EMIR: - It must be part of the same consolidated financial entity for accounting purposes (generally international standards and US GAAP are both acceptable) - It must have meaningful single supervisory control (risk management, consolidated management team, etc.) - You must ask your local regulator and receive approval for the exemption, which has to be 30 days preceding use of the exemption and after the clearing RTS takes effect.",,
+party,fiboTypeI,Boolean,One,Whether an entity is a Financial Instruments Business Operator that conducts Type I Financial Instruments Business as defined in the Financial Instruments and Exchange Act Article 28.,,"Financial Instruments and Exchange Act, 1948, art. 2, 28."
+party,fieaCentralBank,Boolean,One,,,
+party,fieaGovernment,Boolean,One,Entity is the national government or a local government of Japan,,"Cabinet Office Ordinance No.48 on the Regulation of Over-the-Counter Transactions of Derivatives, Jul. 11, 2012, art. 6(2)"
+party,fieaInternalPartyAffiliate,Boolean,One,Whether the counterparty an entity is facing is its parent company or is its subsidiary.,,"Cabinet Office Ordinance No.48 on the Regulation of Over-the-Counter Transactions of Derivatives, Jul. 11, 2012, art. 6(2)"
+party,financialCounterparty,Boolean,One,"Whether an entity is an investment firm auth? orised in accordance with Directive 2004/39/EC, a credit institution authorised in accordance with Directive 2006/48/EC, an insurance undertaking authorised in accordance with Directive 73/239/EEC, an assurance undertaking authorised in accordance with Directive 2002/83/EC, a reinsurance undertaking authorised in accordance with Directive 2005/68/EC, a UCITS and, where relevant, its management company, authorised in accordance with Directive 2009/65/EC, an institution for occupational retirement provision within the meaning of Article 6(a) of Directive 2003/41/EC and an alternative investment fund managed by AIFMs authorised or registered in accordance with Directive 2011/61/EU;",,"Regulation (EU) No 648/2012 of the European Parliament and of the Council of 4 July 2012 on OTC Derivatives, Central Counterparties and Trade Repositories Text with EEA relevance, Jul. 27, 2012 O.J."
+party,financialEntity,Boolean,One,Whether an entity is a financial entity as defined in CEA section 2(h)(7)(C),,CEA section 2(h)(7)(C)
+party,financialInstruBusinessOperation2,Boolean,One,"This field represents ""Type 2"" FIBO.",,
+party,financialInstrumentBusinessOperation,Boolean,One,"A stock company that engages in 1) the sale / solicitation of securities of high liquidity such as stocks, corp bonds (dealing, brokerage, selling, private placement, clearing, derivatives transactions, agency service); 2) OTC derivatives; 3) securities underwriting; 4) prop trading system (PTS); 5) securities management. This field represents ""Type 1"" FIBO.",,
+party,finmaFC,Boolean,One,"Financial Counterparty as defined in FMIA Art.93 para. 2, which includes a. banks in accordance with Article 1 paragraph 1 of the Banking Act of 8 November 1934; b. securities dealers in accordance with Article 2 letter d of the Stock Exchange Act of 24 March 1995; c. insurance and reinsurance companies in accordance with Article 2 paragraph 1 letter a of the Federal Act of 17 December 200419 on the Supervision of Insurance Companies; d. parent companies of a financial or insurance group or financial or insurance conglomerate; e. fund management companies and asset managers of collective investment schemes in accordance with Article 13 paragraph 2 letters a and f of the Collective Investment Schemes Act of 23 June 2006; f. collective investment schemes in accordance with the Collective Investment Schemes Act; g. occupational pension schemes and investment foundations in accordance with Articles 48 to 53k of the Federal Act of 25 June 1982 on Occupational Old Age, Survivors' and Invalidity Pension Provision",,FMIA Art. 93 para.2
+party,finmaIntentToReport,Boolean,One,"Whether an entity intends to perform reporting obligation per Swiss FMIA Art 104 para.2. This is to specifically identify the scenario where a party does not report, per 2(c)",,
+party,finmaMDB,Boolean,One,Recognized Multilateral Development Banks according to Article 53 of Capital Adequacy Ordinance of 2006,,"Swiss Federal Banking Commission Circular: Capital Adequacy for Credit Risks (Credit risks) of 29 September 2006, Appendix I"
+party,finmaNFC,Boolean,One,"FINMA-recognized Non-financial Counterparty, which are companies that are not financial counterparties, per FMIA Art.93 para.3",,FMIA Art.93 para.3
+party,finmaReportingCCP,Boolean,One,Whether a clearing agency represents itself to be submitting reports to FINMA,,
+party,finmaSmallPosition,Boolean,One,"Small financial counterparty per FMIA Art.98 and 99, i.e. if the rolling average for its gross position in all outstanding OTC derivatives transactions calculated over 30 working days is below the threshold.",,"Swiss FMIA Art.98, 99"
+party,foreignADI,Boolean,One,A foreign Authorized Deposit-taking Institution in Australia,,"ASIC Derivative Transaction Rules (Reporting) 2013, Rule 1.2.5 (Austl.)"
+party,foreignBranchUSPerson,Boolean,One,The foreign branch of a US Person entity. See full definition in CFTC cross-border guidance.,,"Final Guidance, 78 Fed. Reg. 45369 (Jul. 26, 2013)."
+party,foreignCentralBank,Boolean,One,"Is the party a Foreign Central Bank for the purpose of exemptions granted by the CFTC? This must be determined by the internal classification rules of the dealer, but should be fairly straightforward.",,
+party,foreignGovernment,Boolean,One,Is the party a Foreign Government for the purpose of exemptions by the CFTC? This must be determined by the internal classification rules of the dealer.,,
+party,foreignSubsidiaryOfAuADIorAFS,Boolean,One,A foreign subsidiary of an Australian Entity where that Australian Entity is an Australian ADI or AFS Licensee.,,
+party,futureExpiryDate,DateType,One,Expiry date of a futures contract,,
+party,fxCommodityPoolOperator,Boolean,One,CFTC Commodity Pool for FX transaction purposes?,,
+party,fxEligibleContractParticipant,Boolean,One,Is the counterparty an ECP for the purpose of FX transactions? This requires a look-through in the case of Commodity Pool vehicles.,,
+party,fxMasterAgreement,Boolean,One,Is there a signed master agreement in place with the counterparty allowing the trading of FX derivatives (e.g. IFXCO) that is NOT an ISDA?,,
+party,fxPhysicalSettlementRepresentation,Boolean,One,"If the counterparty is willing to give a blanket representation that all FX Spot transactions will be physically settled, then it is possible to rule these as non-NDFs. That can be partially inferred from the presence of NOSTRO accounts, but this is fundamentally a key counterparty risk decision point.",,
+party,fxSecuritySettlementRepresentation,Boolean,One,"If the trade is done to facilitate security settlement and the counterparty can give a blanket representation this is the case (e.g. Equity PB) for Forward products, then the CFTC business conduct rules do not apply.",,
+party,generalConsentToTradeOffFacility,Boolean,One,Client generally consents to trade off-facility,,MiFID-II art. 27(5)
+party,guaranteedAffiliateUSPerson,Boolean,One,Can be inferred by looking at the USP status of the entity's guarantor.,,"Final Guidance, 78 Fed. Reg. 45369 (Jul. 26, 2013)."
+party,hasIsdaCanadaReportingAgreement,Boolean,One,Whether a party has agreed to the terms of Canadian Reporting Party Agreement such that party may follow the ISDA methodology with respect to transaction reporting,,"Regulation 91-507 respecting trade repositories and derivatives data reporting (2013), par.25"
+party,hasMultiJurisSmallCMNotional,Boolean,One,"Boolean flag for whether the local counterparty and of each affiliated entity of the local counterparty that is a local counterparty in a jurisdiction of Canada, excluding derivatives with an affiliated entity, has an aggregate month-end gross notional amount under all outstanding derivatives the asset class of which is a commodity, other than currency, of less than $250 000 000, in any calendar month in the preceding 12 calendar months",,"Multijurisdictional Instrument 96-101 respecting trade repositories and derivatives data reporting (2016), par. 40."
+party,hasSmallCMNotional,Boolean,One,"Boolean flag for whether the local counterparty has less than $500,000 aggregate notional value, without netting, under all its outstanding transactions at the time of the transaction including the additional notional value related to that transaction.",,"Regulation 91-507 respecting trade repositories and derivatives data reporting (2013), par. 40."
+party,institutionalSuitabilitySafeHarbor,Boolean,One,Mandatory for everyone except swap dealers and special entities: Does the party agree to incorporate DF schedule 3 (Institutional Suitability safe harbor for non-special entities)?,,
+party,insuranceRFI,Boolean,One,An insurance Registered Financial Institution,,"Insurance Business Act, 1995, art. 3."
+party,internalPartyAffiliate,Boolean,One,"Indicates whether the counterparty is internal to the client (an affiliate) from the perspective of Dodd-Frank external business conduct. If set to true, this means EBCS can be skipped but not necessarily Clearing.",,
+party,internationalFinancialInstitution,Boolean,One,Is the party an IFI and consequently determined by the CFTC to be exempted from clearing? This is driven by association with an explicit enumerated list coming from the CFTC and stored in separate static data.,,
+party,intlAuthorityFSA,Boolean,One,Whether an entity is an international organizations designated by the Commissioner of the Financial Services Agency,,"Cabinet Office Ordinance No.48 on the Regulation of Over-the-Counter Transactions of Derivatives, Jul. 11, 2012, art. 6."
+party,investmentFirm,Boolean,One,MiFID-II Investment Firm,,MiFID-II art. 4(1)
+party,isAffiliateOfCADealer,Boolean,One,"Whether the party is an affiliated entity of a clearing agency or a derivatives dealer in Ontario, Manitoba or Quebec, including deemed dealer.",,OSC Rule 91-507 s41.1(b)(iii) / AMF Rule 91-507 s41.1(b)(iii) / MSC Rule 91-507 s41.1(b)(iii)
+party,isAffiliateOfMbDealer,Boolean,One,"Whether the party is an affiliated entity of a clearing agency or a derivatives dealer in Manitoba, including deemed dealer.",,MSC Rule 91-507 s41.1(b)(iii)
+party,isAffiliateOfMultiJurisDealer,Boolean,One,Whether the party is an affiliated entity of a clearing agency or a derivatives dealer in the relevant Canadian jurisdictions. This also includes deemed dealer.,,"Multijurisdiction Instrument 96-101respecting trade repositories and derivatives data reporting (2016), par. 40.(a)(iii)"
+party,isAffiliateOfOnDealer,Boolean,One,"Whether the party is an affiliated entity of a clearing agency or a derivatives dealer in Ontario, including deemed dealer.",,OSC Rule 91-507 s41.1(b)(iii)
+party,isAffiliateOfQcDealer,Boolean,One,"Whether the party is an affiliated entity of a clearing agency or a derivatives dealer in Quebec, including deemed dealer.",,AMF Rule 91-507 s41.1(b)(iii)
+party,isBankRfi,Boolean,One,"Whether an entity is a bank, Shoko Chukin Bank, Ltd., Development Bank of Japan Inc., a federation of Shinkin banks (the district of which comprises the entire nation) or Norinchukin Bank and constitute a Registered Financial Institution, see Cabinet Ordinance No. 48 Article 6",,"Cabinet Office Ordinance No.48 on the Regulation of Over-the-Counter Transactions of Derivatives, Jul. 11, 2012, art. 6."
+party,isCAindividual,Boolean,One,Boolean flag for whether a party is an individual,,
+party,isGuaranteedByAMFLC,Boolean,One,"Whether a counterparty is an affiliate of a Quebec Local Counterparty, and such person is responsible for the liabilities of that affiliated party",,"Regulation 91-507 respecting trade repositories and derivatives data reporting (2013), par. 1."
+party,isGuaranteedByMSCLC,Boolean,One,"Whether a counterparty is an affiliate of a Manitoba Local Counterparty, and such person is responsible for the liabilities of that affiliated party",,"Regulation 91-507 respecting trade repositories and derivatives data reporting (2013), par. 1."
+party,isGuaranteedByMultiJurisLC,Boolean,One,Whether a party is an affiliate of a person or company that is a local counterparts in the relevant Canadian Jursidiction and such person or company is responsible for the liabilities of that affiliated party.,,"Multijurisdiction Instrument 96-101respecting trade repositories and derivatives data reporting (2016), par. 1."
+party,isGuaranteedByOSCLC,Boolean,One,Whether a party is an affiliate of a person or company that is a Ontario local counterparty and such person or company is responsible for the liabilities of that affiliated party.,,"Regulation 91-507 respecting trade repositories and derivatives data reporting (2013), par. 1."
+party,isMbBased,Boolean,One,Whether an entity has its head office or principal place of business in Manitoba,,"Regulation 91-507 respecting trade repositories and derivatives data reporting (2013), par.1."
+party,isMultiJurisBased,Boolean,One,Whether an entity has its head office or principal place of business in the relevant Canadian Jursidiction,,"Multilateral Instrument 96-101 Trade Repositories and Derivatives Data Reporting (2016), par.1."
+party,isOnBased,Boolean,One,Whether an entity has its head office or principal place of business in Ontario,,"Regulation 91-507 respecting trade repositories and derivatives data reporting (2013), par.1."
+party,isQcBased,Boolean,One,Whether an entity has its head office or principal place of business in Quebec,,"Regulation 91-507 respecting trade repositories and derivatives data reporting (2013), par.1."
+party,isTCE,Boolean,One,Whether an entity is considered a Third Country Entity under EMIR,,
+party,isda2013ACAInPlace,Boolean,One,ISDA 2013 ACA is in place,,
+party,isdaCanadaDeemedDealer,Boolean,One,"Whether party has represented itself as a ""deemed dealer"" by signing onto the ISDA 2014 Multilateral Canadian Reporting Party Agreement (Deemed Dealer Version)",,ISDA 2014 Multilateral Canadian Reporting Party Agreement
+party,isdaDFProtocolAugust2012Signed1,Boolean,One,Has the party adhered to ISDA Protocol 1 (August protocol)?,,
+party,isdaDFProtocolMarch2013Signed,Boolean,One,Has the party adhered to ISDA Protocol 2 (March protocol)?,,
+party,isdaEMIRReportingDelegate,String,One,The specific delegate responsible for meeting EMIR reporting responsibilities for the party,,"Regulation (EU) No 648/2012 of the European Parliament and of the Council of 4 July 2012 on OTC Derivatives, Central Counterparties and Trade Repositories Text with EEA relevance, Jul. 27, 2012 O.J."
+party,isdaMasterAgreement,Boolean,One,Is there a signed ISDA Master Agreement in place with this counterparty?,,
+party,isdaPBProtocolSigned,Boolean,One,Did the Dealer adhere to the ISDA FX PB protocol?,,
+party,japaneseCentralBank,Boolean,One,The Bank of Japan,,"Cabinet Office Ordinance No.48 on the Regulation of Over-the-Counter Transactions of Derivatives, Jul. 11, 2012, art. 6(2)"
+party,japaneseGovernment,Boolean,One,The national government of Japan,,"Cabinet Office Ordinance No.48 on the Regulation of Over-the-Counter Transactions of Derivatives, Jul. 11, 2012, art. 6(2)"
+party,japaneseLocalAuthority,Boolean,One,Japanese Local Authorities,,"Cabinet Office Ordinance No.48 on the Regulation of Over-the-Counter Transactions of Derivatives, Jul. 11, 2012, art. 6(2)"
+party,legalEntityID,String,One,"The global Legal Entity ID for the party, unless if party does not have an LEI, the substitute LEI or Pre-LEI complying with relevant standards",,
+party,limitedCostsAndChargesDetail,Boolean,One,Client has agreed to receive limited details on costs & charges,,MiFID-II Del. Reg. 50(1)
+party,liquidMidWaiverFX,Boolean,One,Did client agree to waive their right to receive a mid for FX transactions defined as ?Covered Derivative Transactions? that qualify them for an exemption?,,
+party,liquidMidWaiverNonFX,Boolean,One,Did client agree to waive their right to receive a mid for non-FX transactions defined as ?Covered Derivative Transactions? that qualify them for an exemption?,,
+party,majorSwapParticipant,Boolean,One,Major Swap Participant as defined under 17 C.F.R. s 1.3(hhh),,17 C.F.R. s 1.3(hhh)
+party,mcgCategory,String,One,MCG category for party,,
+party,miFID2Exemptions,EnumeratedString,Many,MiFID-II Exemptions,lookup:MiFID-II-Exemption,MiFID-II art. 2
+party,mifid2ThirdCountryAffiliate,Boolean,One,Non-EEA affiliate of MiFID-II investment firm (including parent or subsidiary); used for default territorial nexus determinations,,
+party,mscCrownEntity,Boolean,One,"Entity is either (a) Her Majesty in right of Manitoba or the Manitoba Financing Authority when acting as agent for Her Majesty in right of Manitoba, or (b) an Manitoba crown corporation or crown agency that forms part of a consolidated entity with Her Majesty in right of Manitoba for accounting purposes.",,"Regulation 91-507 Trade Repositories and Derivatives Data Reporting (2013), par. 41."
+party,mscDeemedDealer,Boolean,One,"For purpose of the Manitoba reporting requirements only, party represents itself as a ""deemed dealer"" to report as if it were a registered dealer under MSC",,
+party,mscDerivativesDealer,Boolean,One,Whether an entity registered as a derivatives dealer in Manitoba,,"Securities Act, C.C.S.M. 2014, c. S50"
+party,multiJurisDerivativesDealer,Boolean,One,"A person or company engaging in or holding himself, herself or itself out as engaging in the business of trading in derivatives as principal or agent;",,"Multilateral Instrument 96-101 Trade Repositories and Derivatives Data Reporting (2016), par.1."
+party,multiJurisSpecialEntity,Boolean,One,"A counterparty is not required to report derivatives data relating to a derivative between (a)  the government of a local jurisdiction, and (b)  a crown corporation or agency the accounts of which are consolidated for accounting purposes with those of the government referred to in paragraph (a).",,"Multilateral Instrument 96-101 trade repositories and derivatives data reporting (2016), par. 41"
+party,multijurisDeemedDealer,Boolean,One,"For purpose of reporting requirements only, party represents itself as a ""deemed dealer"" to report as if it were a registered dealer under the multijurisdiction regulators (Alberta, British Columbia, so on)",,
+party,natureOfSegregationInClientAccount,EnumeratedString,One,Indicates the nature of the segregation in the (contra)party client account.,lookup:natureOfSegregationInClientAccountEnum,BIS Reg Cap
+party,negAffAgreementProvider,EnumeratedString,One,"Negative affirmation provider for the party. Given a fixed Contraparty, only the Counterparty should have this input populated. This is to represent the designated negative affirmation provider between the pair in their corresponding Master Agreement. Attribute may take the value of ""Contraparty"" or ""Counterparty. When it does not apply, provide as null.",lookup:PartyRoleType,
+party,nonERISASpecialEntitySafeHarbor,Boolean,One,Does non-ERISA special entity agree to apply DF schedule 4 safe harbor for non-ERISA special entity provisions?,,
+party,nonFinancialCounterpartyMinus,Boolean,One,Non-Financial Counterparty (Minus) whose OTC derivative positions (ex-hedging positions) do not exceed a specified threshold.,,"Regulation (EU) No 648/2012 of the European Parliament and of the Council of 4 July 2012 on OTC Derivatives, Central Counterparties and Trade Repositories Text with EEA relevance, Jul. 27, 2012 O.J."
+party,nonFinancialCounterpartyPlus,Boolean,One,Non-Financial Counterparty (Plus) whose OTC derivative positions (ex-hedging positions) exceed a specified threshold.,,"Regulation (EU) No 648/2012 of the European Parliament and of the Council of 4 July 2012 on OTC Derivatives, Central Counterparties and Trade Repositories Text with EEA relevance, Jul. 27, 2012 O.J."
+party,nonFinancialEntity,Boolean,One,Non-financial entity for purposes of MiFID-II art. 57 (Commodity Position Limits),,MiFID-II art. 57; RTS-21 art. 2(1)
+party,nonJapanCentralBank,Boolean,One,"Whether an entity is a central bank of a state or equivalent under the laws of that state, such that it's considered equivalent of the Bank of Japan",,"Cabinet Office Ordinance No.48 on the Regulation of Over-the-Counter Transactions of Derivatives, Jul. 11, 2012, art. 6(2)"
+party,nonJapanGovernment,Boolean,One,"Whether an entity is a foreign equivalent to the national or local government of Japan under the laws or regulations of a foreign state, see Cabinet Ordinance No.48 Article 6(2)",,"Cabinet Office Ordinance No.48 on the Regulation of Over-the-Counter Transactions of Derivatives, Jul. 11, 2012, art. 6(2)"
+party,oscCrownEntity,Boolean,One,"Entity is either (a) Her Majesty in right of Ontario or the Ontario Financing Authority when acting as agent for Her Majesty in right of Ontario, or (b) an Ontario crown corporation or crown agency that forms part of a consolidated entity with Her Majesty in right of Ontario for accounting purposes.",,"Regulation 91-507 respecting trade repositories and derivatives data reporting (2013), par. 41."
+party,oscDeemedDealer,Boolean,One,"For purpose of the Ontario reporting requirements only, party represents itself as a ""deemed dealer"" to report as if it were a registered dealer under OSC",,
+party,oscDerivativesDealer,Boolean,One,Whether a party is registered under Ontario securities law as a derivatives dealer.,,"Securities Act, R.S.O. 1990, c. S.5."
+party,partyRole,EnumeratedString,One,"A type describing a role played by a party in one or more transactions, e.g. ExecutingBroker, PrimeBrocker, PrimeBrokerClient, etc.",lookup:PartyRoleType,http://www.fpml.org/spec/fpml-5-8-7-rec-1/html/confirmation/schemaDocumentation/schemas/fpml-shared-5-8_xsd/complexTypes/RelatedParty/role.html
+party,portfolioReconciliation,Boolean,One,Has the counterparty adopted means of reconciling portfolios and dispute resolution (with the contraparty entity) per EMIR execution requirements?,,
+party,postTradeSuitabilityStatements,Boolean,One,Party has agreed to receive post-trade Suitability statements,,MiFID-II art. 25(6)
+party,primeBrokerNoticeToExecutingBroker,Boolean,One,Deprecated due to new structure,,
+party,quoteDisclosureCategory,String,One,Quote Disclosure Category,,MiFIR art. 18(5)
+party,registeredFinancialInstitution,Boolean,One,Registered Financial Institution as defined under FIEA Japanese legislation.,,"Cabinet Office Ordinance No.48 on the Regulation of Over-the-Counter Transactions of Derivatives, Jul. 11, 2012, art. 6(2)"
+party,registeredIn,EnumeratedString,Many,List of 2-letter country codes describing jurisdictions where an entity has a registered office,lookup:LocationCode,
+party,representingTrustEstablishedInAu,Boolean,One,"The party is making the trade on behalf of a scheme or trust that it��_�s representing, where the scheme or trust is incorporated in Australia.  See ASIC Rules (Clearing), Art. 1.2.4(3)(a).",,
+party,representingTrustEstablishedOutsideAu,Boolean,One,"The party is making the trade on behalf of a scheme or trust that it��_�s representing, where the scheme or trust is incorporated outside of Australia.  See ASIC Rules (Clearing), Art. 1.2.4(5)(a).",,
+party,ruDelegatedInformingPerson,String,One,The informing person specified by the parties to the master agreement which can be a trading party or a third party.,,"Bank of Russia Ordinance 3382-U, Sep.17, 2014 (Rus.). and Bank of Russia Ordinance 3567, Feb 16, 2015. (Rus.)."
+party,ruFinancialEntity,Boolean,One,"Whether an entity is established according to the laws of the Russian Federation as one of the following: credit institutions, brokers, dealers, managers, depositories, registrars, non-governmental pension funds, management companies of an investment fund, a unit investment fund and nongovernmental pension fund, joint-stock investment funds, trade organisers, clearing organisations, insurance companies.",,"Bank of Russia Ordinance 3382-U, Sep.17, 2014 (Rus.)."
+party,russianIndividual,Boolean,One,"Taken to mean Resident of the Russian Federation, but requires further clarification, as requested by ISDA in its February 27 letter to the Central Bank of Russia. Unclear whether this designation applies to Russian citizens domociled and trading outside Russia, or non-Russian citizens domiciled in Russia. http://www2.isda.org/attachment/NjMzMQ==/ISDA%20-%20Letter%20to%20CBR%20(February%202014).pdf",,
+party,russianLegalEntity,Boolean,One,Whether an entity is established under the laws of the Russian Federation,,
+party,russianMasterAgreement,Boolean,One,"Includes: 1- Master agreements eligible for close-out netting (Domestic master agreements approved by the ARB, NAUFOR, NFEA and NSMA, or Cross-border master agreements developed by ISDA, ICMA or GMRA) 2- Bespoke Agreements with Single Agreement Provisions (provision to the effect that all transactions concluded thereunder constitute a single agreement between the partie) sand Cross Default Provisions (rovision to the effect that any default under at least one of the transactions will constitute a default under all the other transactions concluded under that master agreement)",,"Bank of Russia Ordinance 3382-U, Sep.17, 2014 (Rus.)."
+party,russianReportingParty,String,One,"Representation included in repository services agreement of reporting party under Master Agreement. Can be Dealer, Client or third party (represented by unique I.D.)",,
+party,sbsGuaranteedByMSP,Boolean,One,Whether the guarantor of a direct counterparty's performance of any obligation under a security-based swap is a security-based MSP.,,17 C.F.R. 242.900(p)
+party,sbsGuaranteedBySD,Boolean,One,Whether the guarantor of a direct counterparty's performance of any obligation under a security-based swap is a security-based swap dealer.,,17 C.F.R. 242.900(p)
+party,sbsGuaranteedBySwapDealer,Boolean,One,Whether a security-based swap is guaranteed by a security-based swap dealer,,17 C.F.R. 242.900(p)
+party,sbsGuaranteedBySwapEntity,Boolean,One,"When set to true, this Boolean flag means the guarantor of a direct counterparty's performance of any obligation under a security-based swap is a security-based swap dealer or MSP.",,17 C.F.R. 242.900(p)
+party,sbsGuaranteedByUSP,Boolean,One,"When set to true, this Boolean flag means the guarantor of a direct counterparty's performance of any obligation under a security-based swap is a US Person.",,17 C.F.R. 242.900(p)
+party,secCentralIndexKey,String,One,The SEC Central Index Key number used as the identifier for an SEC Issuer / Filer.,,
+party,secElectionApproval,Boolean,One,"If an SEC issuer / filer, did an appropriate committee of the Electing Party's board of directors or equivalent body approve this decision?",,
+party,secIssuerFiler,Boolean,One,Is PCA Principal an SEC Issuer / Filer?,,
+party,secUSPForeignBranch,Boolean,One,Foreign branch of a US Person as defined in 17 C.F.R. Part 240.3a71-3(a)(2),,17 C.F.R. 240.3a71-3(a)(2)
+party,secUSPerson,Boolean,One,U.S. Person as defined in 17 C.F.R. 240.3a71-3,,17 C.F.R. 240.3a71-3(a)(4)
+party,securityBasedMSP,Boolean,One,Whether a party is a security-based swap major swap participant,,17 C.F.R 240.3a71-1
+party,securityBasedMajorSwapParticipant,Boolean,One,Security-based Major Swap Participant under SEC regulation,,17 C.F.R 240.3a67-1
+party,securityBasedSD,Boolean,One,Whether a party is a SEC-registered security-based swap dealer,,17 C.F.R 240.3a71-1
+party,securityBasedSwapDealer,Boolean,One,Security-based swap dealer under SEC regulation,,17 C.F.R 240.3a71-1
+party,sfcATSCCP,Boolean,One,"a person authorized under section 95(2) of the Ordinance to provide automated trading services, but only when the person is? (a) providing services that it is authorized to provide; and (b) acting in its capacity as a central counterparty",,"Securities and Futures (OTC Derivative Transactions(Reporting and Record Keeping Obligations) Rules, 2, Jul.2015 (H.K.)"
+party,sfcApprovedMoneyBroker,Boolean,One,A Hong Kong approved money broker,,"Banking Ordinance Cap.155 s.118A, (H.K.)"
+party,sfcAuthorizedInstitutions,Boolean,One,HK Authorized Financial Institutions (AI) under Banking Ordinance,,"Securities and Futures (OTC Derivative Transactions(Reporting and Record Keeping Obligations) Rules, 2, Jul.2015 (H.K.)"
+party,sfcCompany,Boolean,One,,,
+party,sfcForeignAuthorizedInstitutions,Boolean,One,Foreign authorized financial institutions under the Banking Ordinance of Hong Kong,,"Banking Ordinance, Cap.155, s.14A, (H.K.)"
+party,sfcInitialPhaseIRNotional,Boolean,One,Whether a prescribed person's sum of the notional amounts of all outstanding OTC derivative transactions within the IRS class (whether or not the transactions are specified OTC derivative transactions) to which the prescribed person is a counterparty exceeds US$30 million,,"Securities and Futures (OTC Derivative Transactions (Reporting and Record Keeping Obligations) Rules, 3, Jul.2015 (H.K.)"
+party,sfcInitialPhaseNDFNotional,Boolean,One,Whether a prescribed person's sum of the notional amounts of all outstanding OTC derivative transactions within the NDF class (whether or not the transactions are specified OTC derivative transactions) to which the prescribed person is a counterparty exceeds US$30 million,,"Securities and Futures (OTC Derivative Transactions (Reporting and Record Keeping Obligations) Rules, 3, Jul.2015 (H.K.)"
+party,sfcLicenseDate,DateType,One,"The date on which a party becomes a prescribed person in Hong Kong, by way of obtaining a license for banking or authorized institutions, etc. In the case where a foreign entity uses a Hong Kong trader to enter into a transaction, this corresponds to the license date of the said Hong Kong affiliate.",,
+party,sfcLicensedCorporations,Boolean,One,A licensed corporation under HK Companies Ordinance,,"Companies (Winding Up and Miscellaneous Provisions) Ordinance, Cap.32, (H.K.)"
+party,sfcPhase1StartingDay,DateType,One,"SFC phase-2 reporting starting day for the party. For most parties that are in scope, this date corresponds to the compliance start date which is July 10, 2015",,
+party,sfcPhase2ExemptCessationDay,DateType,One,"The cessation day of a prescribed person's exempt status under SFC phase-2 reporting Rule 3. If a party has not have the exempt status, or if a party's exempt status is still active, then this date must have the special value null.",,"Securities and Futures (OTC Derivative Transactions Reporting and Record Keeping Obligations) (Amendment) Rules 2016, Rule 3"
+party,sfcPhase2ExemptPerson,Boolean,One,Whether party is to be regarded as exempt person per Rule 3. This includes party representing that its OTC derivatives notional oustanding is below US$30 million and the party does not enter into any transaction on behalf of an affiliate.,,"Securities and Futures (OTC Derivative Transactions Reporting and Record Keeping Obligations) (Amendment) Rules 2016, Rule 3"
+party,sfcPhase2GracePeriodEndDay,DateType,One,"SFC phase-2 reporting grace period end day for the party, which is 3 months after the party starting day. If the grace period end day is not available, it can be determined through relevant logic. If this day is known, then related logic is bypassed.",,"Securities and Futures (OTC Derivative Transactions Reporting and Record Keeping Obligations) (Amendment) Rules 2016, Rule 2"
+party,sfcPhase2StartingDay,DateType,One,"SFC phase-2 reporting starting day for the party. For most parties regulated under SFC, this date corresponds to the regulation compliance date, which is July 1, 2017",,
+party,sfcRCH,Boolean,One,"A  person that is a recognized clearing house, but only when the person is acting in its capacity as a central counterparty",,"Securities and Futures (OTC Derivative Transactions��_��__��_��__��_��__Reporting and Record Keeping Obligations) Rules, 2, Jul.2015 (H.K.)"
+party,sfcReportingAgent,String,One,The reporting agent to whom a party has delegated its reporting obligation for transaction reporting to HKMA.,,"Frequently Asked Questions on the Securities and Futures (OTC Derivative Transactions ? Reporting and Record Keeping Obligations) Rules, Jul. 2015, (H.K.)"
+party,sfcSpecifiedSubsidiary,Boolean,One,A subsidiary specified by HKMA in relation to a prescribed person that is an authorized financial institution incorporated in HK.,,"Securities and Futures (OTC Derivative Transactions Reporting and Record Keeping Obligations) (Amendment) Rules 2016, Rule 31"
+party,singaporeSpecifiedPerson,Boolean,One,"Banks, subsidiaries of banks, merchant banks, finance companies, insurers, approved trustees, and holders of capital markets services licenses AND significant derivatives holders (SDH?s).",,
+party,smallLocalPresence,Boolean,One,Does the amount of business in this local jurisdiction exceed 5% of the total business for the parent entity?,,"Final Guidance, 78 Fed. Reg. 45369 (Jul. 26, 2013)."
+party,specialEntity,Boolean,One,Is the counterparty a Special Entity?,,
+party,standingEndUserExceptionElection,Boolean,One,Is the principal choosing to always exercise the end-user exception for clearing?,,17 C.F.R. Part 50.50
+party,standingOptOutAnnualFiling,Boolean,One,Does the principal choose to opt out of the Annual Filing / Trade Filing and thus require its counterparty to pass information to the SDR on a per-trade basis?,,
+party,substituteLei,String,One,Substitute Legal Entity Identifier in the absence of an LEI issued in accordance with the Global Legal Entity Identifier System,,
+party,suitabilityInfo,Boolean,One,Information to assess Suitability has been obtained from the party,,MiFID-II art. 25(2)
+party,swapDealer,Boolean,One,Swap Dealer as defined under 17 C.F.R. ? 1.3(ggg),,17 C.F.R. s 1.3(ggg)
+party,swissGovernmentalEntities,Boolean,One,"The following Swiss governmental entities: the Confederation, cantons and communes or the SNB",,"FMIA Art. 94 para. 1(a), (b)"
+party,thirdCountryEntityFCBranch,Boolean,One,A European Union branch of a non-equivalent TCE that would quality as an FC if it were established in the EU.,,
+party,thirdCountryEntityFCGuarantee,Boolean,One,"A non-EU entity (from a non-equivalent TCE) that meets the tests of EU Regulation No 285/2014, 1(a) and (b): - It is guaranteed by an EU FC, - the guarantee covers at least 8 billion EUR in OTC derivative notional or equivalent, - the guarantee covers at least 5% of the sum of current exposures.",,
+party,thirdCountryFirmBranch,Boolean,One,Third County Firm Branch,,RTS-22 art. 14
+party,ucitsManagementCo,Boolean,One,UCITS Management Company,,UCITS Directive art. 2(1)(b)
+party,umRegimeDeferral,EnumeratedString,Many,"Indicates the regime(s), if any, for which a party is subject to deferred compliance with VM. Can be one or more of [""Canada"", ""Prudential"", ""EMIR""]. An empty list indicatates that the party is not eligible for deferred VM compliance in any regime.",lookup:UMDeferralRegimes,
+party,usForeignOutwardFacingMarginAffiliate,Boolean,One,"Party is outward-facing margin affiliate that is a financial end user, located in a jurisdiction ineligible for substituted compliance, and enters into swaps, either directly or indirectly, with third parties that would be subject to IM rules if the affiliate was a swap entity",,
+party,usMultilateralDevelopmentBank,Boolean,One,Party is multilateral development bank for purposes of exemptions granted by the CFTC and US PRs,,
+party,usPersonNotClassifiedStatus,Boolean,One,DF US Person whose status is not classified,,
+party,usPrudentiallyRegulated,Boolean,One,Party is regulated by the a US Prudential Regulator,,
+party,usSwapEntityForeignBranch,Boolean,One,Whether party is a foreign branch of U.S. Bank that is a Swap Dealer or MSP.,,Foreign Branch of U.S. Bank that is a Swap Dealer or MSP.
+party,usUnclearedStandingEndUserExceptionElection,Boolean,One,Principal always exercises the end-user exception for uncleared margin purposes,,
+party,usprGuarantorUSPerson,Boolean,One,"Party's guarantor is  a US person, foreign branch of a US person, or subsidiary of a US person for purposes of USPR margin rules",,
+party,usprIMPhaseInCategory,EnumeratedString,One,"Indicates if and when the party is phased in (per USPR AANA calculation for reference period March-May): NotPhasedIn, 2016, 2017, 2018, 2019, 2020, After2020",lookup:IMPhaseInCategoryType,
+party,usprSubsidiaryUSPerson,Boolean,One,Subsidiary of US Person,,
+party,usprUSBranchForeignBank,Boolean,One,Party is a US branch or office of foreign bank,,
+party,usprUSPerson,Boolean,One,Party is an entity organized under US or State laws or a natural person resident in the US,,
+party,usprUnclearedEndUser,EnumeratedString,One,Party's financial end-user status per USPR uncleared margin rules:  NotEndUser; NonFinancialEndUser; FinancialEndUser; FinancialEndUserWithMaterialSwapsExposure,lookup:USUnclearedEndUserType,
+party,voiceDistributionMidVariableMET,Boolean,One,Did client agree to receive mid by voice? No implies electronic distribution is required.,,
+party:csa,counterpartyID,String,One,Counterparty ID,,
+party:csa,direction,EnumeratedString,One,CSA Directionality,lookup:CSADirectionalityEnum,
+party:csa,docID,String,One,Document ID,,
+party:csa,docType,EnumeratedString,One,Document Type,lookup:CSADocTypeEnum,
+party:csa,effectiveDate,DateType,One,Effective Date,,
+party:csa,model,String,Many,Calculation Model,,
+party:csa,principalID,String,One,Principal ID,,
+party:csa,regimeProduct,String,Many,List of applicable Regime-Product combinations,,
+json_mapping,swapstream1_averagingmethod,String,One,,,
+json_mapping,swapstream1_calculationperioddates_businesscenter1,EnumeratedString,One,,lookup:BusinessCenter,
+json_mapping,swapstream1_calculationperioddates_businesscenter2,EnumeratedString,One,,lookup:BusinessCenter,
+json_mapping,swapstream1_calculationperioddates_businesscenters,EnumeratedString,Many,,lookup:BusinessCenter,
+json_mapping,swapstream1_calculationperioddates_businessdayconvention,EnumeratedString,One,,lookup:BusinessDayConvention,
+json_mapping,swapstream1_calculationperiodfrequency,TenorType,One,,,
+json_mapping,swapstream1_calculationperiodfrequency_rollconvention,EnumeratedString,One,,lookup:RollConvention,
+json_mapping,swapstream1_calculationperiodstartdate,DateType,One,,,
+json_mapping,swapstream1_compoundingmethod,EnumeratedString,One,,lookup:CompoundingMethod,
+json_mapping,swapstream1_daycountfraction,EnumeratedString,One,,lookup:DayCountFraction,
+json_mapping,swapstream1_effectivedate,DateType,One,,,
+json_mapping,swapstream1_effectivedate_businesscenter1,EnumeratedString,One,,lookup:BusinessCenter,
+json_mapping,swapstream1_effectivedate_businesscenter2,EnumeratedString,One,,lookup:BusinessCenter,
+json_mapping,swapstream1_effectivedate_businessdayconvention,EnumeratedString,One,,lookup:BusinessDayConvention,
+json_mapping,swapstream1_finalstub_currency,EnumeratedString,One,,lookup:Currency,
+json_mapping,swapstream1_finalstub_fixedrate,BigDecimal,One,,,
+json_mapping,swapstream1_finalstub_floattenor1,TenorType,One,,,
+json_mapping,swapstream1_finalstub_floattenor2,TenorType,One,,,
+json_mapping,swapstream1_finalstub_stublength,TenorType,One,,,
+json_mapping,swapstream1_finalstub_stubtype,EnumeratedString,One,,lookup:StubType,
+json_mapping,swapstream1_firstnotionalstepdate,DateType,One,,,
+json_mapping,swapstream1_fixedinitialrate,BigDecimal,One,,,
+json_mapping,swapstream1_fixedrate,BigDecimal,One,,,
+json_mapping,swapstream1_fixingdate_businesscenter1,EnumeratedString,One,,lookup:BusinessCenter,
+json_mapping,swapstream1_fixingdate_businesscenter2,EnumeratedString,One,,lookup:BusinessCenter,
+json_mapping,swapstream1_fixingdate_businesscenters,EnumeratedString,Many,,lookup:BusinessCenter,
+json_mapping,swapstream1_fixingdate_businessdayconvention,EnumeratedString,One,,lookup:BusinessDayConvention,
+json_mapping,swapstream1_fixingdate_daytype,EnumeratedString,One,,lookup:DayType,
+json_mapping,swapstream1_fixingdate_offsettenor,TenorType,One,,,
+json_mapping,swapstream1_floatingrateindex,EnumeratedString,One,,lookup:FloatLegIndex,
+json_mapping,swapstream1_floatingraterounding,BigDecimal,One,,,
+json_mapping,swapstream1_indextenor,TenorType,One,,,
+json_mapping,swapstream1_initialnotionalvalue,BigDecimal,One,,,
+json_mapping,swapstream1_initialstub_currency,EnumeratedString,One,,lookup:Currency,
+json_mapping,swapstream1_initialstub_fixedrate,BigDecimal,One,,,
+json_mapping,swapstream1_initialstub_floattenor1,TenorType,One,,,
+json_mapping,swapstream1_initialstub_floattenor2,TenorType,One,,,
+json_mapping,swapstream1_initialstub_stublength,TenorType,One,,,
+json_mapping,swapstream1_initialstub_stubtype,EnumeratedString,One,,lookup:StubType,
+json_mapping,swapstream1_is_oisleg,Boolean,One,,,
+json_mapping,swapstream1_isconstantrate,Boolean,One,,,
+json_mapping,swapstream1_isconstantspread,Boolean,One,,,
+json_mapping,swapstream1_lastnotionalstepdate,DateType,One,,,
+json_mapping,swapstream1_legtype,EnumeratedString,One,,lookup:LegType,
+json_mapping,swapstream1_notionalcurrency,BigDecimal,One,,,
+json_mapping,swapstream1_notionalstepamount,BigDecimal,One,,,
+json_mapping,swapstream1_notionalstepfrequency,TenorType,One,,,
+json_mapping,swapstream1_payer,String,One,Leg payer,,
+json_mapping,swapstream1_paymentdates_businesscenter1,EnumeratedString,One,,lookup:BusinessCenter,
+json_mapping,swapstream1_paymentdates_businesscenter2,EnumeratedString,One,,lookup:BusinessCenter,
+json_mapping,swapstream1_paymentdates_businesscenters,EnumeratedString,Many,,lookup:BusinessCenter,
+json_mapping,swapstream1_paymentdates_businessdayconvention,EnumeratedString,One,,lookup:BusinessDayConvention,
+json_mapping,swapstream1_paymentdates_daytype,EnumeratedString,One,,lookup:DayType,
+json_mapping,swapstream1_paymentdates_offsettenor,TenorType,One,,,
+json_mapping,swapstream1_paymentfrequency,TenorType,One,,,
+json_mapping,swapstream1_payrelativeto,EnumeratedString,One,,lookup:PayRelativeTo,
+json_mapping,swapstream1_resetdates_businesscenter1,EnumeratedString,One,,lookup:BusinessCenter,
+json_mapping,swapstream1_resetdates_businesscenter2,EnumeratedString,One,,lookup:BusinessCenter,
+json_mapping,swapstream1_resetdates_businesscenters,EnumeratedString,Many,,lookup:BusinessCenter,
+json_mapping,swapstream1_resetdates_businessdayconvention,EnumeratedString,One,,lookup:BusinessDayConvention,
+json_mapping,swapstream1_resetfrequency,TenorType,One,,,
+json_mapping,swapstream1_resetrelativeto,EnumeratedString,One,,lookup:PayRelativeTo,
+json_mapping,swapstream1_residualterm,TenorType,One,,,
+json_mapping,swapstream1_settlementcurrency,EnumeratedString,One,,lookup:Currency,
+json_mapping,swapstream1_spreadschedule_initialspread,BigDecimal,One,,,
+json_mapping,swapstream1_term,TenorType,One,,,
+json_mapping,swapstream1_terminationdate,DateType,One,,,
+json_mapping,swapstream1_terminationdate_businesscenter1,EnumeratedString,One,,lookup:BusinessCenter,
+json_mapping,swapstream1_terminationdate_businesscenter2,EnumeratedString,One,,lookup:BusinessCenter,
+json_mapping,swapstream1_terminationdate_businesscenters,EnumeratedString,Many,,lookup:BusinessCenter,
+json_mapping,swapstream1_terminationdate_businessdayconvention,EnumeratedString,One,,lookup:BusinessDayConvention,
+json_mapping,swapstream1_varyingnotionalfixingdates_businesscenter1,EnumeratedString,One,,lookup:BusinessCenter,
+json_mapping,swapstream1_varyingnotionalfixingdates_businesscenter2,EnumeratedString,One,,lookup:BusinessCenter,
+json_mapping,swapstream2_averagingmethod,String,One,,,
+json_mapping,swapstream2_calculationperioddates_businesscenter1,EnumeratedString,One,,lookup:BusinessCenter,
+json_mapping,swapstream2_calculationperioddates_businesscenter2,EnumeratedString,One,,lookup:BusinessCenter,
+json_mapping,swapstream2_calculationperioddates_businesscenters,EnumeratedString,Many,,lookup:BusinessCenter,
+json_mapping,swapstream2_calculationperioddates_businessdayconvention,EnumeratedString,One,,lookup:BusinessDayConvention,
+json_mapping,swapstream2_calculationperiodfrequency,TenorType,One,,,
+json_mapping,swapstream2_calculationperiodfrequency_rollconvention,EnumeratedString,One,,lookup:RollConvention,
+json_mapping,swapstream2_calculationperiodstartdate,DateType,One,,,
+json_mapping,swapstream2_compoundingmethod,EnumeratedString,One,,lookup:CompoundingMethod,
+json_mapping,swapstream2_daycountfraction,EnumeratedString,One,,lookup:DayCountFraction,
+json_mapping,swapstream2_effectivedate,DateType,One,,,
+json_mapping,swapstream2_effectivedate_businesscenter1,EnumeratedString,One,,lookup:BusinessCenter,
+json_mapping,swapstream2_effectivedate_businesscenter2,EnumeratedString,One,,lookup:BusinessCenter,
+json_mapping,swapstream2_effectivedate_businessdayconvention,EnumeratedString,One,,lookup:BusinessDayConvention,
+json_mapping,swapstream2_finalstub_currency,EnumeratedString,One,,lookup:Currency,
+json_mapping,swapstream2_finalstub_fixedrate,BigDecimal,One,,,
+json_mapping,swapstream2_finalstub_floattenor1,TenorType,One,,,
+json_mapping,swapstream2_finalstub_floattenor2,TenorType,One,,,
+json_mapping,swapstream2_finalstub_stublength,TenorType,One,,,
+json_mapping,swapstream2_finalstub_stubtype,EnumeratedString,One,,lookup:StubType,
+json_mapping,swapstream2_firstnotionalstepdate,DateType,One,,,
+json_mapping,swapstream2_fixedinitialrate,BigDecimal,One,,,
+json_mapping,swapstream2_fixedrate,BigDecimal,One,,,
+json_mapping,swapstream2_fixingdate_businesscenter1,EnumeratedString,One,,lookup:BusinessCenter,
+json_mapping,swapstream2_fixingdate_businesscenter2,EnumeratedString,One,,lookup:BusinessCenter,
+json_mapping,swapstream2_fixingdate_businesscenters,EnumeratedString,Many,,lookup:BusinessCenter,
+json_mapping,swapstream2_fixingdate_businessdayconvention,EnumeratedString,One,,lookup:BusinessDayConvention,
+json_mapping,swapstream2_fixingdate_daytype,EnumeratedString,One,,lookup:DayType,
+json_mapping,swapstream2_fixingdate_offsettenor,TenorType,One,,,
+json_mapping,swapstream2_floatingrateindex,EnumeratedString,One,,lookup:FloatLegIndex,
+json_mapping,swapstream2_floatingraterounding,BigDecimal,One,,,
+json_mapping,swapstream2_indextenor,TenorType,One,,,
+json_mapping,swapstream2_initialnotionalvalue,BigDecimal,One,,,
+json_mapping,swapstream2_initialstub_currency,EnumeratedString,One,,lookup:Currency,
+json_mapping,swapstream2_initialstub_fixedrate,BigDecimal,One,,,
+json_mapping,swapstream2_initialstub_floattenor1,TenorType,One,,,
+json_mapping,swapstream2_initialstub_floattenor2,TenorType,One,,,
+json_mapping,swapstream2_initialstub_stublength,TenorType,One,,,
+json_mapping,swapstream2_initialstub_stubtype,EnumeratedString,One,,lookup:StubType,
+json_mapping,swapstream2_is_oisleg,Boolean,One,,,
+json_mapping,swapstream2_isconstantrate,Boolean,One,,,
+json_mapping,swapstream2_isconstantspread,Boolean,One,,,
+json_mapping,swapstream2_lastnotionalstepdate,DateType,One,,,
+json_mapping,swapstream2_legtype,EnumeratedString,One,,lookup:LegType,
+json_mapping,swapstream2_notionalcurrency,BigDecimal,One,,,
+json_mapping,swapstream2_notionalstepamount,BigDecimal,One,,,
+json_mapping,swapstream2_notionalstepfrequency,TenorType,One,,,
+json_mapping,swapstream2_payer,String,One,Leg 2 payer,,
+json_mapping,swapstream2_paymentdates_businesscenter1,EnumeratedString,One,,lookup:BusinessCenter,
+json_mapping,swapstream2_paymentdates_businesscenter2,EnumeratedString,One,,lookup:BusinessCenter,
+json_mapping,swapstream2_paymentdates_businesscenters,EnumeratedString,Many,,lookup:BusinessCenter,
+json_mapping,swapstream2_paymentdates_businessdayconvention,EnumeratedString,One,,lookup:BusinessDayConvention,
+json_mapping,swapstream2_paymentdates_daytype,EnumeratedString,One,,lookup:DayType,
+json_mapping,swapstream2_paymentdates_offsettenor,TenorType,One,,,
+json_mapping,swapstream2_paymentfrequency,TenorType,One,,,
+json_mapping,swapstream2_payrelativeto,EnumeratedString,One,,lookup:PayRelativeTo,
+json_mapping,swapstream2_resetdates_businesscenter1,EnumeratedString,One,,lookup:BusinessCenter,
+json_mapping,swapstream2_resetdates_businesscenter2,EnumeratedString,One,,lookup:BusinessCenter,
+json_mapping,swapstream2_resetdates_businesscenters,EnumeratedString,Many,,lookup:BusinessCenter,
+json_mapping,swapstream2_resetdates_businessdayconvention,EnumeratedString,One,,lookup:BusinessDayConvention,
+json_mapping,swapstream2_resetfrequency,TenorType,One,,,
+json_mapping,swapstream2_resetrelativeto,EnumeratedString,One,,lookup:PayRelativeTo,
+json_mapping,swapstream2_residualterm,TenorType,One,,,
+json_mapping,swapstream2_settlementcurrency,EnumeratedString,One,,lookup:Currency,
+json_mapping,swapstream2_spreadschedule_initialspread,BigDecimal,One,,,
+json_mapping,swapstream2_term,TenorType,One,,,
+json_mapping,swapstream2_terminationdate,DateType,One,,,
+json_mapping,swapstream2_terminationdate_businesscenter1,EnumeratedString,One,,lookup:BusinessCenter,
+json_mapping,swapstream2_terminationdate_businesscenter2,EnumeratedString,One,,lookup:BusinessCenter,
+json_mapping,swapstream2_terminationdate_businesscenters,EnumeratedString,Many,,lookup:BusinessCenter,
+json_mapping,swapstream2_terminationdate_businessdayconvention,EnumeratedString,One,,lookup:BusinessDayConvention,
+json_mapping,swapstream2_varyingnotionalfixingdates_businesscenter1,EnumeratedString,One,,lookup:BusinessCenter,
+json_mapping,swapstream2_varyingnotionalfixingdates_businesscenter2,EnumeratedString,One,,lookup:BusinessCenter,
+product,ESCBMemberRep,Boolean,One,Party represents that trade is ESCB member exempt,,
+product,aboveMinimumTradableQuantity,Boolean,One,Indicates that an equity quote is above the minimum tradable quantity of the trading venue or SI,,RTS-1 art. 8(2)(b)
+product,abovePostTradeLIS,Boolean,One,Trade size is post-trade large in scale threshold,,MiFIR art. 11(1)(a);  RTS-2 arts. 8-9
+product,abovePostTradeSSTI,Boolean,One,Trade is above post-trade size specific to the instrument,,"MiFIR art. 11(1)(c); RTS-2 art. 8, 10"
+product,abovePreTradeLIS,Boolean,One,Trade size is pre-trade large in scale threshold,,MiFIR art. 9(1)(a); RTS-2 art. 16
+product,abovePreTradeSSTI,Boolean,One,Trade is above pre-trade size specific to the instrument,,MiFIR art. 9(1)(b); RTS-2 art. 16
+product,aboveSMS,Boolean,One,Trade is above standard market size for the product,,MiFIR art. 14(2)
+product,additionalpayment1_businesscenter1,EnumeratedString,One,,lookup:BusinessCenter,
+product,additionalpayment1_businesscenter2,EnumeratedString,One,,lookup:BusinessCenter,
+product,additionalpayment1_businessdayconvention,EnumeratedString,One,,lookup:BusinessDayConvention,
+product,additionalpayment1_currency,EnumeratedString,One,,lookup:Currency,
+product,additionalpayment1_paymentdate,DateType,One,,,
+product,additionalpayment1_settlementdate_paymentdate_offset,TenorType,One,,,
+product,additionalpayment1_submissiondate_paymentdate_offset,TenorType,One,,,
+product,additionalpayment1_terminationdate_paymentdate_offset,TenorType,One,,,
+product,additionalpayment2_businesscenter1,EnumeratedString,One,,lookup:BusinessCenter,
+product,additionalpayment2_businesscenter2,EnumeratedString,One,,lookup:BusinessCenter,
+product,additionalpayment2_businessdayconvention,EnumeratedString,One,,lookup:BusinessDayConvention,
+product,additionalpayment2_currency,EnumeratedString,One,,lookup:Currency,
+product,additionalpayment2_paymentdate,DateType,One,,,
+product,additionalpayment2_settlementdate_paymentdate_offset,TenorType,One,,,
+product,additionalpayment2_submissiondate_paymentdate_offset,TenorType,One,,,
+product,additionalpayment2_terminationdate_paymentdate_offset,TenorType,One,,,
+product,additionalpayment3_businesscenter1,EnumeratedString,One,,lookup:BusinessCenter,
+product,additionalpayment3_businesscenter2,EnumeratedString,One,,lookup:BusinessCenter,
+product,additionalpayment3_businessdayconvention,EnumeratedString,One,,lookup:BusinessDayConvention,
+product,additionalpayment3_currency,EnumeratedString,One,,lookup:Currency,
+product,additionalpayment3_paymentdate,DateType,One,,,
+product,additionalpayment3_settlementdate_paymentdate_offset,TenorType,One,,,
+product,additionalpayment3_submissiondate_paymentdate_offset,TenorType,One,,,
+product,additionalpayment3_terminationdate_paymentdate_offset,TenorType,One,,,
+product,additionalpayment4_businesscenter1,EnumeratedString,One,,lookup:BusinessCenter,
+product,additionalpayment4_businesscenter2,EnumeratedString,One,,lookup:BusinessCenter,
+product,additionalpayment4_businessdayconvention,EnumeratedString,One,,lookup:BusinessDayConvention,
+product,additionalpayment4_currency,EnumeratedString,One,,lookup:Currency,
+product,additionalpayment4_paymentdate,DateType,One,,,
+product,additionalpayment4_settlementdate_paymentdate_offset,TenorType,One,,,
+product,additionalpayment4_submissiondate_paymentdate_offset,TenorType,One,,,
+product,additionalpayment4_terminationdate_paymentdate_offset,TenorType,One,,,
+product,additionalpayment5_businesscenter1,EnumeratedString,One,,lookup:BusinessCenter,
+product,additionalpayment5_businesscenter2,EnumeratedString,One,,lookup:BusinessCenter,
+product,additionalpayment5_businessdayconvention,EnumeratedString,One,,lookup:BusinessDayConvention,
+product,additionalpayment5_currency,EnumeratedString,One,,lookup:Currency,
+product,additionalpayment5_paymentdate,DateType,One,,,
+product,additionalpayment5_settlementdate_paymentdate_offset,TenorType,One,,,
+product,additionalpayment5_submissiondate_paymentdate_offset,TenorType,One,,,
+product,additionalpayment5_terminationdate_paymentdate_offset,TenorType,One,,,
+product,additionalpayment6_businesscenter1,EnumeratedString,One,,lookup:BusinessCenter,
+product,additionalpayment6_businesscenter2,EnumeratedString,One,,lookup:BusinessCenter,
+product,additionalpayment6_businessdayconvention,EnumeratedString,One,,lookup:BusinessDayConvention,
+product,additionalpayment6_currency,EnumeratedString,One,,lookup:Currency,
+product,additionalpayment6_paymentdate,DateType,One,,,
+product,additionalpayment6_settlementdate_paymentdate_offset,TenorType,One,,,
+product,additionalpayment6_submissiondate_paymentdate_offset,TenorType,One,,,
+product,additionalpayment6_terminationdate_paymentdate_offset,TenorType,One,,,
+product,additionalpayment_businesscenters_all,EnumeratedString,Many,,lookup:BusinessCenter,
+product,additionalpayment_businessdayconventions,EnumeratedString,Many,,lookup:BusinessDayConvention,
+product,additionalpayment_settlementdate_paymentdate_offsets,TenorType,Many,,,
+product,additionalpayment_submissiondate_paymentdate_offsets,TenorType,Many,,,
+product,additionalpayment_terminationdate_paymentdate_offsets,TenorType,Many,,,
+product,admissionToTradingRequested,Boolean,One,A request for admission to trading has been made for the product,,MiFIR art. 26(2)(a)
+product,admittedToTradingOnRM_TCM_MTF,Boolean,One,"Product is admitted to trading on a regulated market or on an equivalent third country market or on a MTF, excluding those that embed a derivative or incorporate a structure which makes it difficult for the client to understand the risk involved",,MiFID-II art. 25(4)(a)(ii)
+product,agreedreportingparty,String,One,Agreed reporting party,,
+product,algorithmicallyDeterminedPrice,Boolean,One,"executed by reference to a price that is calculated over multiple time instances according to a given benchmark, including transactions executed by reference to a volume-weighted average price or a time-weighted average price;",,RTS-1 art. 2(a)
+product,anonymousCounterparty,Boolean,One,"Whether the counterparty identity is unknown, when executing on a trading venue",,
+product,approvedCommodityHedge,Boolean,One,Transaction has been approved by CA as exempt from MiFID-II Commodity Position Limits,,MiFID-II art. 57(1); RTS-21 art. 8(1)
+product,assetclass,EnumeratedString,One,ISDA taxonomy asset class,lookup:AssetClass,
+product,associatedsecuritysettlementoffset,TenorType,One,The number of days to settlement of a security which has an FX transaction associated with,,
+product,attotvAtAMLevel,Boolean,One,Whether ATToTV was collected at the Asset Manager level,,
+product,attotvAtLegalEntityLevel,Boolean,One,Whether ATToTV was collected at the legal entity level,,
+product,auClearingContrapartyOptIn,Boolean,One,"The contraparty has opted to become a clearing entity under the ASIC regime. Note that this status may change for each transaction, depending upon whether the entity is acting in a personal or representative capacity.",,"ASIC Rules (Clearing), Art. 1.2.8."
+product,auClearingCounterpartyOptIn,Boolean,One,"The counterparty has opted to become a clearing entity under the ASIC regime. Note that this status may change for each transaction, depending upon whether the entity is acting in a personal or representative capacity.",,"ASIC Rules (Clearing), Art. 1.2.8."
+product,auTradableOnRegulatedMarket,Boolean,One,"The derivative is able to be traded on a Part 7.2A Market, Regulated Foreign Market, or Exempt Financial Market.  See ASIC Rules (Clearing), Art. 1.2.3(7).",,"ASIC Rules (Clearing), Art. 1.2.3(7)"
+product,availableForTradingOnSameVenue,Boolean,One,Whether the components of a package transaction are available for trading on the same trading venue,,Package Delegated Regulation Article 2(1)(a)
+product,averageDailyTurnover,BigDecimal,One,Average Daily Turnover of the product in EUR as published by ESMA,,
+product,backloadedtradedate,DateType,One,,,
+product,basecurrency,EnumeratedString,One,Base currency,lookup:Currency,
+product,baseproduct,EnumeratedString,One,Base Product of ISDA Taxonomy,lookup:BaseProduct,
+product,before1800CET,Boolean,One,Is the event before 18:00 CET?,,RTS-23 art. 2
+product,belowLiquidityThreshold,Boolean,One,Product has fallen below the liquidity threshold,,"MiFIR art. 9(4), 18(6); RTS-2 art. 16"
+product,blocktrade,Boolean,One,"Whether the trade is executed as a block, to be allocated to legal customer accounts post-execution.",,
+product,blocktrade_entrymethod,EnumeratedString,One,,lookup:BlockEntryType,
+product,bookingLocationStateOfRelationship,EnumeratedString,One,"Whether the ""��tat de la relation"" with the counterparty is open for the booking location",lookup:RelationshipStates,
+product,bookingLocationTypeOfLocalRelationship,EnumeratedString,One,Type of relationship with the counterparty for the booking location,lookup:LocalRelationshipTypes,
+product,booklocation,EnumeratedString,One,"For a given transaction, the location of the profit-or-loss account into which the transaction is booked.",lookup:LocationCode,
+product,broadvsnarrow,EnumeratedString,One,"Whether an index underlying of a derivative is broad-based ( attribute is set to ""Broad"") or narrow-based (attribute is set to ""Narrow"").   In general, the Commodity Exchange Act defines a narrow-based security index as an index of securities that meets one of the following four requirements (1) it has nine or fewer components; (2) one component comprises more than 30 percent of the index weighting; (3) the five highest weighted components comprise more than 60 percent of the index weighting, or (4) the lowest weighted components comprising in the aggregate 25 percent of the index��_��__��_s weighting have an aggregate dollar value of average daily volume over a six-month period of less than $50 million ($30 million if there are at least 15 component securities). However, the legal definition in Section 1a(25) of the Commodity Exchange Act, 7 USC 1a(25), contains several exceptions to this provision.",lookup:BroadVsNarrow,7 U.S.C 1(a)(35)
+product,businesscenters_all,EnumeratedString,Many,,lookup:BusinessCenter,
+product,businessdayconventions_all,EnumeratedString,Many,,lookup:BusinessDayConvention,
+product,buyInUnsettledTransactions,Boolean,One,"The transaction is carried out under the rules or procedures of a trading venue, a CCP or a central securities depository to effect a buy-in of unsettled transactions",,RTS-1 art. 2(i)
+product,buyer,EnumeratedString,One,Buyer for purposes of the transaction,lookup:PartySide,
+product,c7_c10EquivalentContract,Boolean,One,"Contract is equivalent to a contract traded on a regulated market, MTF, an OTF or such a third country trading venue, with regards to the price, the lot, the delivery date and other contractual terms.",,MiFID II Del. Reg. Art 7(1)(a)(iii)
+product,caClearingQualifiedMultilateralCompression,Boolean,One,Whether a transaction is a multilateral compression as covered by Part 3 Section 8 of Rule 94-101,,CSA Rule 94-101 Part 3 Section 8
+product,cacibClientMailAttached,Boolean,One,Whether client documentation has been attached related to an override for audit purposes,,
+product,cacibCommentAdded,Boolean,One,Comment related to an override has been added,,
+product,cacibTradeNotAllowedOverride,Boolean,One,Whether a Trade Not Allowed flag has been overriden,,
+product,calculationperioddates_businessdayconventions,EnumeratedString,Many,,lookup:BusinessDayConvention,
+product,cashflows_match_parameters,Boolean,One,,,
+product,cdsBespokeBasket,Boolean,One,Whether an CDS has a bespoke basket,,
+product,cftcBlockSize_fxRate,BigDecimal,One,The FX rate used for block size calculation.,,
+product,cftc_part45_8_reporting_party,EnumeratedString,One,"Takes the value of ""contraparty"", ""counterparty"", ""execution-venue"", ""ccp"" to denote the reporting party per 17 CFR Part 45.8.",lookup:ReportingParty,17 CFR Part 45.8
+product,ciuBeneficialOwnershipTransfer,Boolean,One,Collective Investment Undertaking Beneficial Ownership Transfer,,RTS-2 art. 12(b)
+product,clearingFirmLei,String,One,LEI for the clearing firm where the transaction is accepted for clearing,,
+product,clearingchannel,String,One,,,
+product,clearingchoices,EnumeratedString,Many,,lookup:FinMktInfraType,
+product,clearingcode,String,One,,,
+product,clearinghouse,EnumeratedString,One,Short name of clearing firm,lookup:ClearingFirmShortName,
+product,clearingmember,String,One,,,
+product,clearingstatus,EnumeratedString,One,"The status of the clearing process for the identified trade. For example, Received, Pending (Approval), Registered (i.e. cleared), Rejected, etc.",lookup:ClearingStatus,http://www.fpml.org/spec/fpml-5-8-3-wd-3/html/confirmation/schemaDocumentation/schemas/fpml-business-events-5-8_xsd/complexTypes/ClearingStatusItem/clearingStatusValue.html
+product,clientAbilityToBearLoss,EnumeratedString,One,Client's ability to bear losses,lookup:MiFIDAbilityToBearLoss,MiFID-II Product Governance Guidelines para. 18(c)
+product,clientActingAsDistributorToRetail,Boolean,One,Client is acting as distributor to other retail clients,,"CACIB internal rules for Suitability & Appropriateness, Info on Instrument"
+product,clientInitiatedAndAppropriatenessInformed,Boolean,One,"The investment service is provided at the initiative of the client or potential client, and the client has been clearly informed that in the provision of that service the investment firm is not required to assess the appropriateness of the financial instrument or service provided or offered and that therefore he does not benefit from the corresponding protection of the relevant conduct of business rules. Such a warning may be provided in a standardised format",,MiFID-II art. 25(4)(b)
+product,clientKnowledgeExperience,EnumeratedString,One,Client's knowledge & experience,lookup:MiFIDKnowledgeExperience,MiFID-II Product Governance Guidelines para. 18(b)
+product,clientObjectivesNeeds,String,Many,Client's objectives & needs,,MiFID-II Product Governance Guidelines para. 18(e)
+product,clientOffersProductToItsClients,Boolean,One,Client intends to offer the product to its clients,,MiFID-II Del. Reg. art. 50(1)
+product,clientProvidedExecutionInstructions,Boolean,One,Client Provided Execution Instructions,,MiFID-II art. 27(1)
+product,clientRiskTolerance,EnumeratedString,One,Client's risk tolerance,lookup:MiFIDRiskTolerance,MiFID-II Product Governance Guidelines para. 18(d)
+product,collateralTransfer,Boolean,One,"Transaction is for transfer of collateral or margin, or as part of CCP default settlement",,
+product,collateralization,EnumeratedString,One,Specifies whether trade is collateralized and how,lookup:CollateralType,http://www.fpml.org/spec/fpml-5-9-3-wd-3/html/recordkeeping/schemaDocumentation/schemas/fpml-doc-5-9_xsd/complexTypes/PartyTradeInformation/collateralizationType.html
+product,commercial_intent,Boolean,One,"Whether a transaction is entered into to hedge or mitigate commercial risk, in accordance with 17 CFR 50.50(c)",,17 CFR 50.50(c)
+product,commercial_risk,Boolean,One,,,
+product,commoditySpotSettlement,Boolean,One,"Whether a commodity contract is considered to be spot contract for the purposes of Section C(7) of Annex I to Directive 2004/39/EC. ""Spot"" settlement here requires settlement in 2 business days, or according to market standards, and the absence of any understanding between the parties to the contract that delivery of the underlying is to be postponed and not to be performed within ""spot period""",,Article 38(2) of Regulation (EC) No 1287/2006
+product,commodity_energybalanceintent,Boolean,One,"If a trade is entered into with or by an operator or administrator of an energy transmission grid, energy balancing mechanism or pipeline network, and it is necessary to keep in balance the supplies and uses of energy at a given time.",,
+product,commodity_notionalquantity,BigDecimal,One,Commodity Notional Quantity,,
+product,commodity_regulatoryhedgepurpose,Boolean,One,,,
+product,commoditycode,EnumeratedString,One,"A code to denote future contracts traded on various exchanges. For example, ""ICUS C"" stands for the Coffee C futures contract traded on ICE",lookup:CommodityCode,
+product,commodityuser_inlineofbusiness,Boolean,One,"Whether a counterparty is in the business of producing, delivering or using the commodity being traded",,
+product,consentToTradeOffFacility,Boolean,One,Client consent to trade outside a trading venue has been obtained,,MiFID-II art. 27(5)
+product,considerationfxspotsettlementoffset,TenorType,One,,,
+product,context_interaffiliate,Boolean,One,Boolean flag for whether a transaction is between affiliates,,
+product,contractualmatrix1_matrixtype,String,One,,,
+product,contractualmatrix1_publicationdate,DateType,One,,,
+product,contractualmatrix2_matrixtype,String,One,,,
+product,contractualmatrix2_publicationdate,DateType,One,,,
+product,contractualmatrix3_matrixtype,String,One,,,
+product,contractualmatrix3_publicationdate,DateType,One,,,
+product,contrapartyAgentclientSpecifiedPerson,Boolean,One,,,
+product,contrapartyAustralianClearingEntity,Boolean,One,"The contraparty is an Australian Clearing Entity as defined under the ASIC Rules (Clearing), Art. 1.2.4.",,"ASIC Rules (Clearing), Art. 1.2.4."
+product,contrapartyBookLocation,EnumeratedString,One,"For a given transaction, the location of the profit or loss account into which the trade is booked by the Contraparty",lookup:LocationCode,
+product,contrapartyForeignClearingEntity,Boolean,One,"The contraparty is an Foreign Clearing Entity as defined under the ASIC Rules (Clearing), Art. 1.2.4.",,"ASIC Rules (Clearing), Art. 1.2.4."
+product,contrapartySI,Boolean,One,Contraparty is SI for product,,
+product,contraparty_actingasagent,Boolean,One,,,
+product,contraparty_sales_primarylocation,EnumeratedString,Many,"The primary location of residence and/or employment of the sales staff responsible for arranging or negotiating the trade on the Contraparty side, e.g. [""US""]. If multiple traders are involved and are associated at different locations, then a list may be provided, e.g. [""US"",""AU""]. This may or may not coincide with the physical location of the trade(s) at the time of trader execution.",lookup:LocationCode,
+product,contraparty_trader_physicallocation,EnumeratedString,Many,"The physical location of the trader(s) responsible for entering into the trade on the Contraparty side, e.g. [""US""]. If multiple traders are involved and are associated at different locations, then a list may be provided, e.g. [""US"",""AU""]. This may not coincide with the primary location of employment or residence.",lookup:LocationCode,
+product,contraparty_trader_primarylocation,EnumeratedString,Many,"The primary location of residence and/or employment of the trader responsible for entering the trade on the Contraparty side, e.g. [""US""]. If multiple traders are involved and are associated at different locations, then a list may be provided, e.g. [""US"",""AU""]. This may or may not coincide with the physical location of the trade(s) at the time of trader execution.",lookup:LocationCode,
+product,contrapartyid,String,One,,,
+product,countercurrency,EnumeratedString,One,,lookup:Currency,
+product,counterparty.SI,Boolean,One,Counterparty represents it is a systematic internaliser for the product,,
+product,counterpartyAgentclientSpecifiedPerson,Boolean,One,,,
+product,counterpartyAustralianClearingEntity,Boolean,One,"The counterparty is an Australian Clearing Entity as defined under the ASIC Rules (Clearing), Art. 1.2.4.",,"ASIC Rules (Clearing), Art. 1.2.4."
+product,counterpartyBookLocation,EnumeratedString,One,"For a given transaction, the location of the profit or loss account into which the trade is booked by the Counterparty",lookup:LocationCode,
+product,counterpartyForeignClearingEntity,Boolean,One,"The counterparty is an Foreign Clearing Entity as defined under the ASIC Rules (Clearing), Art. 1.2.4.",,"ASIC Rules (Clearing), Art. 1.2.4."
+product,counterpartySI,Boolean,One,Counterparty rep that it is SI for product,,
+product,counterparty_actingasagent,Boolean,One,,,
+product,counterparty_sales_physicallocation,EnumeratedString,Many,"The physical location of the sales staff responsible for arranging or negotiating the trade on the Counterparty side, e.g. [""US""]. If multiple sales are involved and are associated at different locations, then a list may be provided, e.g. [""US"",""AU""]. This may not coincide with the primary location of employment or residence.",lookup:LocationCode,
+product,counterparty_sales_primarylocation,EnumeratedString,Many,"The primary location of residence and/or employment of the sales staff responsible for arranging or negotiating the trade on the Counterparty side, e.g. [""US""]. If multiple traders are involved and are associated at different locations, then a list may be provided, e.g. [""US"",""AU""]. This may or may not coincide with the physical location of the trade(s) at the time of trader execution.",lookup:LocationCode,
+product,counterparty_trader_physicallocation,EnumeratedString,Many,"The physical location of the sales staff responsible for arranging or negotiating the trade on the Counterparty side, e.g. [""US""]. If multiple sales are involved and are associated at different locations, then a list may be provided, e.g. [""US"",""AU""]. This may not coincide with the primary location of employment or residence.",lookup:LocationCode,
+product,counterparty_trader_primarylocation,EnumeratedString,Many,"The primary location of residence and/or employment of the trader responsible for entering the trade on the Counterparty side, e.g. [""US""]. If multiple traders are involved and are associated at different locations, then a list may be provided, e.g. [""US"",""AU""]. This may or may not coincide with the physical location of the trade(s) at the time of trader execution.",lookup:LocationCode,
+product,counterpartyid,String,One,,,
+product,country,EnumeratedString,One,,lookup:CountryCode,
+product,coupon,BigDecimal,One,,,
+product,credit-index-name,EnumeratedString,One,Name of a credit index,,
+product,credit-index-series,Integer,One,Credit index series,,
+product,creditIndexName,EnumeratedString,One,Credit index names,lookup:CreditIndexNameType,
+product,creditIndexSeries,Integer,One,Credit index series number,,
+product,currency,EnumeratedString,One,Settlement currency of the transaction,lookup:Currency,
+product,custuserlogon,String,One,,,
+product,custusername,String,One,logged in Customer user Name,,
+product,deMinimisTrading,Boolean,One,"Investment Firm parties' trading activity with respect to the shares concerned is non-systematic, ad-hoc, irregular and infrequent",,MiFIR art. 23(1)(a)
+product,dealactionstr,String,One,,,
+product,dealertradername,String,One,dealer trader name,,
+product,decidedToDeal,Boolean,One,Initial decision to deal has been taken,,MiFID-II Del. Reg. art. 74
+product,desc,String,One,,,
+product,difficultToUnderstand,Boolean,One,"Product incorporates a structure that makes it difficult for the client to understand the risk involved or, for structured deposits, the risk of return or cost of exit.",,
+product,distributionRegion,EnumeratedString,Many,Region where the distributor intends to distribute the product,lookup:DistributionRegions,
+product,distributorTier,EnumeratedString,One,Tier to which a distributor belongs,lookup:DistributorTiers,
+product,distributorWaiver,Boolean,One,Whether there is a waiver for distributor,,
+product,earlytermination_multipleexercisepermitted,Boolean,One,,,
+product,earlytermination_partialexercisepermitted,Boolean,One,,,
+product,earlytermination_settlementmethod,EnumeratedString,One,,lookup:SettlementMethod,
+product,earlyterminationdate_businessdayconvention,EnumeratedString,One,,lookup:BusinessDayConvention,
+product,earlyterminationstyle,EnumeratedString,One,,lookup:OptionStyle,
+product,earlyterminationtype,EnumeratedString,One,,lookup:EarlyTerminationType,
+product,economicallyEquivalentOTCContract,Boolean,One,OTC contract is economically equivalent to one traded on a trading venue,,MiFID-II art. 57(1); RTS-21 art. 6
+product,economicssummary,String,One,,,
+product,ecpOffersProductToClients,Boolean,One,Eligible Counterparty intends to offer the product to its clients,,
+product,effectivedate,DateType,One,The effective date of the transaction,,
+product,effectivedates_businessdayconventions,EnumeratedString,Many,,lookup:BusinessDayConvention,
+product,electronicPetConfirm,Boolean,One,Whether verification of primary economic terms occurs electronically,,
+product,eligibleAtCftcDCOs,Boolean,One,Whether a transaction is eligible to clear at any CFTC registered or exempt DCO,,
+product,eligibleDCOs,EnumeratedString,Many,The list of DCOs where the transaction is eligible to clear,,
+product,eligibleToClearAtJSCC,Boolean,One,,,
+product,embedsDerivative,Boolean,One,Product embeds a derivative,,MiFID-II Del. Reg. art. 50(1); ESMA Guidelines 2015/1787
+product,entityid,String,One,,,
+product,entityname,String,One,,,
+product,equityDerivativeUnderlyingInstrument,String,One,Description of the underlying index for stock index futures/forwards/options,,MiFID RTS 2 Annex III Table 6.1
+product,equityIndexType,EnumeratedString,One,Index type of an equity derivative,lookup:EquityIndexType,
+product,equityPostTradeDeferralAuthorized,Boolean,One,Indicates post-trade publication deferral has been authorized for the product,,MiFIR art. 14(2)
+product,equitySwapUnderlier,String,One,"Name of the underlying share, basket, or index of an equity swap",,MiFID RTS 2 Annex III Table 6.1
+product,escbMemberTransparencyExempt,Boolean,One,ESCB Member has given notice that transaction is exempt under MiFIR 1(6),,MiFIR art. 1(6); RTS-2 arts. 14-15
+product,esmaAssetClass,EnumeratedString,One,ESMA Asset Class,lookup:ESMAAssetClasses,
+product,esmaAssetSubClass,EnumeratedString,One,ESMA Asset Sub Class,lookup:ESMAAssetSubClasses,
+product,esmaCommodityUnderlierClassification,EnumeratedString,One,Identifies underlying commodity of a commodity derivative defined at the most granular level as specified in Table 2 of the Annex of Commission Delegated Regulation (EU) 2017/585 (Financial Instrument Reference Data),lookup:ESMACommodityUnderlyerClassification,Package Delegated Regulation Article 6(b); RTS 23 Annex Table 2
+product,esmaCommodityUnderlyerClassification,EnumeratedString,One,Identifies underlying commodity of a commodity derivative defined at the most granular level as specified in Table 2 of the Annex of Commission Delegated Regulation (EU) 2017/585 (Financial Instrument Reference Data),lookup:ESMACommodityUnderlyerClassification,Package Delegated Regulation Article 6(b); RTS 23 Annex Table 2
+product,esmaContractType,EnumeratedString,One,Derivative contract type as defined in RTS 2 Field 5,lookup:ESMAContractTypes,"MiFIR RTS 2, Annex IV, Table 2, Field 5"
+product,esmaSubAssetClass,EnumeratedString,One,RTS 2 Sub-Asset Class,lookup:ESMASubAssetClasses,MiFIR RTS 2
+product,euPDSellingRestriction,Boolean,One,Whether an EU PD selling restriction applies,,
+product,exchangeMemberForTradedProduct,EnumeratedString,One,The party that is an exchange member or participant of the venue on which the product is traded,lookup:PartySide,MiFID-II art. 58(3)
+product,exchange_rate_in_eur,BigDecimal,One,Exchange rate in EUR,,
+product,executedTwoHoursBeforeEOD,Boolean,One,Trade is executed more than two hours before the end of the trading day,,RTS-1 art. 15(3)(a)
+product,executed_on_facility,Boolean,One,,,
+product,executionstyle,EnumeratedString,One,"The execution style of the transaction (quote methodology, e.g. RFQ, RFC, RFM, etc.)",lookup:ExecutionStyle,
+product,executiontype,EnumeratedString,One,"Executon type, i.e. ""Voice"" or ""Electronic""",lookup:ExecutionType,
+product,executionvenue,EnumeratedString,One,"Execution venue type (e.g. SEF, MTF, Off Facility, etc.)",lookup:ExecutionVenueType,
+product,exempFuturesUnderlying,Boolean,One,Whether a derivative is based on an exempt futures contract according Rule 3a12-8 under the Exchange Act,,17 CFR 240.3a12-8
+product,exemptCooperativeMemberTransaction,Boolean,One,"Whether transaction meets the conditions of 17 CFR Part 50.51(b) as a ""member service"" transaction with respect to cooperative members",,17 C.F.R. Part 50.51(b)
+product,exemptSecurityUnderlying,Boolean,One,A derivative whose underlying is an exempt security or entirely consist of exempt securities.,,15 U.S.C. 78c(a)(12)
+product,exemptTreasuryAffiliateTransaction,Boolean,One,"Whether a transaction entered into by a Treasury Affiliate meets the conditions stated in CFTC Letter 14-144 under ""General Conditions to the Swap Activity""",,
+product,exerciseFromOptionDate,DateType,One,"For a swap that results from the exercise of an option, the date on which the exercise takes place. This is also the execution date of the swap.",,
+product,expirationDateClosestToCurrentDate,Boolean,One,Identifies IR Future contracts with expiration date closest to the current date,,Package Delegated Regulation Article 3(f)(2)
+product,exposureValueTradeExposure,BigDecimal,One,Exposure value of trade exposure.,,
+product,facilitatesecuritysettlement,Boolean,One,Boolean flag for whether an FX transaction is entered into to facilitate a security transaction,,
+product,facingSystematicInternaliserForProduct,Boolean,One,Facing Systematic Internaliser (as Counterparty) for Product,,RTS-2 art. 7(6)
+product,family,EnumeratedString,One,"The index family type of a Credit index, e.g. WesternEurope, HY, SeniorFinancial, etc.",lookup:Family,
+product,farleg_settlement_offsetaftervaluation,TenorType,One,Number of business days between valuation and settlement on the far leg of an FX swap.,,
+product,fixedleg1_averagingmethod,String,One,,,
+product,fixedleg1_businesscenters_all,EnumeratedString,Many,,lookup:BusinessCenter,
+product,fixedleg1_calculationperioddates_businesscenter1,EnumeratedString,One,,lookup:BusinessCenter,
+product,fixedleg1_calculationperioddates_businesscenter2,EnumeratedString,One,,lookup:BusinessCenter,
+product,fixedleg1_calculationperioddates_businesscenters,EnumeratedString,Many,The business centers used for calculation period date adjustments on the fixed leg of a swap,lookup:BusinessCenter,
+product,fixedleg1_calculationperioddates_businessdayconvention,EnumeratedString,One,The business day convention used for calculation period date adjustments on the fixed leg of a swap.,lookup:BusinessDayConvention,
+product,fixedleg1_calculationperioddates_firstregularperiodstartdate,DateType,One,,,
+product,fixedleg1_calculationperioddates_lastregularperiodenddate,DateType,One,,,
+product,fixedleg1_calculationperiodfrequency,TenorType,One,,,
+product,fixedleg1_calculationperiodfrequency_rollconvention,EnumeratedString,One,The roll convention used for calculation period dates on the fixed leg of a swap.,lookup:RollConvention,
+product,fixedleg1_calculationperiodstartdate,DateType,One,,,
+product,fixedleg1_daycountfraction,EnumeratedString,One,The day count fraction used on the fixed leg of a swap.,lookup:DayCountFraction,
+product,fixedleg1_effectivedate,DateType,One,,,
+product,fixedleg1_effectivedate_businesscenter1,EnumeratedString,One,,lookup:BusinessCenter,
+product,fixedleg1_effectivedate_businesscenter2,EnumeratedString,One,,lookup:BusinessCenter,
+product,fixedleg1_effectivedate_businesscenters,EnumeratedString,Many,,lookup:BusinessCenter,
+product,fixedleg1_effectivedate_businessdayconvention,EnumeratedString,One,,lookup:BusinessDayConvention,
+product,fixedleg1_finalstub_currency,EnumeratedString,One,,lookup:Currency,
+product,fixedleg1_finalstub_fixedrate,BigDecimal,One,,,
+product,fixedleg1_finalstub_floattenor1,TenorType,One,,,
+product,fixedleg1_finalstub_floattenor2,TenorType,One,,,
+product,fixedleg1_finalstub_ratetype,EnumeratedString,One,,lookup:LegType,
+product,fixedleg1_finalstub_stublength,TenorType,One,,,
+product,fixedleg1_finalstub_stubtype,EnumeratedString,One,,lookup:StubType,
+product,fixedleg1_firstnotionalstepdate,DateType,One,,,
+product,fixedleg1_fixedinitialrate,BigDecimal,One,,,
+product,fixedleg1_fixedrate,BigDecimal,One,,,
+product,fixedleg1_hasstub,Boolean,One,,,
+product,fixedleg1_initialnotionalvalue,BigDecimal,One,,,
+product,fixedleg1_initialstub_currency,EnumeratedString,One,,lookup:Currency,
+product,fixedleg1_initialstub_fixedrate,BigDecimal,One,,,
+product,fixedleg1_initialstub_floattenor1,TenorType,One,,,
+product,fixedleg1_initialstub_floattenor2,TenorType,One,,,
+product,fixedleg1_initialstub_ratetype,EnumeratedString,One,,lookup:LegType,
+product,fixedleg1_initialstub_stublength,TenorType,One,,,
+product,fixedleg1_initialstub_stubtype,EnumeratedString,One,,lookup:StubType,
+product,fixedleg1_isconstantrate,Boolean,One,Is the coupon fixed over the tenor of the swap?,,
+product,fixedleg1_isconstantspread,Boolean,One,determines if the fixed leg has a spread,,
+product,fixedleg1_isfixedrate,Boolean,One,,,
+product,fixedleg1_isnondeliverable,Boolean,One,,,
+product,fixedleg1_lastnotionalstepdate,DateType,One,,,
+product,fixedleg1_legtype,EnumeratedString,One,,lookup:LegType,
+product,fixedleg1_notionalcurrency,EnumeratedString,One,,lookup:Currency,
+product,fixedleg1_notionalstepamount,BigDecimal,One,,,
+product,fixedleg1_notionalstepfrequency,TenorType,One,,,
+product,fixedleg1_payer,String,One,,,
+product,fixedleg1_paymentdates_businesscenter1,EnumeratedString,One,,lookup:BusinessCenter,
+product,fixedleg1_paymentdates_businesscenter2,EnumeratedString,One,,lookup:BusinessCenter,
+product,fixedleg1_paymentdates_businesscenters,EnumeratedString,Many,The business centers used for payment date adjustments on the fixed leg of a swap.,lookup:BusinessCenter,
+product,fixedleg1_paymentdates_businessdayconvention,EnumeratedString,One,The business day convention used for payment date adjustments on the fixed leg of a swap.,lookup:BusinessDayConvention,
+product,fixedleg1_paymentdates_daytype,EnumeratedString,One,,lookup:DayType,
+product,fixedleg1_paymentdates_offsettenor,TenorType,One,,,
+product,fixedleg1_paymentfrequency,TenorType,One,The payment frequency on the fixed leg of a swap.,,
+product,fixedleg1_payrelativeto,EnumeratedString,One,,lookup:PayRelativeTo,
+product,fixedleg1_residualterm,TenorType,One,,,
+product,fixedleg1_settlementcurrency,EnumeratedString,One,,lookup:Currency,
+product,fixedleg1_settlementfxfixing_businesscenter1,EnumeratedString,One,,lookup:BusinessCenter,
+product,fixedleg1_settlementfxfixing_businesscenter2,EnumeratedString,One,,lookup:BusinessCenter,
+product,fixedleg1_settlementfxfixing_businesscenters,EnumeratedString,Many,,lookup:BusinessCenter,
+product,fixedleg1_settlementfxfixing_businessdayconvention,EnumeratedString,One,,lookup:BusinessDayConvention,
+product,fixedleg1_settlementfxfixing_daytype,EnumeratedString,One,,lookup:DayType,
+product,fixedleg1_settlementfxfixing_offsettenor,DateType,One,,,
+product,fixedleg1_settlementfxfixing_rateoption,String,One,,,
+product,fixedleg1_stublengths,TenorType,Many,,,
+product,fixedleg1_stubtypes,EnumeratedString,Many,,lookup:StubType,
+product,fixedleg1_term,TenorType,One,,,
+product,fixedleg1_terminationdate,DateType,One,,,
+product,fixedleg1_terminationdate_businesscenter1,EnumeratedString,One,,lookup:BusinessCenter,
+product,fixedleg1_terminationdate_businesscenter2,EnumeratedString,One,,lookup:BusinessCenter,
+product,fixedleg1_terminationdate_businesscenters,EnumeratedString,Many,The business centers used to adjust the termination date on the fixed leg of a swap.,lookup:BusinessCenter,
+product,fixedleg1_terminationdate_businessdayconvention,EnumeratedString,One,The business day convention used fto adjust the termination date on the fixed leg of a swap.,lookup:BusinessDayConvention,
+product,fixedleg2_averagingmethod,String,One,,,
+product,fixedleg2_businesscenters_all,EnumeratedString,Many,,lookup:BusinessCenter,
+product,fixedleg2_calculationperioddates_businesscenter1,EnumeratedString,One,,lookup:BusinessCenter,
+product,fixedleg2_calculationperioddates_businesscenter2,EnumeratedString,One,,lookup:BusinessCenter,
+product,fixedleg2_calculationperioddates_businesscenters,EnumeratedString,Many,,lookup:BusinessCenter,
+product,fixedleg2_calculationperioddates_businessdayconvention,EnumeratedString,One,,lookup:BusinessDayConvention,
+product,fixedleg2_calculationperioddates_firstregularperiodstartdate,DateType,One,,,
+product,fixedleg2_calculationperioddates_lastregularperiodenddate,DateType,One,,,
+product,fixedleg2_calculationperiodfrequency,TenorType,One,,,
+product,fixedleg2_calculationperiodfrequency_rollconvention,EnumeratedString,One,,lookup:RollConvention,
+product,fixedleg2_calculationperiodstartdate,DateType,One,,,
+product,fixedleg2_daycountfraction,EnumeratedString,One,,lookup:DayCountFraction,
+product,fixedleg2_effectivedate,DateType,One,,,
+product,fixedleg2_effectivedate_businesscenter1,EnumeratedString,One,,lookup:BusinessCenter,
+product,fixedleg2_effectivedate_businesscenter2,EnumeratedString,One,,lookup:BusinessCenter,
+product,fixedleg2_effectivedate_businesscenters,EnumeratedString,Many,,lookup:BusinessCenter,
+product,fixedleg2_effectivedate_businessdayconvention,EnumeratedString,One,,lookup:BusinessDayConvention,
+product,fixedleg2_finalstub_currency,EnumeratedString,One,,lookup:Currency,
+product,fixedleg2_finalstub_fixedrate,BigDecimal,One,,,
+product,fixedleg2_finalstub_floattenor1,TenorType,One,,,
+product,fixedleg2_finalstub_floattenor2,TenorType,One,,,
+product,fixedleg2_finalstub_ratetype,EnumeratedString,One,,lookup:LegType,
+product,fixedleg2_finalstub_stublength,TenorType,One,,,
+product,fixedleg2_finalstub_stubtype,EnumeratedString,One,,lookup:StubType,
+product,fixedleg2_firstnotionalstepdate,DateType,One,,,
+product,fixedleg2_fixedinitialrate,BigDecimal,One,,,
+product,fixedleg2_fixedrate,BigDecimal,One,,,
+product,fixedleg2_hasstub,Boolean,One,,,
+product,fixedleg2_initialnotionalvalue,BigDecimal,One,,,
+product,fixedleg2_initialstub_currency,EnumeratedString,One,,lookup:Currency,
+product,fixedleg2_initialstub_fixedrate,BigDecimal,One,,,
+product,fixedleg2_initialstub_floattenor1,TenorType,One,,,
+product,fixedleg2_initialstub_floattenor2,TenorType,One,,,
+product,fixedleg2_initialstub_ratetype,EnumeratedString,One,,lookup:LegType,
+product,fixedleg2_initialstub_stublength,TenorType,One,,,
+product,fixedleg2_initialstub_stubtype,EnumeratedString,One,,lookup:StubType,
+product,fixedleg2_isconstantrate,Boolean,One,,,
+product,fixedleg2_isnondeliverable,Boolean,One,,,
+product,fixedleg2_lastnotionalstepdate,DateType,One,,,
+product,fixedleg2_legtype,EnumeratedString,One,,lookup:LegType,
+product,fixedleg2_notionalcurrency,EnumeratedString,One,Fixed leg 2 currency,lookup:Currency,
+product,fixedleg2_notionalstepamount,BigDecimal,One,,,
+product,fixedleg2_notionalstepfrequency,TenorType,One,,,
+product,fixedleg2_payer,String,One,,,
+product,fixedleg2_paymentdates_businesscenter1,EnumeratedString,One,,lookup:BusinessCenter,
+product,fixedleg2_paymentdates_businesscenter2,EnumeratedString,One,,lookup:BusinessCenter,
+product,fixedleg2_paymentdates_businesscenters,EnumeratedString,Many,,lookup:BusinessCenter,
+product,fixedleg2_paymentdates_businessdayconvention,EnumeratedString,One,,lookup:BusinessDayConvention,
+product,fixedleg2_paymentdates_daytype,EnumeratedString,One,,lookup:DayType,
+product,fixedleg2_paymentdates_offsettenor,TenorType,One,,,
+product,fixedleg2_paymentfrequency,TenorType,One,,,
+product,fixedleg2_payrelativeto,EnumeratedString,One,,lookup:PayRelativeTo,
+product,fixedleg2_residualterm,TenorType,One,,,
+product,fixedleg2_settlementcurrency,EnumeratedString,One,,lookup:Currency,
+product,fixedleg2_settlementfxfixing_businesscenter1,EnumeratedString,One,,lookup:BusinessCenter,
+product,fixedleg2_settlementfxfixing_businesscenter2,EnumeratedString,One,,lookup:BusinessCenter,
+product,fixedleg2_settlementfxfixing_businesscenters,EnumeratedString,Many,,lookup:BusinessCenter,
+product,fixedleg2_settlementfxfixing_businessdayconvention,EnumeratedString,One,,lookup:BusinessDayConvention,
+product,fixedleg2_settlementfxfixing_daytype,EnumeratedString,One,,lookup:DayType,
+product,fixedleg2_settlementfxfixing_offsettenor,DateType,One,,,
+product,fixedleg2_settlementfxfixing_rateoption,String,One,,,
+product,fixedleg2_stublengths,TenorType,Many,,,
+product,fixedleg2_stubtypes,EnumeratedString,Many,,lookup:StubType,
+product,fixedleg2_term,TenorType,One,,,
+product,fixedleg2_terminationdate,DateType,One,,,
+product,fixedleg2_terminationdate_businesscenter1,EnumeratedString,One,,lookup:BusinessCenter,
+product,fixedleg2_terminationdate_businesscenter2,EnumeratedString,One,,lookup:BusinessCenter,
+product,fixedleg2_terminationdate_businesscenters,EnumeratedString,Many,The business centers used to adjust the termination date on the fixed leg of a swap.,lookup:BusinessCenter,
+product,fixedleg2_terminationdate_businessdayconvention,EnumeratedString,One,The business day convention used fto adjust the termination date on the fixed leg of a swap.,lookup:BusinessDayConvention,
+product,fixedratepayer,EnumeratedString,One,The fixed rate payer of certain interest rate or commodity swaps,lookup:PartyRoleType,
+product,fixedratepayers,String,Many,,,
+product,fixingdate_businessdayconventions,EnumeratedString,Many,,lookup:BusinessDayConvention,
+product,floatingRateOptions,EnumeratedString,Many,Floating rate option or collection of floating rate options referenced in a derivative transaction.,lookup:FloatLegIndex,
+product,floatingleg1_averagingmethod,String,One,,,
+product,floatingleg1_businesscenters_all,EnumeratedString,Many,,lookup:BusinessCenter,
+product,floatingleg1_calculationperioddates_businesscenter1,EnumeratedString,One,,lookup:BusinessCenter,
+product,floatingleg1_calculationperioddates_businesscenter2,EnumeratedString,One,,lookup:BusinessCenter,
+product,floatingleg1_calculationperioddates_businesscenters,EnumeratedString,Many,The business centers used for calculation period date adjustments on the first floating leg of a swap.,lookup:BusinessCenter,
+product,floatingleg1_calculationperioddates_businessdayconvention,EnumeratedString,One,The business day convention used for calculation period date adjustments on the first floating leg of a swap.,lookup:BusinessDayConvention,
+product,floatingleg1_calculationperioddates_firstregularperiodstartdate,DateType,One,,,
+product,floatingleg1_calculationperioddates_lastregularperiodenddate,DateType,One,,,
+product,floatingleg1_calculationperiodfrequency,TenorType,One,,,
+product,floatingleg1_calculationperiodfrequency_rollconvention,EnumeratedString,One,,lookup:RollConvention,
+product,floatingleg1_calculationperiodstartdate,DateType,One,,,
+product,floatingleg1_compoundingmethod,EnumeratedString,One,,lookup:CompoundingMethod,
+product,floatingleg1_daycountfraction,EnumeratedString,One,The day count fraction used on the first floating leg of a swap.,lookup:DayCountFraction,
+product,floatingleg1_effectivedate,DateType,One,,,
+product,floatingleg1_effectivedate_businesscenter1,EnumeratedString,One,,lookup:BusinessCenter,
+product,floatingleg1_effectivedate_businesscenter2,EnumeratedString,One,,lookup:BusinessCenter,
+product,floatingleg1_effectivedate_businesscenters,EnumeratedString,Many,,lookup:BusinessCenter,
+product,floatingleg1_effectivedate_businessdayconvention,EnumeratedString,One,,lookup:BusinessDayConvention,
+product,floatingleg1_finalfixingdate,DateType,One,,,
+product,floatingleg1_finalstub_currency,EnumeratedString,One,,lookup:Currency,
+product,floatingleg1_finalstub_fixedrate,BigDecimal,One,,,
+product,floatingleg1_finalstub_floattenor1,TenorType,One,,,
+product,floatingleg1_finalstub_floattenor2,TenorType,One,,,
+product,floatingleg1_finalstub_ratetype,EnumeratedString,One,,lookup:LegType,
+product,floatingleg1_finalstub_stublength,TenorType,One,,,
+product,floatingleg1_finalstub_stubtype,EnumeratedString,One,,lookup:StubType,
+product,floatingleg1_firstnotionalstepdate,DateType,One,,,
+product,floatingleg1_fixingcutoff_daytype,EnumeratedString,One,,lookup:DayType,
+product,floatingleg1_fixingcutoff_offsettenor,TenorType,One,,,
+product,floatingleg1_fixingdate_businesscenter1,EnumeratedString,One,,lookup:BusinessCenter,
+product,floatingleg1_fixingdate_businesscenter2,EnumeratedString,One,,lookup:BusinessCenter,
+product,floatingleg1_fixingdate_businesscenters,EnumeratedString,Many,The business centers used for fixing date adjustments on the first floating leg of a swap.,lookup:BusinessCenter,
+product,floatingleg1_fixingdate_businessdayconvention,EnumeratedString,One,,lookup:BusinessDayConvention,
+product,floatingleg1_fixingdate_daytype,EnumeratedString,One,,lookup:DayType,
+product,floatingleg1_fixingdate_offsettenor,TenorType,One,,,
+product,floatingleg1_floatingrateindex,EnumeratedString,One,"The ISDA floating rate option on the first floating leg of a swap that references an index, e.g. ""USD-LIBOR-BBA"".",lookup:FloatLegIndex,
+product,floatingleg1_floatingraterounding,Integer,One,,,
+product,floatingleg1_fxlinked_businesscenter1,EnumeratedString,One,xccy notional reset calendar,lookup:BusinessCenter,
+product,floatingleg1_fxlinked_businesscenters,EnumeratedString,Many,xccy notional reset calendar,lookup:BusinessCenter,
+product,floatingleg1_fxlinked_fxspotratesource,EnumeratedString,One,source for spot rate for FX fixing,lookup:RateSourcePageType,
+product,floatingleg1_fxlinked_hasfinalexchange,Boolean,One,xccy final notional exchange,,
+product,floatingleg1_fxlinked_hasinitialexchange,Boolean,One,xccy initial notional exchange,,
+product,floatingleg1_fxlinked_hasintermediateexchange,Boolean,One,xccy intermediate notional exchange,,
+product,floatingleg1_fxlinked_is_constantnotional,Boolean,One,Flag to show whether the leg has a constant notional,,
+product,floatingleg1_fxlinked_reset_offsettenor,TenorType,One,xccy notional reset offset,,
+product,floatingleg1_fxlinked_resetfrequency,TenorType,One,"frequency at which the notional resets, notional resets are always on coupon date",,
+product,floatingleg1_fxlinked_varyingnotionalcurrency,EnumeratedString,One,currency which resets in a xccy swap,lookup:Currency,
+product,floatingleg1_hasinitialfixing,Boolean,One,,,
+product,floatingleg1_hasstub,Boolean,One,,,
+product,floatingleg1_indextenor,TenorType,One,The tenor of the floating rate index on the first floating leg of a swap.,,
+product,floatingleg1_inf_fallbackbond_isapplicable,Boolean,One,,,
+product,floatingleg1_inf_fallbackbondapplicable,Boolean,One,,,
+product,floatingleg1_inf_indexpublication,String,One,,,
+product,floatingleg1_inf_indexsource,String,One,,,
+product,floatingleg1_inf_initialindex,BigDecimal,One,,,
+product,floatingleg1_inf_initialindexlevel,BigDecimal,One,,,
+product,floatingleg1_inf_interpolationmethod,EnumeratedString,One,,lookup:InflationInterpolationMethod,
+product,floatingleg1_inf_primarylagtenor,TenorType,One,,,
+product,floatingleg1_inf_primarylagtenordaytype,EnumeratedString,One,,lookup:DayType,
+product,floatingleg1_initialfixingdate,DateType,One,,,
+product,floatingleg1_initialnotionalvalue,BigDecimal,One,,,
+product,floatingleg1_initialstub_currency,EnumeratedString,One,,lookup:Currency,
+product,floatingleg1_initialstub_fixedrate,BigDecimal,One,,,
+product,floatingleg1_initialstub_floattenor1,TenorType,One,,,
+product,floatingleg1_initialstub_floattenor2,TenorType,One,,,
+product,floatingleg1_initialstub_ratetype,EnumeratedString,One,,lookup:LegType,
+product,floatingleg1_initialstub_stublength,TenorType,One,,,
+product,floatingleg1_initialstub_stubtype,EnumeratedString,One,,lookup:StubType,
+product,floatingleg1_interpolation_indextenor1,TenorType,One,,,
+product,floatingleg1_interpolation_indextenor2,TenorType,One,,,
+product,floatingleg1_is_averaging,Boolean,One,,,
+product,floatingleg1_is_compounding,Boolean,One,,,
+product,floatingleg1_is_oisleg,Boolean,One,,,
+product,floatingleg1_isconstantspread,Boolean,One,Is the spread to the observed index constant over the tenor of the swap?,,
+product,floatingleg1_isnondeliverable,Boolean,One,,,
+product,floatingleg1_lastnotionalstepdate,DateType,One,,,
+product,floatingleg1_legtype,EnumeratedString,One,,lookup:LegType,
+product,floatingleg1_notionalcurrency,EnumeratedString,One,,lookup:Currency,
+product,floatingleg1_notionalstepamount,BigDecimal,One,,,
+product,floatingleg1_notionalstepfrequency,TenorType,One,,,
+product,floatingleg1_payer,String,One,Leg one payer if leg one is floating,,
+product,floatingleg1_paymentdates_businesscenter1,EnumeratedString,One,,lookup:BusinessCenter,
+product,floatingleg1_paymentdates_businesscenter2,EnumeratedString,One,,lookup:BusinessCenter,
+product,floatingleg1_paymentdates_businesscenters,EnumeratedString,Many,The business centers used for payment date adjustments on the first floating leg of a swap.,lookup:BusinessCenter,
+product,floatingleg1_paymentdates_businessdayconvention,EnumeratedString,One,The business day convention used for payment date adjustments on the first floating leg of a swap.,lookup:BusinessDayConvention,
+product,floatingleg1_paymentdates_daytype,EnumeratedString,One,,lookup:DayType,
+product,floatingleg1_paymentdates_offsettenor,TenorType,One,,,
+product,floatingleg1_paymentfrequency,TenorType,One,The payment frequency on the first floating leg of a swap.,,
+product,floatingleg1_payrelativeto,EnumeratedString,One,,lookup:PayRelativeTo,
+product,floatingleg1_resetdates_businesscenter1,EnumeratedString,One,,lookup:BusinessCenter,
+product,floatingleg1_resetdates_businesscenter2,EnumeratedString,One,,lookup:BusinessCenter,
+product,floatingleg1_resetdates_businesscenters,EnumeratedString,Many,,lookup:BusinessCenter,
+product,floatingleg1_resetdates_businessdayconvention,EnumeratedString,One,,lookup:BusinessDayConvention,
+product,floatingleg1_resetfrequency,TenorType,One,The rate reset frequency on the first floating leg of a swap.,,
+product,floatingleg1_resetrelativeto,EnumeratedString,One,Whether resets are done relative to the start or end of a calculation period.,lookup:PayRelativeTo,
+product,floatingleg1_residualterm,TenorType,One,,,
+product,floatingleg1_settlementcurrency,EnumeratedString,One,,lookup:Currency,
+product,floatingleg1_settlementdate,DateType,One,,,
+product,floatingleg1_settlementfxfixing_businesscenter1,EnumeratedString,One,,lookup:BusinessCenter,
+product,floatingleg1_settlementfxfixing_businesscenter2,EnumeratedString,One,,lookup:BusinessCenter,
+product,floatingleg1_settlementfxfixing_businesscenters,EnumeratedString,Many,,lookup:BusinessCenter,
+product,floatingleg1_settlementfxfixing_businessdayconvention,EnumeratedString,One,,lookup:BusinessDayConvention,
+product,floatingleg1_settlementfxfixing_daytype,EnumeratedString,One,,lookup:DayType,
+product,floatingleg1_settlementfxfixing_offsettenor,DateType,One,,,
+product,floatingleg1_settlementfxfixing_rateoption,String,One,,,
+product,floatingleg1_spreadschedule_initialspread,BigDecimal,One,,,
+product,floatingleg1_stublengths,TenorType,Many,,,
+product,floatingleg1_stubtypes,EnumeratedString,Many,,lookup:StubType,
+product,floatingleg1_term,TenorType,One,,,
+product,floatingleg1_terminationdate,DateType,One,,,
+product,floatingleg1_terminationdate_businesscenter1,EnumeratedString,One,,lookup:BusinessCenter,
+product,floatingleg1_terminationdate_businesscenter2,EnumeratedString,One,,lookup:BusinessCenter,
+product,floatingleg1_terminationdate_businesscenters,EnumeratedString,Many,The business centers used to adjust the termination date on the first floating leg of a swap.,lookup:BusinessCenter,
+product,floatingleg1_terminationdate_businessdayconvention,EnumeratedString,One,The business day convention used fto adjust the termination date on the first floating leg of a swap.,lookup:BusinessDayConvention,
+product,floatingleg1_varyingnotionalfixingdates_businesscenter1,EnumeratedString,One,,lookup:BusinessCenter,
+product,floatingleg1_varyingnotionalfixingdates_businesscenter2,EnumeratedString,One,,lookup:BusinessCenter,
+product,floatingleg2_averagingmethod,String,One,,,
+product,floatingleg2_businesscenters_all,EnumeratedString,Many,,lookup:BusinessCenter,
+product,floatingleg2_calculationperioddates_businesscenter1,EnumeratedString,One,,lookup:BusinessCenter,
+product,floatingleg2_calculationperioddates_businesscenter2,EnumeratedString,One,,lookup:BusinessCenter,
+product,floatingleg2_calculationperioddates_businesscenters,EnumeratedString,Many,,lookup:BusinessCenter,
+product,floatingleg2_calculationperioddates_businessdayconvention,EnumeratedString,One,,lookup:BusinessDayConvention,
+product,floatingleg2_calculationperioddates_firstregularperiodstartdate,DateType,Many,,,
+product,floatingleg2_calculationperioddates_lastregularperiodenddate,DateType,One,,,
+product,floatingleg2_calculationperiodfrequency,TenorType,One,,,
+product,floatingleg2_calculationperiodfrequency_rollconvention,EnumeratedString,One,,lookup:RollConvention,
+product,floatingleg2_calculationperiodstartdate,DateType,One,,,
+product,floatingleg2_compoundingmethod,EnumeratedString,One,,lookup:CompoundingMethod,
+product,floatingleg2_daycountfraction,EnumeratedString,One,,lookup:DayCountFraction,
+product,floatingleg2_effectivedate,DateType,One,,,
+product,floatingleg2_effectivedate_businesscenter1,EnumeratedString,One,,lookup:BusinessCenter,
+product,floatingleg2_effectivedate_businesscenter2,EnumeratedString,One,,lookup:BusinessCenter,
+product,floatingleg2_effectivedate_businesscenters,EnumeratedString,Many,,lookup:BusinessCenter,
+product,floatingleg2_effectivedate_businessdayconvention,EnumeratedString,One,,lookup:BusinessDayConvention,
+product,floatingleg2_finalstub_currency,EnumeratedString,One,,lookup:Currency,
+product,floatingleg2_finalstub_fixedrate,BigDecimal,One,,,
+product,floatingleg2_finalstub_floattenor1,TenorType,One,,,
+product,floatingleg2_finalstub_floattenor2,TenorType,One,,,
+product,floatingleg2_finalstub_ratetype,EnumeratedString,One,,lookup:LegType,
+product,floatingleg2_finalstub_stublength,TenorType,One,,,
+product,floatingleg2_finalstub_stubtype,EnumeratedString,One,,lookup:StubType,
+product,floatingleg2_firstnotionalstepdate,DateType,One,,,
+product,floatingleg2_fixingcutoff_daytype,EnumeratedString,One,,lookup:DayType,
+product,floatingleg2_fixingcutoff_offsettenor,TenorType,One,,,
+product,floatingleg2_fixingdate_businesscenter1,EnumeratedString,One,,lookup:BusinessCenter,
+product,floatingleg2_fixingdate_businesscenter2,EnumeratedString,One,,lookup:BusinessCenter,
+product,floatingleg2_fixingdate_businesscenters,EnumeratedString,Many,,lookup:BusinessCenter,
+product,floatingleg2_fixingdate_businessdayconvention,EnumeratedString,One,,lookup:BusinessDayConvention,
+product,floatingleg2_fixingdate_daytype,EnumeratedString,One,,lookup:DayType,
+product,floatingleg2_fixingdate_offsettenor,TenorType,One,,,
+product,floatingleg2_floatingrateindex,EnumeratedString,One,"The ISDA floating rate option on the second floating leg of a swap that references an index, e.g. ""USD-LIBOR-BBA"".",lookup:FloatLegIndex,
+product,floatingleg2_floatingraterounding,Integer,One,,,
+product,floatingleg2_fxlinked_businesscenter1,EnumeratedString,One,xccy notional reset calendar,lookup:BusinessCenter,
+product,floatingleg2_fxlinked_businesscenters,EnumeratedString,Many,xccy notional reset calendar,lookup:BusinessCenter,
+product,floatingleg2_fxlinked_fxspotratesource,EnumeratedString,One,source for spot rate for FX fixing,lookup:RateSourcePageType,
+product,floatingleg2_fxlinked_hasfinalexchange,Boolean,One,xccy final notional exchange,,
+product,floatingleg2_fxlinked_hasinitialexchange,Boolean,One,xccy initial notional exchange,,
+product,floatingleg2_fxlinked_hasintermediateexchange,Boolean,One,xccy intermediate notional exchange,,
+product,floatingleg2_fxlinked_is_constantnotional,Boolean,One,Flag to show whether the leg has a constant notional,,
+product,floatingleg2_fxlinked_reset_offsettenor,TenorType,One,xccy notional reset offset,,
+product,floatingleg2_fxlinked_resetfrequency,TenorType,One,"frequency at which the notional resets, notional resets are always on coupon date",,
+product,floatingleg2_fxlinked_varyingnotionalcurrency,EnumeratedString,One,currency which resets in a xccy swap,lookup:Currency,
+product,floatingleg2_hasstub,Boolean,One,,,
+product,floatingleg2_indextenor,TenorType,One,,,
+product,floatingleg2_initialnotionalvalue,BigDecimal,One,,,
+product,floatingleg2_initialstub_currency,EnumeratedString,One,,lookup:Currency,
+product,floatingleg2_initialstub_fixedrate,BigDecimal,One,,,
+product,floatingleg2_initialstub_floattenor1,TenorType,One,,,
+product,floatingleg2_initialstub_floattenor2,TenorType,One,,,
+product,floatingleg2_initialstub_ratetype,EnumeratedString,One,,lookup:LegType,
+product,floatingleg2_initialstub_stublength,TenorType,One,,,
+product,floatingleg2_initialstub_stubtype,EnumeratedString,One,,lookup:StubType,
+product,floatingleg2_interpolation_indextenor1,TenorType,One,,,
+product,floatingleg2_interpolation_indextenor2,TenorType,One,,,
+product,floatingleg2_is_averaging,Boolean,One,,,
+product,floatingleg2_is_compounding,Boolean,One,,,
+product,floatingleg2_is_oisleg,Boolean,One,,,
+product,floatingleg2_isconstantspread,Boolean,One,,,
+product,floatingleg2_isnondeliverable,Boolean,One,,,
+product,floatingleg2_lastnotionalstepdate,DateType,One,,,
+product,floatingleg2_legtype,EnumeratedString,One,,lookup:LegType,
+product,floatingleg2_notionalcurrency,EnumeratedString,One,,lookup:Currency,
+product,floatingleg2_notionalstepamount,BigDecimal,One,,,
+product,floatingleg2_notionalstepfrequency,TenorType,One,,,
+product,floatingleg2_payer,String,One,Leg 2 payer if leg 2 is a floating leg,,
+product,floatingleg2_paymentdates_businesscenter1,EnumeratedString,One,,lookup:BusinessCenter,
+product,floatingleg2_paymentdates_businesscenter2,EnumeratedString,One,,lookup:BusinessCenter,
+product,floatingleg2_paymentdates_businesscenters,EnumeratedString,Many,,lookup:BusinessCenter,
+product,floatingleg2_paymentdates_businessdayconvention,EnumeratedString,One,,lookup:BusinessDayConvention,
+product,floatingleg2_paymentdates_daytype,EnumeratedString,One,,lookup:DayType,
+product,floatingleg2_paymentdates_offsettenor,TenorType,One,,,
+product,floatingleg2_paymentfrequency,TenorType,One,,,
+product,floatingleg2_payrelativeto,EnumeratedString,One,,lookup:PayRelativeTo,
+product,floatingleg2_resetdates_businesscenter1,EnumeratedString,One,,lookup:BusinessCenter,
+product,floatingleg2_resetdates_businesscenter2,EnumeratedString,One,,lookup:BusinessCenter,
+product,floatingleg2_resetdates_businesscenters,EnumeratedString,Many,,lookup:BusinessCenter,
+product,floatingleg2_resetdates_businessdayconvention,EnumeratedString,One,,lookup:BusinessDayConvention,
+product,floatingleg2_resetfrequency,TenorType,One,,,
+product,floatingleg2_resetrelativeto,EnumeratedString,One,,lookup:PayRelativeTo,
+product,floatingleg2_residualterm,TenorType,One,,,
+product,floatingleg2_settlementcurrency,EnumeratedString,One,,lookup:Currency,
+product,floatingleg2_settlementfxfixing_businesscenter1,EnumeratedString,One,,lookup:BusinessCenter,
+product,floatingleg2_settlementfxfixing_businesscenter2,EnumeratedString,One,,lookup:BusinessCenter,
+product,floatingleg2_settlementfxfixing_businesscenters,EnumeratedString,Many,,lookup:BusinessCenter,
+product,floatingleg2_settlementfxfixing_businessdayconvention,EnumeratedString,One,,lookup:BusinessDayConvention,
+product,floatingleg2_settlementfxfixing_daytype,EnumeratedString,One,,lookup:DayType,
+product,floatingleg2_settlementfxfixing_offsettenor,DateType,One,,,
+product,floatingleg2_settlementfxfixing_rateoption,String,One,,,
+product,floatingleg2_spreadschedule_initialspread,BigDecimal,One,,,
+product,floatingleg2_stublengths,TenorType,Many,,,
+product,floatingleg2_stubtypes,EnumeratedString,Many,,lookup:StubType,
+product,floatingleg2_term,TenorType,One,,,
+product,floatingleg2_terminationdate,DateType,One,,,
+product,floatingleg2_terminationdate_businesscenter1,EnumeratedString,One,,lookup:BusinessCenter,
+product,floatingleg2_terminationdate_businesscenter2,EnumeratedString,One,,lookup:BusinessCenter,
+product,floatingleg2_terminationdate_businesscenters,EnumeratedString,Many,,lookup:BusinessCenter,
+product,floatingleg2_terminationdate_businessdayconvention,EnumeratedString,One,,lookup:BusinessDayConvention,
+product,floatingleg2_varyingnotionalfixingdates_businesscenter1,EnumeratedString,One,,lookup:BusinessCenter,
+product,floatingleg2_varyingnotionalfixingdates_businesscenter2,EnumeratedString,One,,lookup:BusinessCenter,
+product,forwardstart_offset,TenorType,One,,,
+product,fra_buyer,String,One,,,
+product,fra_calculationperiod_numberofdays,TenorType,One,,,
+product,fra_currency,EnumeratedString,One,,lookup:Currency,
+product,fra_daycountfraction,EnumeratedString,One,,lookup:DayCountFraction,
+product,fra_discounting,EnumeratedString,One,,lookup:FraDiscounting,
+product,fra_effectivedate,DateType,One,,,
+product,fra_fixedrate,BigDecimal,One,,,
+product,fra_fixingdate_businesscenter1,EnumeratedString,One,,lookup:BusinessCenter,
+product,fra_fixingdate_businesscenter2,EnumeratedString,One,,lookup:BusinessCenter,
+product,fra_fixingdate_businesscenters,EnumeratedString,Many,,lookup:BusinessCenter,
+product,fra_fixingdate_businessdayconvention,EnumeratedString,One,,lookup:BusinessDayConvention,
+product,fra_fixingdate_daytype,EnumeratedString,One,,lookup:DayType,
+product,fra_fixingdate_offsettenor,TenorType,One,,,
+product,fra_floatingrateindex,EnumeratedString,One,"The ISDA floating rate option referenced on a FRA, e.g. ""GBP-LIBOR-BBA"".",lookup:FloatLegIndex,
+product,fra_floatingraterounding,Integer,One,,,
+product,fra_indextenor,TenorType,One,,,
+product,fra_indextenor1,TenorType,One,index tenor 1 for FRA,,
+product,fra_indextenor2,TenorType,One,index tenor 2 for FRA,,
+product,fra_interpolation_indextenor1,TenorType,One,,,
+product,fra_interpolation_indextenor2,TenorType,One,,,
+product,fra_notionalamount,BigDecimal,One,,,
+product,fra_paymentdate,DateType,One,,,
+product,fra_paymentdates_businesscenter1,EnumeratedString,One,,lookup:BusinessCenter,
+product,fra_paymentdates_businesscenter2,EnumeratedString,One,,lookup:BusinessCenter,
+product,fra_paymentdates_businesscenters,EnumeratedString,Many,,lookup:BusinessCenter,
+product,fra_paymentdates_businessdayconvention,EnumeratedString,One,,lookup:BusinessDayConvention,
+product,fra_paymentdates_daytype,EnumeratedString,One,,lookup:DayType,
+product,fra_terminationdate,DateType,One,,,
+product,fxRateToEUR,BigDecimal,One,"FX Rate to EUR to covert trade notional, price or other nominal value to",,RTS-2 Annex III
+product,fxRateToUSD,BigDecimal,One,"The exchange rate between a currency and USD, with USD being the base currency.",,
+product,fx_currency1payer,EnumeratedString,One,"Payer of ""currency1"" in the exchanged pair of currencies, and the receiver of ""currency2"".",lookup:PartyRoleType,
+product,fx_currency2payer,EnumeratedString,One,"Payer of ""currency2"" in the exchanged pair of currencies, and the receiver of ""currency1"".",lookup:PartyRoleType,
+product,fx_forward_commercial_purpose,Boolean,One,,,
+product,fx_physicalsettlementintent,Boolean,One,Is a short-dated FX transaction done with intent to physically settle?,,
+product,fx_pricefluctuation,BigDecimal,One,,,
+product,fx_quotedcurrencypair_currency1,EnumeratedString,One,The base currency in the quoted currency pair.,lookup:Currency,
+product,fx_quotedcurrencypair_currency2,EnumeratedString,One,The counter currency in the quoted currency pair.,lookup:Currency,
+product,fx_quotedcurrencypair_quotebasis,String,One,,,
+product,fx_ratevaluation_postponement,TenorType,One,,,
+product,fx_ratevaluation_postponement_daytype,EnumeratedString,One,,lookup:DayType,
+product,fx_settlement_businesscenter1,EnumeratedString,One,,lookup:BusinessCenter,
+product,fx_settlement_businesscenter2,EnumeratedString,One,,lookup:BusinessCenter,
+product,fx_settlement_businesscenters,EnumeratedString,Many,,lookup:BusinessCenter,
+product,fx_settlement_businessdayconvention,EnumeratedString,One,,lookup:BusinessDayConvention,
+product,fx_settlement_currency,EnumeratedString,One,,lookup:Currency,
+product,fx_settlement_daytype,EnumeratedString,One,,lookup:DayType,
+product,fx_settlement_offsetaftervaluation,TenorType,One,Settlement offset of an FX transaction after trade is entered into,,
+product,fx_spotrate_fallback_reference,String,One,,,
+product,fx_spotrate_fallback_reference_alternate,String,One,,,
+product,fx_spotrate_source,String,One,,,
+product,fx_spotrate_source_alternate,String,One,,,
+product,fx_valuation_businesscenter1,EnumeratedString,One,,lookup:BusinessCenter,
+product,fx_valuation_businesscenter2,EnumeratedString,One,,lookup:BusinessCenter,
+product,fx_valuation_businesscenters,EnumeratedString,Many,,lookup:BusinessCenter,
+product,fx_valuation_businessdayconvention,EnumeratedString,One,,lookup:BusinessDayConvention,
+product,giveuptrade,Boolean,One,Whether a trade is a give-up trade (to the contraparty),,
+product,hasBondReference,Boolean,One,"For a swap, whether a swap has a bond reference in its additional terms. For a swaption, whether the swap underlying to the swaption has a bond reference",,http://www.fpml.org/spec/fpml-5-9-3-wd-3/html/recordkeeping/schemaDocumentation/schemas/fpml-ird-5-9_xsd/complexTypes/SwapAdditionalTerms/bondReference.html
+product,hasC10underlier,Boolean,One,Whether the underlier of a commodity derivative is a C10 financial instrument,,
+product,hasETFUnderlier,Boolean,One,Whether the underlier is an ETF,,
+product,hasPublicIndex,Boolean,One,"Whether a transaction is based on underlying assets that includes an index, e.g. ISDA taxonomy Equity:[Base-product]:[Sub-product]:SingleIndex or Credit:Index, whether the index underlying is administered by an third-party organization where the index methodology is publicly available.",,
+product,hascontingentsettlement,Boolean,One,"Has contingent settlement or delivery terms, e.g. change of delivery method, settlement date.",,
+product,hasoptionality,Boolean,One,"Whether a swap has associated optionality (e.g. an early termination option), which precludes it from being subject to a mandatory clearing mandate.",,
+product,highlyLiquid,Boolean,One,,,
+product,highly_liquid_covered_derivative,Boolean,One,"Boolean flag for whether the transaction is within the types of product which are considered ""Covered Products"" under the mid quote exemption given to highly liquid products.",,
+product,inScopeForMiFIRTransactionReporting,Boolean,One,Whether a transaction is in scope for MiFIR Transaction Reporting obligations,,
+product,intenttoclear,Boolean,One,Whether a trade is to be submitted for clearing at a clearing firm.,,
+product,intenttodeliver,Boolean,One,"Whether a contract is intended to be delivered and does not contain provisions to permit rolling over the delivery, option to settle the contract in a method other than the actual delivery.",,
+product,intraGroupTransaction,Boolean,One,The transaction is between corporate entities that are part of the same corporate group.,,
+product,investmentAdvice,Boolean,One,Party is providing investment advice in connection with this trade?,,
+product,investmentServiceProvider,EnumeratedString,One,The party providing investment services for the transaction or event,lookup:PartySide,
+product,investmentServicesProvided,EnumeratedString,Many,Investment Services Provided,lookup:InvestmentService,MiFID-II Annex I ��_��_��_A
+product,ipoSPODebtIssuance,Boolean,One,Transaction is part of IPO/SPO or debt issuance,,RTS-22 art. 2(5)
+product,irFutureUnderlierTerm,TenorType,One,The term of the underlying interest rate of an IR Future,,
+product,irSwapFutureUnderlierTerm,TenorType,One,The term of the underlying swap of an interest rate swap future,,
+product,irSwaptionExerciseDate,DateType,One,"The exercise date of an Interest Rate Swaption, which is also the start date of its underlying swap",,
+product,isBackloaded,EnumeratedString,Many,A list of regulators under which a transaction report has been backloaded.,lookup:RegulatorShortName,
+product,isCFD,Boolean,One,Whether a transaction is a Contract for Difference,,
+product,isDVP,Boolean,One,Whether the transaction is Delivery vs Payment,,
+product,isDelegatedSale,Boolean,One,Whether the transaction is a delegated sale,,
+product,isFuturesRollover,Boolean,One,Whether a transaction is for the purpose of executing a futures contract rollover,,"Package Delegated Regulation Article 3(g), Article 6(e)"
+product,isIndexCDSRollover,Boolean,One,Indicates a position replacing an off-the-run version of an index CDS with an on-the-run position,,Package Delegated Regulation Article 5(e)
+product,isMATproduct,Boolean,One,Transaction is of a product that has been Made Available to Trade under CFTC,,
+product,isMiFIRTransactionEvent,Boolean,One,Event is an acquisition or disposal for purposes of MiFIR transaction reporting,,RTS-22  art. 2(1)-(4)
+product,isMultiCurrency,Boolean,One,Whether a transaction requires the exchange of more than one currency,,"Rule 91-507 Appendix C, amended 2016"
+product,isPRIIPSProduct,Boolean,One,Product is a packaged product under PRIIPS,,PRIIPS Reg. art. 4
+product,isPriceFormingEvent,Boolean,One,"Any termination, assignment, novation, exchange, transfer, amendment, conveyance, or extinguishing of rights or obligations of a swap that changes the pricing of the swap.",,
+product,isPublicIndex,Boolean,One,"For transactions based on index, e.g. ISDA taxonomy Equity:[Base-product]:[Sub-product]:SingleIndex or Credit:Index, whether the index underlying is administered by an third-party organization where the index methodology is publicly available.",,
+product,isTotalReturnSwap,Boolean,One,"Transaction is a total return swap based on some underlying asset. Note that ISDA taxonomy only provides Total Return Swap as a taxonomy point under the Credit asset class. In practice, however, the underlying may be many other non-credit assets.",,
+product,is_constantnotional,Boolean,One,Is notional constant over the tenor of the swap?,,
+product,is_fxswap_farleg,Boolean,One,Whether an FX single leg (spot or forward) is the far leg of an FX swap.,,
+product,is_fxswap_nearleg,Boolean,One,Whether an FX single leg (spot or forward) is the NEAR leg of an FX swap.,,
+product,isda2Commodity,EnumeratedString,One,ISDA 2.0 Commodity Type,lookup:ISDA2Commodities,ISDA 2.0 Taxonomy
+product,isda2SubCommodity,EnumeratedString,One,ISDA 2.0 Sub-Commodity Type,lookup:ISDA2SubCommodities,ISDA 2.0 Taxonomy
+product,isforwardstart,Boolean,One,,,
+product,isin,String,One,ISIN of a financial instrument,,
+product,issuanceDate,DateType,One,Date of issue of a bond,,
+product,issuanceSize,BigDecimal,One,Size of debt issue,,
+product,itbcs,Boolean,One,,,
+product,kycStatus,EnumeratedString,One,KYC Status,lookup:KYCStatus,
+product,liborinarrears,Boolean,One,,,
+product,lifecycleevent,String,One,Life Cycle Event,,
+product,liquidMarketForPackage,Boolean,One,Whether there is a liquid market for a package order,,MiFIR Package RTS arts. 1-6
+product,liquidMarketForProduct,Boolean,One,Liquid Market Exists for Product,,MiFIR art. 11(1)(b); RTS-2 art. 8
+product,mandatorilyclearable,Boolean,One,Whether the particular trade type in question is required by this regulator to be cleared.,,http://www.fpml.org/spec/fpml-5-8-3-wd-3/html/confirmation/schemaDocumentation/schemas/fpml-clearing-processes-5-8_xsd/complexTypes/ClearingRequirements/mandatorilyClearable.html
+product,marketMakerForProduct,Boolean,One,CP is market maker for product,,
+product,marketid,String,One,,,
+product,marketingOrRecommendingProduct,Boolean,One,Investment Firm is marketing or recommending product to client,,MiFID-II Del. Reg. art. 50(5)(a)
+product,markit_ticker,String,One,,,
+product,matchedPrincipalTrading,Boolean,One,Trading on Matched Principal Basis,,
+product,maturitydate,DateType,One,,,
+product,memberStatesAgreedToHostReporting,Boolean,One,"For orders executed through branches, the relevant home and host member states have agreed that reports should be made to host member state instead of the home member state",,RTS-22 art. 14(1)
+product,mifid2DistributionAgreement,Boolean,One,Whether there is a MiFID II compliant Distribution Agreement for distributor,,
+product,mifid2FinancialInstrument,Boolean,One,Indicates whether the instrument meets the conditions to be considered a MiFID II Financial Instrument,,"MiFID II, Annex I, Section C"
+product,mifidAgriculturalProduct,EnumeratedString,One,Agricultural product type of agricultural commodity derivative,lookup:MiFIDAgriculturalProducts,"MiFID RTS 2 Annex III Table 7.1, RTS 23 Annex"
+product,mifidCommoditySettlementLocation,String,One,Settlement location of an energy commodity derivative contract,,MiFIR RTS 2 Annex III Table 7.1
+product,mifidCommodityType,EnumeratedString,One,Type of underlying commodity,lookup:MiFIDCommodityTypes,MiFIR RTS 2 Annex III Table 11.1
+product,mifidEnergyType,EnumeratedString,One,Energy type of an energy commodity derivative,lookup:MiFIDEnergyTypes,"MiFID RTS 2 Annex III Table 7.1, RTS 23 Annex"
+product,mifidEquityParameter,EnumeratedString,One,Parameter return of an equity swap,lookup:MiFIDEquityParameters,"MiFID RTS 2 Annex III Table 6.2, Annex IV Table 2"
+product,mifidFloatingRateOption,String,One,Floating Rate Option underlier of InterestRateDerivative,,MiFIR RTS-2
+product,mifidFreightContractType,EnumeratedString,One,Contract type for freight derivatives,lookup:MiFIDFreightContractType,MiFIR RTS 2 Annex III Table 10.1
+product,mifidFreightRoute,String,One,Route of underlying freight of freight derivative,,MiFIR RTS 2 Annex III Table 10.1
+product,mifidFreightSpecificationOfSize,String,One,Specification of size of underlying freight of freight derivative,,MiFIR RTS 2 Annex III Table 10.1
+product,mifidFreightSubType,EnumeratedString,One,Freight sub-type for freight derivatives,lookup:MiFIDFreightSubTypes,MiFIR RTS 2 Annex III Table 10.1
+product,mifidFreightType,EnumeratedString,One,Freight type wet/dry for freight derivatives,lookup:MiFIDFreightType,MiFIR RTS 2 Annex III Table 10.1
+product,mifidIRSwapType,EnumeratedString,One,Type of underlying swap for interest rate swaption,lookup:MiFIDIRSwapTypes,MiFIR RTS 2 Annex III Table 5.1
+product,mifidLoadType,EnumeratedString,One,Load type of electricity energy commodity,lookup:MiFIDLoadType,"MiFIR RTS 2 Annex III Table 7.1, RTS 23 Annex"
+product,mifidMetalType,EnumeratedString,One,Metal type of a metal commodity derivative,lookup:MiFIDMetalTypes,"MiFID RTS 2 Annex III Table 7.1, RTS 23 Annex"
+product,mifidReferenceEntityType,EnumeratedString,One,Classification of reference entity of CDS as sovereign or corporate type,lookup:MiFIDReferenceEntityTypes,MiFIR RTS 2 Annex III Table 9.1
+product,mifidUnderlyingCreditIndex,String,One,Underlying Credit Index for Index Credit derivative,,MiFIR RTS-2
+product,mifidWholesaleEnergyProduct,Boolean,One,Identifies a product as wholesale energy,,MiFID II Del. Reg. Art. 6(3)
+product,mifirNonTransactionalActivity,EnumeratedString,Many,Non-Transactional activity under MiFIR art. 26 reporting and other provisions,lookup:MiFIRNonTransactionalActivity,RTS-22 art. 2(5); MiFIR art. 31
+product,mifirPackage,Boolean,One,Whether the package meets the definition of a package under MiFIR,,"MiFIR Article 2(49), Article 2(50)"
+product,mifirPrimaryMarketTransaction,Boolean,One,"Whether transaction is a primary market activity such as issuance, allotment or subscription for securities, and creation and redemption of units in ETFs",,"ESMA Q&A Section 2, Answer 4"
+product,mktrfqid,String,One,,,
+product,mkttradeid,String,One,,,
+product,mtnType,EnumeratedString,One,MTN type of instrument,lookup:MTNTypes,CA-CIB internal rules for Info on Instrument
+product,negativeaffirmationprovider,String,One,,,
+product,negotiatedTransaction,Boolean,One,Negotiated Transaction,,
+product,noCallPeriod,TenorType,One,Structured Note No Call Period,,
+product,nominalValue,BigDecimal,One,Nominal value of debt instruments traded (other than ETCs and ETNs),,RTS-2 Annex II Table 4
+product,numberofadditionalpayments,Integer,One,,,
+product,numberofcoupons,Integer,One,,,
+product,oisleg_finalfixingdate_terminationoffset,TenorType,One,,,
+product,oisleg_initialfixingdate_effectiveoffset,TenorType,One,,,
+product,oisleg_settlementdate_terminationoffset,TenorType,One,,,
+product,onHoursTrade,Boolean,One,"Trade is during trading hours for trading venue, most relevant market, or investment firm's normal trading hours, as applicable",,RTS-1 art. 14(1)
+product,optionExpiryDate,DateType,One,Expiry date of an option contract,,
+product,optionMimicsSwapPayout,Boolean,One,Certain cash-settled options structured to mimic the payout of a swap,,
+product,optionToDelayForSuitabilityStatement,Boolean,One,Counterparty has been the option to delay the trade until it receive Suitability statement,,MiFID-II art. 25(6)
+product,optionbuyer,EnumeratedString,One,Option buyer,lookup:PartyRoleType,
+product,optionexemption,Boolean,One,Is the party asserting the trade option exemption for a commodity transaction?,,
+product,orderExecuted,Boolean,One,Order executed on execution venue's system,,RTS-27 arts. 4-6
+product,orderHeldInOMS,Boolean,One,Order is held in OMS,,MiFIR art. 9(1)(a)
+product,orderReceived,Boolean,One,Order received for execution on MTF/OTF or by other execution venue,,RTS-27 arts. 3-6
+product,otherExecutionVenueOperation,Boolean,One,Operating an execution venue other than MTF or  OTF,,MiFID II art. 27(3)
+product,otherNonComplexProduct,Boolean,One,Product is non-complex per MiFID art. 25(4)((a)(iv) and Del. Reg. Art. 57(b)-(d),,MiFID-II art. 25(4)(a)(vi); MiFID-II Del. Reg. art. 57
+product,package,Boolean,One,Identifies a transaction as a package,,"MiFIR Article 2(49), Article 2(50)"
+product,packageComponentID,String,One,Identifier assigned to a component of a package transaction,,
+product,packagePreTradeTransparencyWaivers,EnumeratedString,Many,Approved pre-trade transparency waivers to be applied to a package order as a whole,lookup:PackagePreTradeTransparencyWaivers,"MiFIR Article 9(1)(d), Article 9(1)(e)"
+product,packageSeller,EnumeratedString,One,Identifies the overall seller of a package transaction (Contraparty or Counterparty),lookup:PartySide,"MiFIR RTS 2 Article 7(5), Article 7(6)"
+product,packageType,EnumeratedString,One,Describes the type of package transaction,lookup:ProductStructure,"MiFIR Article 2(49), Article 2(50)"
+product,package_legcount,Integer,One,,,
+product,packageleg,String,One,,,
+product,packagelegtype,EnumeratedString,Many,,lookup:PackageLegTypeType,
+product,packageoption,String,One,,,
+product,paymentdates_businessdayconventions,EnumeratedString,Many,,lookup:BusinessDayConvention,
+product,paymentdates_daytypes,EnumeratedString,Many,,lookup:DayType,
+product,performanceseller,EnumeratedString,One,The seller of performance of the underlying portfolio,lookup:PartyRoleType,
+product,portfolioCompression,Boolean,One,Trade is part of portfolio compression,,
+product,portfolioManagement,Boolean,One,Trade is part of portfolio management,,
+product,portfolioTrade,Boolean,One,Transaction is part of a portfolio trade,,RTS-1 art. 2(b)
+product,postTradeTransparencyDeferrals,EnumeratedString,Many,Applicable Post-Trade Transparency Deferrals,lookup:PostTradeTransparencyDeferralType,MifIR art. 11; RTS-2 art. 11
+product,preTradeTransparencyWaivers,EnumeratedString,Many,Applicable Pre Trade Transparency Waivers,lookup:PreTradeTransparencyWaiverType,MiFIR Article 9(1)
+product,premiumreceiver,EnumeratedString,One,"The receiver of option premium, i.e. the seller or writer of the option",lookup:PartyRoleType,
+product,priipsSRI,EnumeratedString,One,Summary Risk Indicator (SRI),lookup:SummaryRiskIndicators,
+product,primebrokerid,String,One,,,
+product,product,ProductMasterType,One,,,
+product,productComplexity,EnumeratedString,One,Product Complexity,lookup:ProductComplexity,Client Internal Rule
+product,productTaxonomy,EnumeratedString,One,Taxonomy used to identify products,lookup:ProductTaxonomies,
+product,productType,EnumeratedString,One,Type of Supported Product,lookup:SupportedProducts,
+product,productclearable,Boolean,One,"Was the product clearable as of November 15, 2013?",,
+product,productvariant,EnumeratedString,One,"Whether a swap is spot-starting, IMM, MAC, or forward-starting.",lookup:ProductVariant,
+product,proprietaryVsClientClearing,EnumeratedString,One,Indicates whether the trade is proprietary or for client clearing.,lookup:proprietaryVsClientClearingEnum,
+product,protectionseller,EnumeratedString,One,Seller of underlying protection,lookup:PartyRoleType,
+product,qualifiedSwapConnectedWithLoans,Boolean,One,Whether a swap is entered into between an exempt cooperative and its member in connection with loan or loan origination per 17 CFR 50.51(b)(1),,17 CFR 50.51(b)(1)
+product,quoteDate,DateType,One,Date of RFQ or quote,,
+product,quoteOrIOIType,EnumeratedString,One,Quote or IOI Type,lookup:QuoteType,"MiFIR arts. 8(1), 9(1)"
+product,quoteType,EnumeratedString,One,Describes a quote as firm or indicative,lookup:QuoteResponseType,MiFIR arts. 18(1)-(2); RTS-27 arts. 7-8
+product,quotedCurrency,EnumeratedString,One,Quoted currency,lookup:Currency,
+product,receivingParty,EnumeratedString,One,Receiving Party for Transmitted Order,lookup:PartySide,"RTS-22 arts. 4, 14"
+product,receivingPartyAgreesToReportOrTransmit,Boolean,One,Party receving the order has agreed to report it or to transmit the necessary information onward,,RTS-22 art. 4(1)(c)
+product,receivingPartyRole,EnumeratedString,One,Receiving Party Role,lookup:PartyRoleType,"RTS-22 arts. 4, 14"
+product,reducingCommercialOrTreasuryActivityRisk,Boolean,One,Transaction is objectively measurable as reducing commercial or treasury activity risk of party or its group,,MiFID-II art. 8(1)
+product,referenceEntity,String,One,Issuer of debt or CDS underlying reference entity,,
+product,referencePriceQuote,Boolean,One,Indicates that the trading system is using a reference price methodology,,
+product,relatedcoveredbond,Boolean,One,,,
+product,reportedUnderEMIR,Boolean,One,Transaction has been reported to a TR under EMIR art. 9,,MiFIR art. 26(7); EMIR art. 9
+product,reportingchoices,EnumeratedString,Many,,lookup:FinMktInfraType,
+product,representativeCapacity,Boolean,One,"The party is making the trade in a representative capacity or as an agent for someone else. If this value is false, it is assumed that the party is acting in their personal capacity.",,
+product,reserveOrder,Boolean,One,Indicates the quote is for a reserve order as defined by RTS 1 art. 8(3),,"RTS-1 art. 8(2)(a), (3)"
+product,resetdates_businessdayconventions,EnumeratedString,Many,,lookup:BusinessDayConvention,
+product,residualterm,TenorType,One,"The time lapse between ""today"" and the scheduled termination date of the transaction.",,
+product,returnSwap_singleUnderlyer,Boolean,One,Whether a return swap underlyer is a single underlying or a basket of multiple underlyers,,
+product,rfqType,EnumeratedString,One,Type of RFQ (Firm/Indicative),lookup:QuoteResponseType,RTS-27 arts. 7-8
+product,rfqiscompetitive,BigDecimal,One,,,
+product,rfqnumofdealers,Integer,One,,,
+product,rfqordertypestr,String,One,,,
+product,rfqverbstr,String,One,,,
+product,rollconventions_all,EnumeratedString,Many,The roll conventions used to adjust the dates of a vanilla swap.,lookup:RollConvention,
+product,ruDelegatedInformingPeron,String,One,The informing person specified by the parties to the master agreement which can be a trading party or a third party.,,
+product,ruDelegatedInformingPerson,String,One,The informing person specified by the parties to the master agreement which can be a trading party or a third party.,,
+product,salesperson,String,One,,,
+product,salespersonlocation,EnumeratedString,Many,"The physical location of the sales staff responsible for arranging or negotiating the trade on the Contraparty side, e.g. [""US""]. If multiple sales are involved and are associated at different locations, then a list may be provided, e.g. [""US"",""AU""]. This may not coincide with the primary location of employment or residence.",lookup:LocationCode,
+product,sector,String,One,,,
+product,securitisedDerivativeHasCommodityUnderlying,Boolean,One,Product is securitised derivative with a commodity underlying,,"ESMA Q&A on Commodity Derivative Topics, Sec. 2, Q&A 7"
+product,securitytype,String,One,,,
+product,sellingLocationStateOfRelationship,EnumeratedString,One,"Whether the ""��tat de la relation"" with the counterparty is open for the selling location",lookup:RelationshipStates,
+product,sellingLocationTypeOfLocalRelationship,EnumeratedString,One,Type of relationship with the counterparty for the selling location,lookup:LocalRelationshipTypes,
+product,series,Integer,One,The underlying Credit Index series number (e.g. 28).,,
+product,settlementconvention,String,One,The settlement convention for a commodity swap (spot / forward).,,
+product,settlementcurrencies,EnumeratedString,Many,"The settlement currency, or a list of all settlement currencies, in a derivative transaction",,
+product,settlementdate,DateType,One,,,
+product,settlementtype,EnumeratedString,One,"Settlement type as Cash, Physical or Standard (Standard Settlement Matrix for Credit Derivatives)",lookup:SettlementMethod,
+product,sfcExcludedIntraGroup,Boolean,One,"This flag is used to indicate a whether a dual-side reportable transaction is intra-group. When set to true, additional reporting-party selection logic is evoked to determine the appropriate reporting party.",,
+product,sfcPhase1Reported,Boolean,One,Whether an outstanding transaction has been reported under Phase 1 reporting rules.,,"Securities and Futures (OTC Derivative Transactions Reporting and Record Keeping Obligations) (Amendment) Rules 2016, Rule 2 ""Previous Rules"""
+product,singleLoanTRS,Boolean,One,Whether an LTRS is based on a single loan. A value of TRUE means a loan total return swap has a single non-security loan as underlying and is classified as security-based swap.,,"Federal Register / Vol. 77, No. 156 p48266"
+product,sizeInEUR,BigDecimal,One,"Size of order, quote, or transaction in EUR",,"RTS-1 arts. 8(2)(a), Annex II RTS-27 art. 9(c)"
+product,solicitedQuote,Boolean,One,Whether quote was provided as a response to a request for quote,,
+product,spEndClientRepsProvided,Boolean,One,Structured Product End Client Reps Provided,,
+product,spot,BigDecimal,One,,,
+product,spotoffset,TenorType,One,The number of business days that the effective date is offset from the trade date for a swap (e.g. 2D).,,
+product,spread,BigDecimal,One,Credit spread in units of basis point.,,
+product,strategy,EnumeratedString,One,,lookup:ProductStructure,
+product,strike,BigDecimal,One,,,
+product,structuredProduct,Boolean,One,Structured Product,,
+product,subjectToEMIRClearingObligation,Boolean,One,Product is subject to the EMIR Clearing Obligation,,Package Delegated Regulation Article 2(1)(b)
+product,subjectToMiFIRClearingObligation,Boolean,One,Product is subject to the MiFIR Clearing Obligation,,Package Delegated Regulation Article 2(1)(b)
+product,subjectToMiFIRTradingObligation,Boolean,One,Product is subject to MiFIR trading obligation,,MiFIR arts. 23 & 28
+product,subjectToNegativeAffirmation,Boolean,One,Whether a transaction is subject to negative affirmation,,
+product,submissiondate,DateType,One,The date when a trade is submitted for clearing.,,
+product,subproduct,EnumeratedString,One,"Subproduct of a derivative in the ISDA taxonomy, if applicable.",lookup:SubProduct,
+product,swapClassificationOverride,EnumeratedString,One,"User override on swap classification. User may directly specify a swap as ""mixed"", ""security-based-swap"", or ""swap"", and bypass the logic of classification of underlying and swap type.",lookup:DoddFrankSwapType,
+product,swap_bondreference,Boolean,One,Whether a swap has a bond reference in additional terms,,http://www.fpml.org/spec/fpml-5-9-3-wd-3/html/recordkeeping/schemaDocumentation/schemas/fpml-ird-5-9_xsd/complexTypes/SwapAdditionalTerms/bondReference.html
+product,swap_term_iswholeyear,Boolean,One,,,
+product,swaptionExerciseDate,DateType,One,"The exercise date of a Swaption, which is also the start date of its underlying swap",,
+product,swaptionSettlementMethod,EnumeratedString,One,"Whether a swaption is cash or physically settled. In the case of physical settlement, parties enter into the underlying swap upon swaption exercise",lookup:swaptionSettlementMethodType,
+product,swaption_european_earliestexercisetime_businesscenters,EnumeratedString,Many,swaption exercise time business centers,lookup:BusinessCenter,
+product,swaption_european_earliestexercisetime_hourminutetime,TenorType,One,earliest time a european swaption can be exercised,,
+product,swaption_european_expirationdate_businesscenters,EnumeratedString,Many,European swaption exp. date business center,lookup:BusinessCenter,
+product,swaption_european_expirationdate_businessdayconvention,EnumeratedString,One,European swaption exp date business day convention,lookup:BusinessDayConvention,
+product,swaption_european_expirationtime_businesscenters,EnumeratedString,Many,swaption expiration time business centers,lookup:BusinessCenter,
+product,swaption_european_expirationtime_hourminutetime,TenorType,One,latest time a european swaption can be exercised,,
+product,swaption_european_partialexercise,Boolean,One,European swaption partial exercise flag,,
+product,swaption_exercise_style,EnumeratedString,One,"swaption exercise style: European, American or Bermuda",lookup:OptionStyle,
+product,swaption_iscashsettlement,Boolean,One,swaption cash settlement flag,,
+product,swaption_isphysicalsettlement,Boolean,One,swaptions physical settlement flag,,
+product,swaption_isstraddle,Boolean,One,flag to determine if the swaption is a straddle,,
+product,swaption_optiontype,EnumeratedString,One,"denotes payer, receiver, straddle",lookup:OptionType,
+product,swaption_premium_currency,EnumeratedString,One,swaption premium payment currency,lookup:Currency,
+product,swaption_premium_paymentdate_offset,TenorType,One,swaption premium payment date offset,,
+product,swaption_premiumpaymentdate_businesscenters,EnumeratedString,Many,swaption premium payment date business center,lookup:BusinessCenter,
+product,swaption_premiumpaymentdate_businessdayconvention,EnumeratedString,One,business day convention for swaption premium payment,lookup:BusinessDayConvention,
+product,swaption_residualterm,TenorType,One,used for the maximum maturity of a swaption,,
+product,swaption_swap_currency,EnumeratedString,One,currency of the underlying swap,lookup:Currency,
+product,swaption_swap_fixedleg1_calculationperioddates_businesscenters,EnumeratedString,Many,calc period dates business centers,lookup:BusinessCenter,
+product,swaption_swap_fixedleg1_calculationperioddates_businessdayconvention,EnumeratedString,One,calc period dates business day convention,lookup:BusinessDayConvention,
+product,swaption_swap_fixedleg1_calculationperiodfrequency,TenorType,One,swaption underlying swap fixed leg calc period frequency,,
+product,swaption_swap_fixedleg1_daycountfraction,EnumeratedString,One,daycountfraction,lookup:DayCountFraction,
+product,swaption_swap_fixedleg1_effectivedate_businessdayconvention,EnumeratedString,One,effective date business date convention,lookup:BusinessDayConvention,
+product,swaption_swap_fixedleg1_fixingdate_businesscenters,EnumeratedString,Many,fixing date business center,lookup:BusinessCenter,
+product,swaption_swap_fixedleg1_hasstub,Boolean,One,swaption underlying swap stub rules,,
+product,swaption_swap_fixedleg1_is_compounding,Boolean,One,swaption underlying swap fixed leg compounding rules,,
+product,swaption_swap_fixedleg1_isconstantrate,Boolean,One,Whether a swaption's underlying swap has constant fixed rate,,
+product,swaption_swap_fixedleg1_paymentdates_businesscenters,EnumeratedString,Many,payment date business center,lookup:BusinessCenter,
+product,swaption_swap_fixedleg1_paymentdates_businessdayconvention,EnumeratedString,One,payment date business day convention,lookup:BusinessDayConvention,
+product,swaption_swap_fixedleg1_paymentfrequency,TenorType,One,swaption underlying swap fixed leg payment frequency,,
+product,swaption_swap_fixedleg1_resetdates_businessdayconvention,EnumeratedString,One,reset dates business day convention,lookup:BusinessDayConvention,
+product,swaption_swap_fixedleg1_terminationdate_businesscenters,EnumeratedString,Many,termination date business centers,lookup:BusinessCenter,
+product,swaption_swap_fixedleg1_terminationdate_businessdayconvention,EnumeratedString,One,termination date business day convention,,
+product,swaption_swap_floatingleg1_calculationperioddates_businesscenters,EnumeratedString,Many,calc period dates business centers,lookup:BusinessCenter,
+product,swaption_swap_floatingleg1_calculationperioddates_businessdayconvention,EnumeratedString,One,calc period date business day convention,lookup:BusinessDayConvention,
+product,swaption_swap_floatingleg1_calculationperiodfrequency,TenorType,One,swaption underlying swap floating leg calc period frequency,,
+product,swaption_swap_floatingleg1_daycountfraction,EnumeratedString,One,daycountfraction,lookup:DayCountFraction,
+product,swaption_swap_floatingleg1_effectivedate_businessdayconvention,EnumeratedString,One,effective date business day convention,lookup:BusinessDayConvention,
+product,swaption_swap_floatingleg1_fixingdate_businesscenters,EnumeratedString,Many,fixing date business centers,lookup:BusinessCenter,
+product,swaption_swap_floatingleg1_floatingrateindex,EnumeratedString,One,floating rate index of the underlying swap,lookup:FloatLegIndex,
+product,swaption_swap_floatingleg1_hasstub,Boolean,One,swaption underlying swap stub rules,,
+product,swaption_swap_floatingleg1_indextenor,TenorType,One,swaption index tenor,,
+product,swaption_swap_floatingleg1_is_compounding,Boolean,One,swaption underlying swap compounding rules,,
+product,swaption_swap_floatingleg1_isconstantspread,Boolean,One,swaption underlying swap floating leg spread flag,,
+product,swaption_swap_floatingleg1_paymentdates_businesscenters,EnumeratedString,Many,payment date business center,lookup:BusinessCenter,
+product,swaption_swap_floatingleg1_paymentdates_businessdayconvention,EnumeratedString,One,payment date business day convention,lookup:BusinessDayConvention,
+product,swaption_swap_floatingleg1_paymentfrequency,TenorType,One,swaption underlying swap floating leg payment frequency,,
+product,swaption_swap_floatingleg1_resetdates_businessdayconvention,EnumeratedString,One,reset dates business day convention,lookup:BusinessDayConvention,
+product,swaption_swap_floatingleg1_resetfrequency,TenorType,One,swaption underlying swap floating leg reset frequency,,
+product,swaption_swap_floatingleg1_spreadschedule_initialspread,BigDecimal,One,swaption underlying swap spread value in basis points,,
+product,swaption_swap_floatingleg1_terminationdate_businesscenters,EnumeratedString,Many,termination date business center,lookup:BusinessCenter,
+product,swaption_swap_floatingleg1_terminationdate_businessdayconvention,EnumeratedString,One,termination date business day convention,lookup:BusinessDayConvention,
+product,swaption_swap_is_constantnotional,Boolean,One,determines if a variable notional is allowed,,
+product,swaption_swap_isforwardstart,Boolean,One,swaption underlying swap forward starting rules,,
+product,swaption_swap_product,EnumeratedString,One,product type of the underlying swap,lookup:ProductMasterType,
+product,swaption_swap_residualterm,TenorType,One,swaption underlying swap maturity,,
+product,swaption_swap_rollconventions_all,EnumeratedString,Many,roll convention for the swap,lookup:RollConvention,
+product,systematicInternaliserForProduct,Boolean,One,Systematic Internaliser for product,,MiFIR art. 18
+product,targetMarketAbilityToBearLoss,EnumeratedString,One,Target market ability to bear losses,lookup:MiFIDAbilityToBearLoss,MiFID-II Product Governance Guidelines para. 18(c)
+product,targetMarketClientType,EnumeratedString,One,Target market client type,lookup:MiFID-II-ClientType,MiFID-II Product Governance Guidelines para. 18(a)
+product,targetMarketKnowledgeExperience,EnumeratedString,One,Target market knowledge & experience,lookup:MiFIDKnowledgeExperience,MiFID-II Product Governance Guidelines para. 18(b)
+product,targetMarketObjectivesNeeds,String,Many,Target market objectives & needs,,MiFID-II Product Governance Guidelines para. 18(e)
+product,targetMarketRiskTolerance,EnumeratedString,One,Target market risk tolerance,lookup:MiFIDRiskTolerance,MiFID-II Product Governance Guidelines para. 18(d)
+product,targetfxspotsettlement,TenorType,One,,,
+product,term,TenorType,One,The time lapse between the effective date and the scheduled termination date of the transaction.,,
+product,term_daytype,EnumeratedString,One,,lookup:DayType,
+product,termination_clauses,Boolean,One,,,
+product,terminationdate,DateType,One,Termination date of a derivative contract,,
+product,terminationdate_businessdayconventions,EnumeratedString,Many,,lookup:BusinessDayConvention,
+product,tfqordertype,String,One,,,
+product,tonsOfCO2Equivalent,BigDecimal,One,Tons of CO2 equivalent for emission allowances and emission allowance derivatives,,RTS-2 Annex I Table 4
+product,tons_of_co2_equivalent,BigDecimal,One,Tons of CO2 Equivalent,,
+product,total_nominal_value,BigDecimal,One,Total nominal value of debt instruments traded,,
+product,tradeEvent,EnumeratedString,One,"A enum to describe the broad trade event category, e.g. ""Creation"" for entering into a brand new trade, or ""Change"" for any changes to an existing trade, ""Termination"" for the full exit of an existing position.",lookup:TradeEventType,
+product,tradeEventDate,DateType,One,"The date of a lifecycle event. If the event is the entering into a new transaction, then it is the trade date",,
+product,tradePrice,BigDecimal,One,"Trade price (for ETCs, ETNs, and securitised derivatives)",,RTS-2 Annex II Table 4
+product,trade_goldensourceid,String,One,,,
+product,trade_groupid,String,One,,,
+product,tradebook,String,One,,,
+product,tradedOnTradingVenue,Boolean,One,Product is either actively traded on a TV or identical to one per ESMA opinion letter ESMA70-156-117,,ESMA70-156-117
+product,tradedate,DateType,One,"The execution date of a transaction, i.e. when the trade was entered into.",,
+product,tradenotional,BigDecimal,One,The transaction notional.,,
+product,traderlocation,EnumeratedString,Many,"The physical location of the trader(s) responsible for entering into the trade on the Contraparty side, e.g. [""US""]. If multiple traders are involved and are associated at different locations, then a list may be provided, e.g. [""US"",""AU""]. This may not coincide with the primary location of employment or residence.",lookup:LocationCode,
+product,tradertype,String,One,,,
+product,tradevenue,String,One,,,
+product,tradingAmount,BigDecimal,One,Trading Amount,,
+product,tradingDenomination,BigDecimal,One,Trading Denomination,,
+product,transactiontype,EnumeratedString,One,"Transaction type of a derivative in the ISDA taxonomy, if applicable.",lookup:TransactionType,
+product,transmittedOrderDetails,Boolean,One,Party has transmitted order details to receiving party,,RTS-22 art. 4(1)(b)
+product,transparencySuspended,Boolean,One,Transparency obligations for product suspended,,MiFIR art. 11(2); RTS-2 art. 16
+product,treatAsProfessionalForTrade,Boolean,One,Treat Eligible Counterparty or Retail Client as Professional Client for purposes of trade,,MiFID-II art. 30(2)
+product,typeOfPlacement,EnumeratedString,One,Whether the transaction is a public (including US MTNs) or a private placement,lookup:PlacementTypes,
+product,underlierIsin,String,Many,ISIN of the underlying instrument of a derivative contract,,
+product,underlierResidualTerm,TenorType,One,Residual term of the underlying instrument,,
+product,underlierTerm,TenorType,One,The term of a derivative contract underlying instrument,,
+product,underlyingAgriculturalCommodity,EnumeratedString,One,Underlying product of agricultural commodity derivative,lookup:UnderlyingAgriculturalCommodities,"MiFIR RTS 2 Annex III Table 7.1, RTS 23 Annex"
+product,underlyingESMAAssetClass,EnumeratedString,One,ESMA Asset class of the underlying instrument,lookup:ESMAAssetClasses,
+product,underlyingESMASubAssetClass,EnumeratedString,One,ESMA sub-asset class of the underlying instrument,lookup:ESMASubAssetClasses,
+product,underlyingEmissionAllowance,EnumeratedString,One,Underlying emission allowance of an emission allowance derivative,lookup:EmissionAllowances,
+product,underlyingEnergy,EnumeratedString,One,Underlying energy of an energy commodity derivative,lookup:UnderlyingEnergy,"MiFID RTS 2 Annex III, RTS 23  Annex"
+product,underlyingIndex,String,One,Underlying index of a derivative contract,,
+product,underlyingMetal,EnumeratedString,One,Underlying metal of metal commodity derivative,lookup:UnderlyingMetals,
+product,underlyingTradedOnTradingVenue,Boolean,One,Product's underlying is traded on trading venue or an index or basket composed of instruments traded on trading venue,,MiFIR art. 26(2)(b)-(c)
+product,underlyingasset,EnumeratedString,Many,Underlying asset or assets of a derivative transaction,lookup:UnderlyingAssetType,
+product,upfront,BigDecimal,One,,,
+product,usi,String,One,,,
+product,variable_schedules,String,One,,,
+product,variable_schedules_fixedrate,Boolean,One,,,
+product,variable_schedules_floatingspread,Boolean,One,,,
+product,variable_schedules_notional,Boolean,One,,,
+product,version,Integer,One,,,
+product,versiondate,DateType,One,,,

@@ -19,13 +19,13 @@ if [ $n -ne 1 ]
 then  
         # find all files with old annotation links
         files=$(grep -rl "$a" $2)
-        
         # for each file, write the file name to the affectedFiles.txt and replace the old link
         for item in $files
         do
             echo "Affected files with old link: $a , new link: $b" >> affectedFiles.txt
             echo "$item" >> affectedFiles.txt
             sed -i '' "s#${a}#${b}#g" $item
+            sed -i.bak $'s/\r//' $item
         done
 fi
 
