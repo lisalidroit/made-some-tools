@@ -19,7 +19,7 @@ if [ $n -ne 1 ]
 then  
         # find all files with old annotation links
         files=$(grep -rl "$a" $2)
-        # for each file, write the file name to the affectedFiles.txt and replace the old link
+        # for each file, write the file name to the affectedFiles.txt and replace the old link then removes carriage return
         for item in $files
         do
             echo "Affected files with old link: $a , new link: $b" >> affectedFiles.txt
